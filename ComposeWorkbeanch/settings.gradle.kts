@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ComposeTwo"
-include(":app")
+rootProject.name = "ComposeWorkbeanch"
+include(":CheezyCode")
  

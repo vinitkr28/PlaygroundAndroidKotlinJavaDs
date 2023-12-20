@@ -1,0 +1,25 @@
+package cheezyCode.jetpackCompose.workbeanchTwo
+
+import android.annotation.SuppressLint
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.platform.ComposeView
+import cheezyCode.jetpackCompose.R
+
+class WorkbeanchActivityTwo : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_workbeanch_two)
+
+        val composeView = findViewById<ComposeView>(R.id.composeViewOne)
+
+        composeView.setContent {
+//            SampleTextFieldTwo()
+//            LayoutRowOne(value1 = "ONE", value2 = "TWO")
+            CircularImage()
+        }
+
+
+    }
+}
