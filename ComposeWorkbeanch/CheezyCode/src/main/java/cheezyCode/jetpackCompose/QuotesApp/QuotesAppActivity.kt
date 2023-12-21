@@ -27,6 +27,8 @@ class QuotesAppActivity : ComponentActivity() {
         }
 
         setContent {
+
+
 //            QuoteDetail(quote = Quote("", "Chetan Bhagat", "", "", 3, "Five Point Someone"))
             App()
         }

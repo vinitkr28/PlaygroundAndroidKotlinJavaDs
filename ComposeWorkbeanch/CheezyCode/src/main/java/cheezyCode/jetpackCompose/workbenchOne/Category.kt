@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchOne
+package cheezyCode.jetpackCompose.workbenchOne
 
 import cheezyCode.jetpackCompose.R
 

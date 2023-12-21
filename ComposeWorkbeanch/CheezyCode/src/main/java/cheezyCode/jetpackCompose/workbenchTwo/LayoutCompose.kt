@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchTwo
+package cheezyCode.jetpackCompose.workbenchTwo
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Wallpapers
 import androidx.compose.ui.unit.sp
 import cheezyCode.jetpackCompose.R
 
-class WorkbeanchTwoLayoutCompose {
+class WorkbenchTwoLayoutCompose {
 }
 
 @Composable

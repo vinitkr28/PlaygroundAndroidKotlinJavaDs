@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchTwo
+package cheezyCode.jetpackCompose.workbenchTwo
 
 import androidx.compose.foundation.Image
 import androidx.compose.material3.Button
@@ -10,7 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import cheezyCode.jetpackCompose.R
 
-class WorkbeanchTwoButtonCompose {
+class WorkbenchTwoButtonCompose {
 }
 
 @Preview(showBackground = true, widthDp = 300, heightDp = 500)

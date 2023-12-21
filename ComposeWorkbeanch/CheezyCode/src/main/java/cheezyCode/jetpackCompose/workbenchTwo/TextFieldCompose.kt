@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchTwo
+package cheezyCode.jetpackCompose.workbenchTwo
 
 import android.util.Log
 import androidx.compose.material3.Text
@@ -10,9 +10,9 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.Wallpapers
 
-private const val TAG = "WorkbeanchTwoTextFieldC"
+private const val TAG = "WorkbenchTwoTextFieldC"
 
-class WorkbeanchTwoTextFieldCompose {
+class WorkbenchTwoTextFieldCompose {
 }
 
 @Composable

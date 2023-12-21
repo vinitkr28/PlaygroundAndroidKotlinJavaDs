@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 
-private const val TAG = "WorkbeanchActivityThree"
+private const val TAG = "WorkbenchActivityThree"
 
-class WorkbeanchActivityThree : AppCompatActivity() {
+class WorkbenchActivityThree : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

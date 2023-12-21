@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchTwo
+package cheezyCode.jetpackCompose.workbenchTwo
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.platform.ComposeView
 import cheezyCode.jetpackCompose.R
 
-class WorkbeanchActivityTwo : AppCompatActivity() {
+class WorkbenchActivityTwo : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_workbeanch_two)
+        setContentView(R.layout.activity_workbench_two)
 
         val composeView = findViewById<ComposeView>(R.id.composeViewOne)
 

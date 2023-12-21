@@ -1,4 +1,4 @@
-package cheezyCode.jetpackCompose.workbeanchOne
+package cheezyCode.jetpackCompose.workbenchOne
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
