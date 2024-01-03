@@ -15,7 +15,7 @@
 
 
         <activity
-            android:name=".SideEffects.SideEffectActivity"
+            android:name=".side_effects.SideEffectActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
 
 
         <activity
-            android:name=".ColorsTypographyInTheme.ColorsTypographyInThemActivity"
+            android:name=".colors_typography_in_theme.ColorsTypographyInThemActivity"
             android:exported="true">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +37,7 @@
 
 
         <activity
-            android:name=".QuotesApp.QuotesAppActivity"
+            android:name=".quotes_app.QuotesAppActivity"
             android:exported="true">
 
             <!-- android:theme="@style/Theme.AppCompat.Light"> -->
