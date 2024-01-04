@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeWorkbeanch"
 include(":CheezyCode")
- 
+include(":cheezycodecomposeadvance")
