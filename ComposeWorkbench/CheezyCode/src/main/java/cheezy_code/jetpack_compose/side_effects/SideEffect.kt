@@ -1,19 +1,44 @@
 package cheezy_code.jetpack_compose.side_effects
 
+import android.media.MediaPlayer
 import android.util.Log
+import android.view.ViewTreeObserver
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.tooling.preview.Devices
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import cheezy_code.jetpack_compose.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -281,8 +306,188 @@ fun LandingScreen(onTimeout: () -> Unit) {
     /* Landing screen content */
 }
 // ***********************
+//Disposable Effect Handler
+
+@Composable
+fun DisposableEffectCompose() {
+    val state = remember{
+        mutableStateOf(false)
+    }
+
+    DisposableEffect(key1 = state.value) {
+        Log.d(TAG, "DisposableEffectCompose: Disposable Effect started.")
+        onDispose {
+            Log.d(TAG, "DisposableEffectCompose: cleaning up side effects.")
+        }
+    }
+
+    Button(onClick = {
+        state.value = !state.value
+    }) {
+        Text(text = "Change State")
+    }
+}
 // ***********************
 
+@Composable
+fun MediaComposable() {
+    val context = LocalContext.current
+
+    DisposableEffect(key1 = Unit) {
+        val mediaPlayer = MediaPlayer.create(context, R.raw.file_example_mp3_700kb)
+        mediaPlayer.start()
+        onDispose {
+            mediaPlayer.stop()
+            mediaPlayer.release()
+        }
+    }
+}
+
+@Composable
+fun DisposableEffectExampleMediaPlayer() {
+    val scope = rememberCoroutineScope()
+    Button(onClick = {
+        scope.launch {
+//            MediaComposable()
+        }
+    }) {
+        Text(text = "Play Media")
+    }
+}
+
+
+@Composable
+fun DisposableEffectExampleMediaPlayer2() {
+    val scope = rememberCoroutineScope()
+    Button(onClick = {
+        scope.launch {
+
+        }
+    }) {
+        Text(text = "Play Media")
+    }
+}
+
+@Composable
+fun KeyboardComposable() {
+    val view = LocalView.current
+
+    DisposableEffect(key1 = Unit) {
+
+        val listener = ViewTreeObserver.OnGlobalLayoutListener {
+            val insets = ViewCompat.getRootWindowInsets(view)
+            val isKeyboardVisible = insets?.isVisible(WindowInsetsCompat.Type.ime())
+            Log.d(TAG, "KeyboardComposable: $isKeyboardVisible")
+        }
+        onDispose {
+            view.viewTreeObserver.removeOnGlobalLayoutListener { listener }
+        }
+    }
+}
+
+@Composable
+fun KeyboardPopupTest() {
+    KeyboardComposable()
+    TextField(value = "", onValueChange = {
+
+    })
+}
+
+
+// ***********************
+
+//ProduceState
+@Composable
+fun LoaderCompose() {
+
+    val degree = produceState(initialValue = 0) {
+        while (true) {
+            delay(16)
+            value = (value + 10) % 360
+        }
+    }
+
+
+    Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize(1f)) {
+        Column {
+            Image(
+                imageVector = Icons.Default.Refresh,
+                contentDescription = "",
+                modifier = Modifier
+                    .size(60.dp)
+                    .rotate(degree.value.toFloat())
+            )
+            Text(
+                text = "Loading",
+                modifier = Modifier
+                    .fillMaxWidth(Float.MAX_VALUE)
+                    .align(Alignment.CenterHorizontally)
+            )
+        }
+
+    }
+}
+
+@Preview(device = Devices.DEFAULT, showBackground = true, showSystemUi = true)
+@Composable
+fun PreviewLoaderCompose() {
+    LoaderCompose()
+}
+
+
+// ***********************
+//Derived State
+@Composable
+fun DerivedCompose() {
+    val tableOf = remember {
+        mutableIntStateOf(5)
+    }
+    val index = remember {
+        mutableIntStateOf(1)
+    }
+
+    val message by remember {
+        derivedStateOf {
+            "${tableOf.intValue} * ${index.intValue} = ${tableOf.intValue * index.intValue}"
+        }
+    }
+
+    Box {
+        Text(text = message, style = MaterialTheme.typography.headlineMedium)
+    }
+}
+
+// ------------------
+@Composable
+fun DerivedCompose1() {
+    val tableOf = remember {
+        mutableIntStateOf(5)
+    }
+    val index = produceState(initialValue = 1) {
+        repeat(9){
+            delay(1000)
+            value++
+        }
+    }
+
+    val message by remember {
+        derivedStateOf {
+            "${tableOf.intValue} * ${index.value} = ${tableOf.intValue * index.value}"
+        }
+    }
+
+    Box {
+        Text(text = message, style = MaterialTheme.typography.headlineMedium)
+    }
+}
+
+// ***********************
+
+
+// ***********************
+
+
+// ***********************
 
 fun fetchCategories(): List<String> {
     return listOf("One", "Two", "Three", "Four")
