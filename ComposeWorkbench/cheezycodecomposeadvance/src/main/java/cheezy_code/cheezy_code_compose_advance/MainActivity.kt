@@ -27,16 +27,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        GlobalScope.launch { 
-            var response = tweetsyAPI.getCategory()
-            Log.d(TAG, "onCreate: response.body():: ${response.body()}")
 
-            var result = response.body()
-            result!!.distinct()
-
-            Log.d(TAG, "onCreate: result:: $result")
-        }
-        
+        justForTest()
         
         setContent {
             ComposeWorkbeanchTheme {
@@ -48,6 +40,19 @@ class MainActivity : ComponentActivity() {
                     Greeting("Android")
                 }
             }
+        }
+    }
+
+
+    fun justForTest(){
+        GlobalScope.launch {
+            var response = tweetsyAPI.getCategory()
+            Log.d(TAG, "onCreate: response.body():: ${response.body()}")
+
+            var result = response.body()
+            result!!.distinct()
+
+            Log.d(TAG, "onCreate: result:: $result")
         }
     }
 }
