@@ -1,4 +1,4 @@
-package com.vinit.cheezycodecomposeadvance
+package com.cheezy_code.cheezy_code_compose_advance
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
