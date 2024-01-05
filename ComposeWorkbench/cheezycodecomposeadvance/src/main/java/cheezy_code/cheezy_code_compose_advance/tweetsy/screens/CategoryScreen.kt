@@ -3,7 +3,6 @@ package cheezy_code.cheezy_code_compose_advance.tweetsy.screens
 import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -26,15 +25,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import cheezy_code.cheezy_code_compose_advance.R
 import cheezy_code.cheezy_code_compose_advance.tweetsy.viewmodels.CategoryViewModel
+import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_android_internal_builders_ViewModelComponentBuilder
 
 private const val TAG = "CategoryScreen"
 @Composable
-fun CategoryScreen() {
+fun CategoryScreen(onCategorySelected: (selectedCategory: String) -> Unit) {
 
-    val categoryViewModel: CategoryViewModel = viewModel()
+//    val categoryViewModel: CategoryViewModel = viewModel()
+    val categoryViewModel: CategoryViewModel = hiltViewModel()
     val categories: State<List<String>> = categoryViewModel.categories.collectAsState()
 
     LazyVerticalGrid(
@@ -43,13 +45,13 @@ fun CategoryScreen() {
 //        verticalArrangement = Arrangement.SpaceBetween
     ) {
         items(categories.value.size) {
-            CategoryItem(category = categories.value[it])
+            CategoryItem(onCategorySelected, category = categories.value[it])
         }
     }
 }
 
 @Composable
-fun CategoryItem(category: String) {
+fun CategoryItem(onCategorySelected: (selectedCategory: String) -> Unit, category: String) {
     Box(
         modifier = Modifier
             .padding(4.dp)
@@ -61,6 +63,7 @@ fun CategoryItem(category: String) {
             )
             .clickable {
                 Log.d(TAG, "CategoryItem: $category")
+                onCategorySelected(category)
             }
             .border(1.dp, Color(0xFFEEEEEE)),
         contentAlignment = Alignment.BottomCenter
@@ -78,5 +81,6 @@ fun CategoryItem(category: String) {
 @Preview(showSystemUi = true)
 @Composable
 fun PreviewCategoryItem() {
-    CategoryItem(category = "Android")
+//    val onCategorySelected = (String){}
+//    CategoryItem(onCategorySelected = onCategorySelected, category = "Android")
 }

@@ -7,13 +7,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import cheezy_code.cheezy_code_compose_advance.tweetsy.api.TweetsyAPI
 import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.CategoryScreen
-import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.DetailScreen
 import cheezy_code.cheezy_code_compose_advance.ui.theme.ComposeWorkbeanchTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
@@ -39,7 +35,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CategoryScreen()
+                    CategoryScreen {
+
+                    }
 //                    DetailScreen()
                 }
             }
