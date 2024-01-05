@@ -21,15 +21,16 @@ class TweetRepository @Inject constructor(private val tweetAPI: TweetsyAPI) {
     suspend fun getCategories() {
         val  response = tweetAPI.getCategory()
         if (response.isSuccessful && response.body() != null) {
-            _categories.emit(response.body()!!)
+            _categories.emit(response.body()!!.distinct())
         }
     }
 
 
     suspend fun getTweets(category: String) {
-        val  response = tweetAPI.getTweets(category)
-        if (response.isSuccessful && response.body() != null) {
-            _tweets.emit(response.body()!!)
+        val makeHeader = "tweets[?(@.category==\"$category\")]"
+        val  result = tweetAPI.getTweets(makeHeader)
+        if (result.isSuccessful && result.body() != null) {
+            _tweets.emit(result.body()!!)
         }
     }
 }

@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import cheezy_code.cheezy_code_compose_advance.tweetsy.api.TweetsyAPI
+import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.CategoryScreen
+import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.DetailScreen
 import cheezy_code.cheezy_code_compose_advance.ui.theme.ComposeWorkbeanchTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
@@ -37,7 +39,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    CategoryScreen()
+//                    DetailScreen()
                 }
             }
         }
@@ -54,21 +57,5 @@ class MainActivity : ComponentActivity() {
 
             Log.d(TAG, "onCreate: result:: $result")
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposeWorkbeanchTheme {
-        Greeting("Android")
     }
 }
