@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "8b37b451-570f-4397-9b50-296937d4ad12",
+		"name": "ComposeWorkbench",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "597988"
+	},
+	"item": [
+		{
+			"name": "https://api.jsonbin.io/v3/b/659652d31f5677401f1746e8/meta/privacy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Bin-Private",
+						"value": "false",
+						"type": "text"
+					},
+					{
+						"key": "X-Master-Key",
+						"value": "$2a$10$5QSNVaFeOZj9n94ZQ9RmruFhCQ5clOlDpDYP9Xml8xChg2prc8zYS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.jsonbin.io/v3/b/6596f77f266cfc3fde727bb0/meta/privacy",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jsonbin",
+						"io"
+					],
+					"path": [
+						"v3",
+						"b",
+						"6596f77f266cfc3fde727bb0",
+						"meta",
+						"privacy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.jsonbin.io/v3/b/659652d31f5677401f1746e8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jsonbin.io/v3/b/6596f77f266cfc3fde727bb0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jsonbin",
+						"io"
+					],
+					"path": [
+						"v3",
+						"b",
+						"6596f77f266cfc3fde727bb0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.jsonbin.io/v3/b/659652d31f5677401f1746e8?meta=false",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-JSON-Path",
+						"value": "tweets[?(@.category==\"unix\")]",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.jsonbin.io/v3/b/6596f77f266cfc3fde727bb0?meta=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jsonbin",
+						"io"
+					],
+					"path": [
+						"v3",
+						"b",
+						"6596f77f266cfc3fde727bb0"
+					],
+					"query": [
+						{
+							"key": "meta",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.jsonbin.io/v3/b/6596f77f266cfc3fde727bb0?meta=false",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-JSON-Path",
+						"value": "tweets..category",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.jsonbin.io/v3/b/6596f77f266cfc3fde727bb0?meta=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jsonbin",
+						"io"
+					],
+					"path": [
+						"v3",
+						"b",
+						"6596f77f266cfc3fde727bb0"
+					],
+					"query": [
+						{
+							"key": "meta",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
