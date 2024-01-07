@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidKotlinJavaDsWorkbench"
 include(":cheezy_code_compose")
 include(":cheezy_code_compose_advance")
+include(":libJavaPractice")
+include(":libKotlinPractice")
