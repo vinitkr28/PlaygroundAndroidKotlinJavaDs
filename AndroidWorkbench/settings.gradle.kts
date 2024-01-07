@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ComposeWorkbeanch"
+rootProject.name = "AndroidWorkbench"
 include(":cheezy_code_compose")
 include(":cheezy_code_compose_advance")
