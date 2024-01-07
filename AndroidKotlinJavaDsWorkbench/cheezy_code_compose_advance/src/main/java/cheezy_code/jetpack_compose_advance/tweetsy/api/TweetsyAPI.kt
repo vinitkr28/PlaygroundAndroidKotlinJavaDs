@@ -1,6 +1,6 @@
-package cheezy_code.cheezy_code_compose_advance.tweetsy.api
+package cheezy_code.jetpack_compose_advance.tweetsy.api
 
-import cheezy_code.cheezy_code_compose_advance.tweetsy.models.TweetListItem
+import cheezy_code.jetpack_compose_advance.tweetsy.models.TweetListItem
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header

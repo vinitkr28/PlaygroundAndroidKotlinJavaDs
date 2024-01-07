@@ -1,13 +1,12 @@
-package cheezy_code.cheezy_code_compose_advance.tweetsy.di
+package cheezy_code.jetpack_compose_advance.tweetsy.di
 
-import cheezy_code.cheezy_code_compose_advance.tweetsy.api.TweetsyAPI
+import cheezy_code.jetpack_compose_advance.tweetsy.api.TweetsyAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module

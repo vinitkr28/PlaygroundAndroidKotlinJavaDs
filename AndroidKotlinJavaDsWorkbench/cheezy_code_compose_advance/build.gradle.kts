@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "cheezy_code.cheezy_code_compose_advance"
+    namespace = "cheezy_code.jetpack_compose_advance"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "cheezy_code.cheezy_code_compose_advance"
+        applicationId = "cheezy_code.jetpack_compose_advance"
         minSdk = 30
         targetSdk = 34
         versionCode = 1

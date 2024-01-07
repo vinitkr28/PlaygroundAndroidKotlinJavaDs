@@ -1,4 +1,4 @@
-package cheezy_code.cheezy_code_compose_advance
+package cheezy_code.jetpack_compose_advance
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -1,7 +1,7 @@
-package cheezy_code.cheezy_code_compose_advance.tweetsy.repository
+package cheezy_code.jetpack_compose_advance.tweetsy.repository
 
-import cheezy_code.cheezy_code_compose_advance.tweetsy.api.TweetsyAPI
-import cheezy_code.cheezy_code_compose_advance.tweetsy.models.TweetListItem
+import cheezy_code.jetpack_compose_advance.tweetsy.api.TweetsyAPI
+import cheezy_code.jetpack_compose_advance.tweetsy.models.TweetListItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject

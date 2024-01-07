@@ -1,10 +1,10 @@
-package cheezy_code.cheezy_code_compose_advance.tweetsy.viewmodels
+package cheezy_code.jetpack_compose_advance.tweetsy.viewmodels
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cheezy_code.cheezy_code_compose_advance.tweetsy.models.TweetListItem
-import cheezy_code.cheezy_code_compose_advance.tweetsy.repository.TweetRepository
+import cheezy_code.jetpack_compose_advance.tweetsy.models.TweetListItem
+import cheezy_code.jetpack_compose_advance.tweetsy.repository.TweetRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

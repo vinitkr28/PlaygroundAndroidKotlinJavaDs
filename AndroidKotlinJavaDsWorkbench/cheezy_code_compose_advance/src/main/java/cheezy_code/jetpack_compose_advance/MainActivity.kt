@@ -1,4 +1,4 @@
-package cheezy_code.cheezy_code_compose_advance
+package cheezy_code.jetpack_compose_advance
 
 import android.os.Bundle
 import android.util.Log
@@ -8,9 +8,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import cheezy_code.cheezy_code_compose_advance.tweetsy.api.TweetsyAPI
-import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.CategoryScreen
-import cheezy_code.cheezy_code_compose_advance.ui.theme.ComposeWorkbeanchTheme
+import cheezy_code.jetpack_compose_advance.tweetsy.api.TweetsyAPI
+import cheezy_code.jetpack_compose_advance.tweetsy.screens.CategoryScreen
+import cheezy_code.jetpack_compose_advance.ui.theme.ComposeWorkbeanchTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

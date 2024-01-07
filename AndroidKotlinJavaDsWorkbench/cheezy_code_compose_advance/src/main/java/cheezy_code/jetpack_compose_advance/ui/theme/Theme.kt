@@ -1,4 +1,4 @@
-package cheezy_code.cheezy_code_compose_advance.ui.theme
+package cheezy_code.jetpack_compose_advance.ui.theme
 
 import android.app.Activity
 import android.os.Build

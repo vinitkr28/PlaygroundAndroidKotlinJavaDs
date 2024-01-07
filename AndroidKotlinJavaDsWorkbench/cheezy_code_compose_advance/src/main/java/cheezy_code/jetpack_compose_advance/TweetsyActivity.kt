@@ -1,4 +1,4 @@
-package cheezy_code.cheezy_code_compose_advance
+package cheezy_code.jetpack_compose_advance
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,9 +9,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.CategoryScreen
-import cheezy_code.cheezy_code_compose_advance.tweetsy.screens.DetailScreen
-import cheezy_code.cheezy_code_compose_advance.ui.theme.ComposeWorkbeanchTheme
+import cheezy_code.jetpack_compose_advance.tweetsy.screens.CategoryScreen
+import cheezy_code.jetpack_compose_advance.tweetsy.screens.DetailScreen
+import cheezy_code.jetpack_compose_advance.ui.theme.ComposeWorkbeanchTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
