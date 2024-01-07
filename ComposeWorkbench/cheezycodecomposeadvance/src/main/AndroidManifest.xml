@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeWorkbeanch">
         <activity
-            android:name=".TweetsyActivity"
+            android:name=".TweetsyWithScanfoldActivity"
             android:exported="true"
-            android:label="@string/title_activity_tweetsy"
+            android:label="@string/title_activity_tweetsy_with_scanfold"
             android:theme="@style/Theme.ComposeWorkbeanch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +23,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NavigationActivity"
+            android:name=".TweetsyActivity"
             android:exported="true"
-            android:label="@string/title_activity_navigation"
+            android:label="@string/title_activity_tweetsy"
             android:theme="@style/Theme.ComposeWorkbeanch">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.ComposeWorkbeanch">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".MainActivity"
