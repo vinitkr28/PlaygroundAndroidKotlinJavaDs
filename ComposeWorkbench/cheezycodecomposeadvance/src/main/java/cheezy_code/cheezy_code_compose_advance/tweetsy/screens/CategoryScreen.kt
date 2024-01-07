@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -39,15 +40,26 @@ fun CategoryScreen(onCategorySelected: (selectedCategory: String) -> Unit) {
     val categoryViewModel: CategoryViewModel = hiltViewModel()
     val categories: State<List<String>> = categoryViewModel.categories.collectAsState()
 
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(8.dp),
+    if (categories.value.isEmpty()) {
+        Box(
+            modifier = Modifier.fillMaxSize(1f),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = "Loading...", style = MaterialTheme.typography.headlineLarge)
+        }
+    } else {
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp),
 //        verticalArrangement = Arrangement.SpaceBetween
-    ) {
-        items(categories.value.size) {
-            CategoryItem(onCategorySelected, category = categories.value[it])
+        ) {
+            items(categories.value.size) {
+                CategoryItem(onCategorySelected, category = categories.value[it])
+            }
         }
     }
+
+
 }
 
 @Composable
@@ -81,6 +93,9 @@ fun CategoryItem(onCategorySelected: (selectedCategory: String) -> Unit, categor
 @Preview(showSystemUi = true)
 @Composable
 fun PreviewCategoryItem() {
-//    val onCategorySelected = (String){}
-//    CategoryItem(onCategorySelected = onCategorySelected, category = "Android")
+    CategoryItem(onCategorySelected = ::onCategorySelected, category = "Android")
+}
+
+fun onCategorySelected(s: String) {
+
 }
