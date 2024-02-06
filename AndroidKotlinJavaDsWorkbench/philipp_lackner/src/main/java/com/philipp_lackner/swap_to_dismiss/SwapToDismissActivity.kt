@@ -42,8 +42,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.philipp_lackner.DeleteBackground
-import com.philipp_lackner.SwipeToDeleteContainer2
 import com.philipp_lackner.swap_to_dismiss.ui.theme.SwipeToDeleteComposeTheme
 import kotlinx.coroutines.delay
 
