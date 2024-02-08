@@ -20,3 +20,11 @@ https://medium.com/androiddevnotes/how-to-use-dokka-documentation-engine-for-and
 https://www.kodeco.com/30067669-documenting-kotlin-code-for-android-using-kdoc-and-dokka?page=2#toc-anchor-010
 
 
+https://developer.android.com/studio/write/lint#manuallyRunInspections
+
+
+https://developer.android.com/studio/write/annotations
+
+
+
+https://developer.android.com/studio/write/lint
