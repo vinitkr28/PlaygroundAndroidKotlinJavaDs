@@ -45,6 +45,28 @@ public class LC67AddBinary {
         }
 
         return finalString.toString();
+
+        /*
+
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+
+        while (i >= 0 || j >= 0 || carry == 1)
+        {
+            if(i >= 0)
+                carry += a.charAt(i--) - '0';
+            if(j >= 0)
+                carry += b.charAt(j--) - '0';
+            sb.insert(carry % 2, sb);
+//            sb.append(carry % 2);
+            carry /= 2;
+        }
+        return sb.toString();
+//        return sb.reverse().toString();
+        */
+
     }
 
     public static void main(String[] args) {
@@ -52,10 +74,10 @@ public class LC67AddBinary {
 //        String value = binary.addBinary("11", "1");
 //        System.out.println("100>>>> " + value);
 
-//        String value = binary.addBinary("1010", "1011");
-//        System.out.println("10101>>>> " + value);
+        String value = binary.addBinary("1010", "1011");
+        System.out.println("10101>>>> " + value);
 
-        String value = binary.addBinary("0", "0");
-        System.out.println("0>>>> " + value);
+//        String value = binary.addBinary("0", "0");
+//        System.out.println("0>>>> " + value);
     }
 }
