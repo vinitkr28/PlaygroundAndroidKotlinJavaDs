@@ -61,10 +61,20 @@ dependencies {
     kapt("com.google.dagger:dagger-android-processor:$dagger_version")
     */
 
+
+    /*
+    This block is moved inside buildSrc
     val dagger_version = "2.48.1"
     implementation("com.google.dagger:dagger:$dagger_version")
     implementation("com.google.dagger:dagger-android:$dagger_version")
     implementation("com.google.dagger:dagger-android-support:$dagger_version")
     kapt("com.google.dagger:dagger-compiler:$dagger_version")
     kapt("com.google.dagger:dagger-android-processor:$dagger_version")
+    */
+
+    implementation(Dependencies.dagger)
+    implementation(Dependencies.dagger_android)
+    implementation(Dependencies.dagger_android_support)
+    kapt(Dependencies.kapt_dagger_compiler)
+    kapt(Dependencies.kapt_dagger_android_processor)
 }
