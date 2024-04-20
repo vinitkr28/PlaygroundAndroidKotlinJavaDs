@@ -25,5 +25,26 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
      - On Device Test (Instrumentation Test)
        - UI Tests (Interaction with Views)
        - Non UI Tests (Context, Asset Manager, etc...)
+
+
+
+
  
-2. 
+2. Android JUnit Introduction Tutorial | Parameterized Tests Kotlin - CheezyCode - Hindi
+   https://youtu.be/LdZdAofm7hk?si=ezam5d0CjdC6Og9z
+   cheezy_code/unit_testing/2-Parameterized-Tests-Kotlin
+
+    
+    @Test
+    fun testPallindrome(){
+        //Arrange
+        //Act
+        //Assert
+    }
+
+    - @RunWith(value = Parameterized::class)
+    - @JvmStatic
+    - @Parameterized.Parameters(name = "isPallindromeLogic2 - {index} : {0} is pallindrome - {1}")
+
+
+3. 
