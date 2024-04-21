@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+//    id("com.google.devtools.ksp")
+    id("kotlin-kapt")
 }
 
 android {
@@ -72,5 +74,21 @@ dependencies {
 
     // To use android test orchestrator
     androidTestUtil("androidx.test:orchestrator:1.4.2")
+
+
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+//    ksp("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+
+    testImplementation("androidx.room:room-testing:$room_version")
+    androidTestImplementation("androidx.room:room-testing:$room_version")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+
+    implementation("androidx.room:room-coroutines:2.1.0-alpha04")
+    androidTestImplementation("androidx.room:room-coroutines:2.1.0-alpha04")
+    testImplementation("androidx.room:room-coroutines:2.1.0-alpha04")
 
 }

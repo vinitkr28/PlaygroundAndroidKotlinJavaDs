@@ -110,3 +110,23 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
     - ViewMatchers
     - Intents.intended
     - IntentMatchers.hasAction
+
+7. Android Unit Test - Room Database | Testing Room DB | CheezyCode - Hindi
+   https://youtu.be/hK4An_jL0Q4?si=kEMb6Mv2FaOFE_rv
+   cheezy_code/unit_testing/7-Testing-Room-DB
+
+   - Instead of KAPT(Kotlin Annotation Process Tool) used KSP(Kotlin Symbol Processing)
+   - added in project level build.gradle file
+     - id("com.google.devtools.ksp") version "1.9.23-1.0.20" apply false
+   - added in model cheezy_code_unit_testing level build.gradle file
+     - implementation("androidx.room:room-runtime:$room_version")
+     - implementation("androidx.room:room-ktx:$room_version")
+     - ksp("androidx.room:room-compiler:$room_version")
+     - 
+     - testImplementation("androidx.room:room-testing:$room_version")
+     - androidTestImplementation("androidx.room:room-testing:$room_version")
+     - testImplementation("androidx.arch.core:core-testing:2.2.0")
+     - androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+
+        - In memory database only to test the database
+        - https://github.com/android/architecture-components-samples/blob/main/LiveDataSample/app/src/test/java/com/android/example/livedatabuilder/util/LiveDataTestUtil.kt
