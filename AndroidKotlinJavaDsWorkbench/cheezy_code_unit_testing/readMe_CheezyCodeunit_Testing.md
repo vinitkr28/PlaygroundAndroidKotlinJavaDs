@@ -67,14 +67,16 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
 
 4. Android Local Unit Test - Practice Problems | Kotlin - CheezyCode - Part 1
     https://youtu.be/Cq7YHb5tKmQ?si=cRqtz2Noc-ew-Veh
-    cheezy_code/unit_testing/4-Android-Local-Unit-Test-Practice-Problems
+    cheezy_code/unit_testing/4-Android-Local-Unit-Test-Practice-Problems-Part1
 
     * Problem Statement: Validate Password
         - Should not be empty
-        - Length should between 6 & 15
+        - Length should between or equal to 6 & 15
         - Otherwise, return Valid Password
     
     * Problem Statement: String Reversal
         - "ABC" -> "CAB"
         - 
-5. 
+5. Android Local Unit Test - Solution Video | Kotlin - CheezyCode - Part 2
+   https://youtu.be/r9cC5yDzNZ4?si=PBkr1mgYParcIX92
+   cheezy_code/unit_testing/4-Android-Local-Unit-Test-Practice-Solution-Part2
