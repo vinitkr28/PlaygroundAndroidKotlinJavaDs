@@ -1,0 +1,18 @@
+[
+  {
+    "book_name": "A Christmas carol",
+    "author": "Charles Dickens",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Classic Literature",
+    "reading_time_in_hr_approx": 3,
+    "availability": "Free with Kindle"
+  },
+  {
+    "book_name": "Rich dad, poor dad",
+    "author": "Robert Kiyosaki",
+    "amazon_link": "https://amzn.eu/d/bCwwJD2",
+    "genre": "Personal Finance",
+    "reading_time_in_hr_approx": 4,
+    "availability": "Free with Amazon prime"
+  }
+]

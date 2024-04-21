@@ -10,17 +10,17 @@ import androidx.room.Update
 interface QuotesDao {
 
     @Insert
-    suspend fun insertQuote(quote: Quote)
+    fun insertQuote(quote: Quote)
 
     @Update
-    suspend fun updateQuote(quote: Quote)
+    fun updateQuote(quote: Quote)
 
-    @Query("DELETE FROM quote")
-    suspend fun delete()
+//    @Query("DELETE FROM quote")
+//    suspend fun delete()
 
     @Query("SELECT * FROM quote")
-    suspend fun getQuotes() : LiveData<List<Quote>>
+    fun getQuotes() : LiveData<List<Quote>>
 
     @Query("SELECT * FROM quote where id = :quoteId")
-    suspend fun getQuoteById(quoteId: Int) : Quote
+    fun getQuoteById(quoteId: Int) : Quote
 }

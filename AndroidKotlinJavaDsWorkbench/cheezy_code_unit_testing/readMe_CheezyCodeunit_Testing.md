@@ -1,5 +1,12 @@
-Android Unit Testing Playlist - JUnit, Espresso, Mockito with Kotlin
-Cheezy Code
+# **Android Unit Testing Playlist - JUnit, Espresso, Mockito with Kotlin**
+### _[Cheezy Code](https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=6VuZHbtiQ9nx2ZMf)_
+
+[Youtube](https://www.youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5)
+[Youtube](https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eRlAhFWty2)
+
+[//]: # ([![N|Solid]&#40;https://avatars.githubusercontent.com/u/18653994?v=4&#41;]&#40;https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=6VuZHbtiQ9nx2ZMf&#41;)
+
+
 https://www.youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5
 https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eRlAhFWty2
 
@@ -85,10 +92,16 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
     
     * Problem Statement: String Reversal
      - "ABC" -> "CAB"
-     - 
+
+
+
+
 5. Android Local Unit Test - Solution Video | Kotlin - CheezyCode - Part 2
    https://youtu.be/r9cC5yDzNZ4?si=PBkr1mgYParcIX92
    cheezy_code/unit_testing/4-Android-Local-Unit-Test-Practice-Solution-Part2
+
+
+
 
 
 6. Android Espresso Unit Tests - UI Tests with Example | CheezyCode - Hindi
@@ -111,6 +124,9 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
     - Intents.intended
     - IntentMatchers.hasAction
 
+
+
+
 7. Android Unit Test - Room Database | Testing Room DB | CheezyCode - Hindi
    https://youtu.be/hK4An_jL0Q4?si=kEMb6Mv2FaOFE_rv
    cheezy_code/unit_testing/7-Testing-Room-DB
@@ -130,3 +146,15 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
 
         - In memory database only to test the database
         - https://github.com/android/architecture-components-samples/blob/main/LiveDataSample/app/src/test/java/com/android/example/livedatabuilder/util/LiveDataTestUtil.kt
+
+
+8. Android Mockito Example - Unit Testing Tutorial | CheezyCode - Hindi
+   https://youtu.be/vg0nXJqAnQA?si=LCmOg-L1SENa0ctD
+   cheezy_code/unit_testing/8-Mockito-Example-Unit-Testing
+
+        androidTestImplementation("androidx.test:core:1.5.0") 
+        androidTestImplementation("androidx.text:core-ktx:1.1.5")
+        //The below line is used if not want to create resources folder inside test folder
+        //testImplementation("org.mockito:mockito-inline:5.2.0")
+        
+           

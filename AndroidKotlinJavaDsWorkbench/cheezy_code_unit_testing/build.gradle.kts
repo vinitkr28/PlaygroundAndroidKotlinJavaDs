@@ -76,7 +76,9 @@ dependencies {
     androidTestUtil("androidx.test:orchestrator:1.4.2")
 
 
-    val room_version = "2.6.1"
+//    val room_version = "2.3.0"
+    val room_version = "2.5.2"
+//    kapt("org.xerial:sqlite-jdbc:3.41.2.2")
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
 //    ksp("androidx.room:room-compiler:$room_version")
@@ -90,5 +92,43 @@ dependencies {
     implementation("androidx.room:room-coroutines:2.1.0-alpha04")
     androidTestImplementation("androidx.room:room-coroutines:2.1.0-alpha04")
     testImplementation("androidx.room:room-coroutines:2.1.0-alpha04")
+
+
+    testImplementation("org.mockito:mockito-core:4.0.0")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+//    testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+
+//    testImplementation("org.mockito:mockito-inline:5.2.0")
+
+
+
+
+
+
+
+
+/*
+    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    testImplementation("junit:junit:4.+")
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
+
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+
+    kapt("org.xerial:sqlite-jdbc:3.41.2.2")
+    implementation("androidx.room:room-runtime:2.3.0")
+//    kapt("androidx.room:room-compiler:2.3.0")
+    annotationProcessor("androidx.room:room-compiler:2.3.0")
+    implementation("androidx.room:room-ktx:2.3.0")*/
 
 }

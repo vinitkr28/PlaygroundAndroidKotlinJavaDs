@@ -58,12 +58,12 @@ class QuoteManagerTest {
         val quoteManager = QuoteManager()
         quoteManager.populateQuotes(
             arrayOf(
-                Quote("", "author 1", "", "", 0, "book 1"),
-                Quote("", "author 2", "", "", 0, "book 2"),
-                Quote("", "author 3", "", "", 0, "book 3"),
-                Quote("", "author 4", "", "", 0, "book 4"),
-                Quote("", "author 5", "", "", 0, "book 5"),
-                Quote("", "author 6", "", "", 0, "book 6"),
+                Quote(1, "author 1", "", "", "",0, "book 1"),
+//                Quote("", "author 2", "", "", 0, "book 2"),
+//                Quote("", "author 3", "", "", 0, "book 3"),
+//                Quote("", "author 4", "", "", 0, "book 4"),
+//                Quote("", "author 5", "", "", 0, "book 5"),
+//                Quote("", "author 6", "", "", 0, "book 6"),
             )
         )
         //Act
@@ -78,12 +78,12 @@ class QuoteManagerTest {
         val quoteManager = QuoteManager()
         quoteManager.populateQuotes(
             arrayOf(
-                Quote("", "author 1", "", "", 0, "book 1"),
-                Quote("", "author 2", "", "", 0, "book 2"),
-                Quote("", "author 3", "", "", 0, "book 3"),
-                Quote("", "author 4", "", "", 0, "book 4"),
-                Quote("", "author 5", "", "", 0, "book 5"),
-                Quote("", "author 6", "", "", 0, "book 6"),
+                Quote(1, "author 1", "", "", "",0, "book 1"),
+//                Quote("", "author 2", "", "", 0, "book 2"),
+//                Quote("", "author 3", "", "", 0, "book 3"),
+//                Quote("", "author 4", "", "", 0, "book 4"),
+//                Quote("", "author 5", "", "", 0, "book 5"),
+//                Quote("", "author 6", "", "", 0, "book 6"),
             )
         )
         //Act
