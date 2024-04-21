@@ -44,6 +44,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
 
+    implementation(Dependencies.google_gson)
+
     testImplementation("junit:junit:4.13.2")
     //testImplementation("junit:junit:4.12")
 

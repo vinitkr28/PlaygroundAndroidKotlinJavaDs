@@ -47,4 +47,22 @@ https://youtube.com/playlist?list=PLRKyZvuMYSIMKOSCLYPVAtqLGqQa0JtU5&si=ulzsV8eR
     - @Parameterized.Parameters(name = "isPallindromeLogic2 - {index} : {0} is pallindrome - {1}")
 
 
-3. 
+3. Android Instrumentation Tests Tutorial | Assert Exceptions Kotlin - CheezyCode - Hindi
+   https://youtu.be/crd4IPEJtkI?si=ftdiiNjJO0yX5Wll
+   cheezy_code/unit_testing/3-Assert-Exceptions-Kotlin
+
+
+    @Test
+    fun testPallindrome(){
+        //Arrange
+        //Act
+        //Assert
+    }
+
+    - @RunWith(value = Parameterized::class)
+    - @JvmStatic
+    - @Parameterized.Parameters(name = "isPallindromeLogic2 - {index} : {0} is pallindrome - {1}")
+
+
+
+4. 

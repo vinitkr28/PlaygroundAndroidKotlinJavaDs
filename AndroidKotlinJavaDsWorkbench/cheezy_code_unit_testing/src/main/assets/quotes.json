@@ -1,0 +1,122 @@
+[
+  {
+    "book_name": "As a man thinketh",
+    "author": "James allen ",
+    "amazon_link": "https://amzn.eu/d/6HorzR2",
+    "genre": "Personal Development",
+    "reading_time_in_hr_approx": 2,
+    "availability" : "Free with Kindle app"
+  },
+  {
+    "book_name": "A Christmas carol",
+    "author": "Charles Dickens",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Classic Literature",
+    "reading_time_in_hr_approx": 3,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Rich dad, poor dad",
+    "author": "Robert Kiyosaki",
+    "amazon_link": "https://amzn.eu/d/bCwwJD2",
+    "genre": "Personal Finance",
+    "reading_time_in_hr_approx": 4,
+    "availability" : "Free with Amazon prime"
+  },
+  {
+    "book_name": "Diary of a young girl Anne frank",
+    "author": "Anne Frank",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Memoir",
+    "reading_time_in_hr_approx": 4,
+    "availability" : ""
+  },
+  {
+    "book_name": "A secret garden",
+    "author": "Frances Hodgson Burnett",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Fiction",
+    "reading_time_in_hr_approx": 4,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Stories from Tagore",
+    "author": "Rabindranath Tagore",
+    "amazon_link": "https://amzn.eu/d/caFZt4M",
+    "genre": "Short Stories",
+    "reading_time_in_hr_approx": 4,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Animal farm ",
+    "author": "George Orwell",
+    "amazon_link": "https://amzn.eu/d/i202A0W",
+    "genre": "Political Satire",
+    "reading_time_in_hr_approx": 4,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "The great Gatsby",
+    "author": "George Orwell",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Classic Literature",
+    "reading_time_in_hr_approx": 5,
+    "availability" : "Free with Amazon prime"
+  },
+  {
+    "book_name": "Black beauty",
+    "author": "Anna Sewell",
+    "amazon_link": "https://amzn.eu/d/buGZDve",
+    "genre": "Fiction",
+    "reading_time_in_hr_approx": 5,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Wings of fire",
+    "author": "A.P.J. Abdul Kalam",
+    "amazon_link": "https://amzn.eu/d/5WWQgVa",
+    "genre": "Autobiography",
+    "reading_time_in_hr_approx": 5,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Frankenstein",
+    "author": "Mary Shelley ",
+    "amazon_link": "https://amzn.eu/d/aIm2d8Y",
+    "genre": "Gothic Fiction",
+    "reading_time_in_hr_approx": 7,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "1984",
+    "author": "George Orwell",
+    "amazon_link": "https://amzn.eu/d/dti4W3V",
+    "genre": "Dystopian Fiction",
+    "reading_time_in_hr_approx": 8,
+    "availability" : "Free with Amazon prime"
+  },
+  {
+    "book_name": "Little women",
+    "author": "Louisa May Alcott",
+    "amazon_link": "https://amzn.eu/d/emtlAMt",
+    "genre": "Classic Literature",
+    "reading_time_in_hr_approx": 8,
+    "availability" : "Free with Kindle"
+  },
+  {
+    "book_name": "Palace of illusions",
+    "author": "Chitra Banerjee Divakaruni ",
+    "amazon_link": "https://amzn.eu/d/9josqCl",
+    "genre": "Historical Fiction",
+    "reading_time_in_hr_approx": 10,
+    "availability" : ""
+  },
+  {
+    "book_name": "The immortals of meluha ",
+    "author": "Amish Tripathi",
+    "amazon_link": "https://amzn.eu/d/7g4fUdb",
+    "genre": "Mythological Fiction",
+    "reading_time_in_hr_approx": 10,
+    "availability" : ""
+  }
+]
