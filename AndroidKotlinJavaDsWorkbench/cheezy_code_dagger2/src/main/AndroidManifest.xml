@@ -18,8 +18,18 @@
             </intent-filter>
         </activity>-->
 
-        <activity
+        <!--<activity
             android:name=".chapter3.UserRegistration3Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <activity
+            android:name=".chapter4.UserRegistration4Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
