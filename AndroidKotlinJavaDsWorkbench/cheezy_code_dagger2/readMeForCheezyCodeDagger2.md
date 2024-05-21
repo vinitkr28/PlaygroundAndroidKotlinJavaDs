@@ -36,7 +36,7 @@
 
 
 ##### Concept - 
-1. [ ] Consumer
-2. [ ] Producer
-3. [ ] Connector
+1. [ ] Consumer (@Inject)
+2. [ ] Producer (@Module, @Provides, @Binds)
+3. [ ] Connector (@Component)
    
