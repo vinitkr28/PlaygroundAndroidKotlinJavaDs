@@ -1,11 +1,10 @@
-package cheezy_code.dagger2.chapter2
+package cheezy_code.dagger2.chapter4
 
-import cheezy_code.dagger2.chapter4.EmailService3
-import cheezy_code.dagger2.chapter3.UserRepository3
+import javax.inject.Inject
 
-class UserRegistrationService2b(
-    private val userRepository: UserRepository3,
-    private val emailService: EmailService3
+class UserRegistrationService4 @Inject constructor(
+    private val userRepository: UserRepository4,
+    private val emailService: EmailService4
 ) {
     fun registerUser(email: String, password: String) {
         userRepository.saveUser(email, password)
