@@ -46,35 +46,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    /*implementation("com.google.dagger:dagger:2.40.5")
-    kapt("com.google.dagger:dagger-compiler:2.40.5")*/
-
-
-    /*
-    // Dagger dependencies
-    val dagger_version = "2.44"
-    implementation("com.google.dagger:dagger:$dagger_version")
-    kapt("com.google.dagger:dagger-compiler:$dagger_version")
-    implementation("com.google.dagger:dagger-android:$dagger_version")
-//    implementation("com.google.dagger:dagger-android-support:$dagger_version") // if you use the support libraries
-    kapt("com.google.dagger:dagger-android-processor:$dagger_version")
-    */
-
-
-    /*
-    This block is moved inside buildSrc
-    val dagger_version = "2.48.1"
-    implementation("com.google.dagger:dagger:$dagger_version")
-    implementation("com.google.dagger:dagger-android:$dagger_version")
-    implementation("com.google.dagger:dagger-android-support:$dagger_version")
-    kapt("com.google.dagger:dagger-compiler:$dagger_version")
-    kapt("com.google.dagger:dagger-android-processor:$dagger_version")
-    */
-
-    implementation(Dependencies.dagger)
-    implementation(Dependencies.dagger_android)
-    implementation(Dependencies.dagger_android_support)
-    kapt(Dependencies.kapt_dagger_compiler)
-    kapt(Dependencies.kapt_dagger_android_processor)
 }
