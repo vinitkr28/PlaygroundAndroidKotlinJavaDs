@@ -1,6 +1,8 @@
-package cheezy_code.dagger2.chapter2
+package cheezy_code.dagger2.chapter3
 
-class UserRegistrationService3(
+import javax.inject.Inject
+
+class UserRegistrationService3 @Inject constructor(
     private val userRepository: UserRepository3,
     private val emailService: EmailService3
 ) {

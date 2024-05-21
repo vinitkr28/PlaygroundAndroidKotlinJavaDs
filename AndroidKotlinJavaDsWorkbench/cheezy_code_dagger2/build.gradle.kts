@@ -48,6 +48,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation(Dependencies.dagger)
-    kapt(Dependencies.kapt_dagger_compiler)
+
+    implementation(Dependencies.dagger)//
+    implementation(Dependencies.dagger_android)
+    implementation(Dependencies.dagger_android_support)
+    kapt(Dependencies.kapt_dagger_compiler)//
+    kapt(Dependencies.kapt_dagger_android_processor)
 }
