@@ -1,6 +1,5 @@
 package cheezy_code.dagger2.chapter4
 
-import cheezy_code.dagger2.chapter3.EmailService3
 import dagger.Component
 
 @Component
