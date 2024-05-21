@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
         <activity
-            android:name=".chapter2.UserRegistration2Activity"
+            android:name=".chapter2.UserRegistration3Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
