@@ -21,5 +21,22 @@
    4. Lifetime Of Objects (Reusability)
     
       * code cleanup
-      * 
+
+
+### 2. [Dagger 2 & Manual Dependency Injection Tutorial - CheezyCode (Hindi) #2](https://youtu.be/cg0yCHW2Keg?si=mtleHrSBxm_0cJf1)
+
+   1. Dagger is a fully static, compile-time dependency injection framework.
+   2. Compile time checking is performed if Dagger can create the required objects.
+   3. Annotation Based
+
+         * Dagger will behave as a system for us to create required objects.
+         * Dagger will help us inject these objects.
+         * Dagger will manage the lifetime of the objects.
+         * Dagger will help us write manageable code.
+
+
+##### Concept - 
+1. [ ] Consumer
+2. [ ] Producer
+3. [ ] Connector
    
