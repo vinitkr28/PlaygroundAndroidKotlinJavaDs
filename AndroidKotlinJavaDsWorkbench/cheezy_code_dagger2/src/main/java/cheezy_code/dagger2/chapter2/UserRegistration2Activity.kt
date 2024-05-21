@@ -3,6 +3,9 @@ package cheezy_code.dagger2.chapter2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
+import cheezy_code.dagger2.chapter3.EmailService3
+import cheezy_code.dagger2.chapter3.UserRegistrationService3
+import cheezy_code.dagger2.chapter3.UserRepository3
 
 class UserRegistration2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
