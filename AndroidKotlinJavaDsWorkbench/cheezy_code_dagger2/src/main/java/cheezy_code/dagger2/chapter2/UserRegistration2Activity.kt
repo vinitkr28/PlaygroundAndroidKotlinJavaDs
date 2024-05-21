@@ -17,7 +17,7 @@ class UserRegistration2Activity : AppCompatActivity() {
 
 
         val emailService2 = EmailService2()
-        val userRepository2 = UserRepository3()
+        val userRepository2 = UserRepository2()
 
         val userRegistrationService2b = UserRegistrationService2b(
             emailService = emailService2,
