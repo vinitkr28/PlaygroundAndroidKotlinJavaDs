@@ -1,11 +1,8 @@
 package cheezy_code.dagger2.chapter2
 
-import cheezy_code.dagger2.chapter4.EmailService3
-import cheezy_code.dagger2.chapter3.UserRepository3
-
 class UserRegistrationService2a {
-    private val userRepository = UserRepository3()
-    private val emailService = EmailService3()
+    private val userRepository = UserRepository2()
+    private val emailService = EmailService2()
 
     fun registerUser(email: String, password: String) {
         userRepository.saveUser(email, password)

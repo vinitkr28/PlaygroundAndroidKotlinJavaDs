@@ -3,8 +3,6 @@ package cheezy_code.dagger2.chapter2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
-import cheezy_code.dagger2.chapter4.EmailService3
-import cheezy_code.dagger2.chapter4.UserRegistrationService3
 import cheezy_code.dagger2.chapter3.UserRepository3
 
 class UserRegistration2Activity : AppCompatActivity() {
@@ -18,10 +16,10 @@ class UserRegistration2Activity : AppCompatActivity() {
         */
 
 
-        val emailService2 = EmailService3()
+        val emailService2 = EmailService2()
         val userRepository2 = UserRepository3()
 
-        val userRegistrationService2b = UserRegistrationService3(
+        val userRegistrationService2b = UserRegistrationService2b(
             emailService = emailService2,
             userRepository = userRepository2
         )
