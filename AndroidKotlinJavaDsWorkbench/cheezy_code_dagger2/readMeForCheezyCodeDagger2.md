@@ -39,4 +39,19 @@
 1. [ ] Consumer (@Inject)
 2. [ ] Producer (@Module, @Provides, @Binds)
 3. [ ] Connector (@Component)
+
+
+### 3. [Dagger 2 @Inject & @Component Tutorial - CheezyCode (Hindi) #3](https://youtu.be/vcr-wW50t8g?si=qjqvHVML0GgUo1FE)
+
+   1. 
+   2. 
+   3. 
+
+        * 
+
+
+##### Concept -
+1. [ ] 
+2. [ ] 
+3. [ ] 
    
