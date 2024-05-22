@@ -83,4 +83,39 @@
 ##### Concept -
 1. [ ] 
 2. [ ] 
+3. [ ]
+
+
+
+### 6. [Dagger 2 @Named Annotation & Qualifiers Tutorial - CheezyCode (Hindi) #6](https://youtu.be/z31Qfxyz5QM?si=xoCcT-k2CZxbHxik)
+
+1. @Named Annotation
+2. Qualifiers
+3.
+
+    *
+
+
+##### Concept -
+1. [ ] 
+2. [ ] 
 3. [ ] 
+
+
+### 7. [Dagger 2 Component Factory Tutorial with @BindsInstance - CheezyCode (Hindi) #7](https://youtu.be/LvAiu9yVFT0?si=vCnnDieXQU9eS6vB)
+
+1. Component Factory with @BindsInstance
+2. 
+3.
+
+       val db = Room.databaseBuilder(
+          applicationContext,
+          AppDatabase::class.java, "database-name"
+       ).build()
+
+
+1. [ ] When we got the object at runtime
+2. [ ] 
+3. [ ] 
+
+

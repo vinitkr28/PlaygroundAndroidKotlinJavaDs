@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class NotificationServiceModule {
+class NotificationServiceModule5 {
 
     @Provides
     fun getMessageService(): NotificationService5 {

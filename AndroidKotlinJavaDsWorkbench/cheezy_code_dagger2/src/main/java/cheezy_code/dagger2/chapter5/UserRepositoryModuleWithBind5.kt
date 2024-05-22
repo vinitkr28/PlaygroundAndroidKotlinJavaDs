@@ -6,7 +6,7 @@ import dagger.Provides
 
 
 @Module
-class UserRepositoryModule {
+abstract class UserRepositoryModuleWithBind5 {
 
     /*@Provides
     fun getFirebaseRepository(): UserRepository5 {
@@ -16,10 +16,12 @@ class UserRepositoryModule {
 
 
 
-    @Provides
+    /*@Provides
     fun getSQLRepository(sqlRepository5: SQLRepository5): UserRepository5 {
         return sqlRepository5
-    }
+    }*/
 
 
+    @Binds
+    abstract fun getFirebaseRepository(sqlRepository5: SQLRepository5): UserRepository5
 }

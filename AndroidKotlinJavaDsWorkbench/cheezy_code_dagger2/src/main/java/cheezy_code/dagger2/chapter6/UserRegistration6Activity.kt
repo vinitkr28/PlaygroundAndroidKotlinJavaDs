@@ -1,25 +1,21 @@
-package cheezy_code.dagger2.chapter4
+package cheezy_code.dagger2.chapter6
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
-import cheezy_code.dagger2.chapter3.DaggerUserRegistrationComponent3
 import javax.inject.Inject
 
-class UserRegistration4Activity : AppCompatActivity() {
+class UserRegistration6Activity : AppCompatActivity() {
 
     @Inject
-    lateinit var userRegistrationService: UserRegistrationService4
-
-//    @Inject
-//    lateinit var emailService: EmailService4
+    lateinit var userRegistrationService: UserRegistrationService6
 
     @Inject
-    lateinit var emailService: NotificationService4
+    lateinit var emailService: EmailService6
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main4)
+        setContentView(R.layout.activity_main6)
 
         /*
         val userRegistrationService2a = UserRegistrationService2a()
@@ -43,16 +39,17 @@ class UserRegistration4Activity : AppCompatActivity() {
 
 
 
-        //error: [Dagger/MissingBinding] cheezy_code.dagger2.chapter4.UserRepository4 cannot be provided without an @Provides-annotated method.
-//        val component = DaggerUserRegistrationComponent4.builder().build()
-//        component.inject(this)
+        /*
+        val component = DaggerUserRegistrationComponent5.builder().build()
+        component.inject(this)
 
-        /*val userRegistrationService = component.getUserRegistrationService()
-        val emailService = component.getEmailService()*/
+        *//*val userRegistrationService = component.getUserRegistrationService()
+        val emailService = component.getEmailService()*//*
 
         emailService.send("", "", null)
 
         userRegistrationService.registerUser("abc@xyz.com", "1234567890")
+        */
 
     }
 }

@@ -1,21 +1,22 @@
-package cheezy_code.dagger2.chapter5
+package cheezy_code.dagger2.chapter6
 
 import android.util.Log
 import javax.inject.Inject
 
-private const val TAG = "EmailService"
+private const val TAG = "NotificationService6"
 
-interface NotificationService5 {
+interface NotificationService6 {
     fun send(to: String, from: String, body: String?)
 }
-class EmailService5 @Inject constructor(): NotificationService5 {
+
+class EmailService6 @Inject constructor() : NotificationService6 {
 
     override fun send(to: String, from: String, body: String?) {
         Log.d(TAG, "Email Sent")
     }
 }
 
-class MessageService5: NotificationService5 {
+class MessageService6 : NotificationService6 {
 
     override fun send(to: String, from: String, body: String?) {
         Log.d(TAG, "Message Sent")
