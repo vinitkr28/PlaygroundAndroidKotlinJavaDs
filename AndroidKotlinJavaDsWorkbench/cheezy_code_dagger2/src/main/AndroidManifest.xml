@@ -4,6 +4,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:name=".chapter9_application_component.UserApplication"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -79,7 +80,7 @@
         </activity>-->
 
         <activity
-            android:name=".chapter9_application_component.UserRegistration9Activity"
+            android:name=".chapter9_application_component.views.UserRegistration9Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

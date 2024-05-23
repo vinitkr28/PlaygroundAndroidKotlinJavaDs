@@ -1,4 +1,4 @@
-package cheezy_code.dagger2.chapter9_application_component
+package cheezy_code.dagger2.chapter9_application_component.dagger
 
 import cheezy_code.dagger2.chapter9_application_component.SQLRepository9
 import cheezy_code.dagger2.chapter9_application_component.UserRepository9

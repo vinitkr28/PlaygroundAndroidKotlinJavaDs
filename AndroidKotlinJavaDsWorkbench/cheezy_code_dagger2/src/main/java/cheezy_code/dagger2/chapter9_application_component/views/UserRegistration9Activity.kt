@@ -1,8 +1,11 @@
-package cheezy_code.dagger2.chapter9_application_component
+package cheezy_code.dagger2.chapter9_application_component.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
+import cheezy_code.dagger2.chapter9_application_component.services.EmailService9
+import cheezy_code.dagger2.chapter9_application_component.UserApplication
+import cheezy_code.dagger2.chapter9_application_component.services.UserRegistrationService9
 import javax.inject.Inject
 
 class UserRegistration9Activity : AppCompatActivity() {
@@ -12,6 +15,9 @@ class UserRegistration9Activity : AppCompatActivity() {
 
     @Inject
     lateinit var emailService: EmailService9
+
+    @Inject
+    lateinit var emailService2: EmailService9
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +75,16 @@ class UserRegistration9Activity : AppCompatActivity() {
         */
 
 
+        /*
         val component = DaggerUserRegistrationComponent9WithFactory
             .factory().create(33)
+        */
+
+
+
+        val component = (application as UserApplication).userRegistrationComponent
+        component.inject(this)
+
+        userRegistrationService.registerUser("abc@xyz.com", "0987654321")
     }
 }

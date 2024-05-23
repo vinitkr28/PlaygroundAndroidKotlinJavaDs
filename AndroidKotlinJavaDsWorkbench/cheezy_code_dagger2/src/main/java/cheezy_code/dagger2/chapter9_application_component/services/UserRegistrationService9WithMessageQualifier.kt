@@ -1,5 +1,7 @@
-package cheezy_code.dagger2.chapter9_application_component
+package cheezy_code.dagger2.chapter9_application_component.services
 
+import cheezy_code.dagger2.chapter9_application_component.UserRepository9
+import cheezy_code.dagger2.chapter9_application_component.dagger.MessageQualifier9
 import javax.inject.Inject
 
 class UserRegistrationService9WithMessageQualifier @Inject constructor(

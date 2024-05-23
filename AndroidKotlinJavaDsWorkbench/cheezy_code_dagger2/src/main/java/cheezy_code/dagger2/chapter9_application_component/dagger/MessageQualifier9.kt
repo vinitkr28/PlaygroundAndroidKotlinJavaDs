@@ -1,4 +1,4 @@
-package cheezy_code.dagger2.chapter9_application_component
+package cheezy_code.dagger2.chapter9_application_component.dagger
 
 import java.lang.annotation.Documented
 import java.lang.annotation.Retention
