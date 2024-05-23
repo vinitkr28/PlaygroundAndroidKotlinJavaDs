@@ -119,3 +119,16 @@
 3. [ ] 
 
 
+### 8. [Dagger 2 @Singleton Annotation & @Scopes - CheezyCode (Hindi) #8](https://youtu.be/pdS2JtfrXFs?si=cxXUjy1y83J0sIQq)
+
+1. @Singleton Annotation
+2. Scopes
+3.
+
+    
+
+
+1. [ ] 
+2. [ ] 
+3. [ ] 
+
