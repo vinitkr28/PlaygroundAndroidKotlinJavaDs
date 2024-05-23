@@ -104,8 +104,8 @@
 
 ### 7. [Dagger 2 Component Factory Tutorial with @BindsInstance - CheezyCode (Hindi) #7](https://youtu.be/LvAiu9yVFT0?si=vCnnDieXQU9eS6vB)
 
-1. Component Factory with @BindsInstance
-2. 
+1. Component Factory 
+2. Pass Value To Modules At Runtime
 3.
 
        val db = Room.databaseBuilder(

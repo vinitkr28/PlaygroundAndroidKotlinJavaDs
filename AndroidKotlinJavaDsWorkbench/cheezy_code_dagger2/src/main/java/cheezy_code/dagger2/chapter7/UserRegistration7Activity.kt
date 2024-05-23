@@ -51,5 +51,25 @@ class UserRegistration7Activity : AppCompatActivity() {
         userRegistrationService.registerUser("abc@xyz.com", "1234567890")
         */
 
+
+        /*
+        * chapter7
+        * */
+
+        /*val component = DaggerUserRegistrationComponent7
+            .builder()
+            .notificationServiceModule7WithMessageQualifier(NotificationServiceModule7WithMessageQualifier(45))//if this will not set then it will break at runtime
+            .build()*/
+
+        /*
+        val component = DaggerUserRegistrationComponent7WithFactory
+            .builder()
+            .notificationServiceModule7WithMessageQualifier(NotificationServiceModule7WithMessageQualifier(45))
+            .build()
+        */
+
+
+        val component = DaggerUserRegistrationComponent7WithFactory
+            .factory().create(33)
     }
 }
