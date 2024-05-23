@@ -132,3 +132,17 @@
 2. [ ] 
 3. [ ] 
 
+
+
+### 9. [Dagger 2 Application Component, @Singleton & @Scopes - CheezyCode (Hindi) #9](https://youtu.be/cTmsG2TTFVc?si=Pc_FF3H1MlIAFChF)
+
+1. 
+2. 
+3.
+
+
+
+
+1. [ ] 
+2. [ ] 
+3. [ ] 
