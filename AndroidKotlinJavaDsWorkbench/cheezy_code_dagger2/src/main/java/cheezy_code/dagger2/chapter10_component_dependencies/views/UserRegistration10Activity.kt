@@ -3,7 +3,7 @@ package cheezy_code.dagger2.chapter10_component_dependencies.views
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
-import cheezy_code.dagger2.chapter10_component_dependencies.UserApplication
+import cheezy_code.dagger2.chapter10_component_dependencies.UserApplication10
 import cheezy_code.dagger2.chapter10_component_dependencies.services.EmailService10
 import cheezy_code.dagger2.chapter10_component_dependencies.services.UserRegistrationService10
 import javax.inject.Inject
@@ -82,7 +82,7 @@ class UserRegistration10Activity : AppCompatActivity() {
 
 
 
-        val component = (application as UserApplication).userRegistrationComponent
+        val component = (application as UserApplication10).userRegistrationComponent
         component.inject(this)
 
         userRegistrationService.registerUser("abc@xyz.com", "0987654321")
