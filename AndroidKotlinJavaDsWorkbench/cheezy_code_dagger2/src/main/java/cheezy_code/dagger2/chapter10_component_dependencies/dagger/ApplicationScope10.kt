@@ -1,4 +1,4 @@
-package cheezy_code.dagger2.chapter9_application_component.dagger
+package cheezy_code.dagger2.chapter10_component_dependencies.dagger
 
 import java.lang.annotation.Documented
 import java.lang.annotation.Retention
@@ -8,4 +8,4 @@ import javax.inject.Scope
 @Scope
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-annotation class ApplicationScope()
+annotation class ApplicationScope10()

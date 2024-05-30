@@ -1,27 +1,27 @@
-package cheezy_code.dagger2.chapter9_application_component.views
+package cheezy_code.dagger2.chapter10_component_dependencies.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cheezy_code.dagger2.R
-import cheezy_code.dagger2.chapter10_component_dependencies.services.EmailService9
 import cheezy_code.dagger2.UserApplication
-import cheezy_code.dagger2.chapter10_component_dependencies.services.UserRegistrationService9
+import cheezy_code.dagger2.chapter10_component_dependencies.services.EmailService10
+import cheezy_code.dagger2.chapter10_component_dependencies.services.UserRegistrationService10
 import javax.inject.Inject
 
-class UserRegistration9Activity : AppCompatActivity() {
+class UserRegistration10Activity : AppCompatActivity() {
 
     @Inject
-    lateinit var userRegistrationService: UserRegistrationService9
+    lateinit var userRegistrationService: UserRegistrationService10
 
     @Inject
-    lateinit var emailService: EmailService9
+    lateinit var emailService: EmailService10
 
     @Inject
-    lateinit var emailService2: EmailService9
+    lateinit var emailService2: EmailService10
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main9)
+        setContentView(R.layout.activity_main10)
 
         /*
         val userRegistrationService2a = UserRegistrationService2a()

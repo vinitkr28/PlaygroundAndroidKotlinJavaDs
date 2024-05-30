@@ -1,8 +1,8 @@
 package cheezy_code.dagger2.chapter9_application_component.dagger
 
-import cheezy_code.dagger2.chapter9_application_component.services.EmailService9
-import cheezy_code.dagger2.chapter9_application_component.services.MessageService9
-import cheezy_code.dagger2.chapter9_application_component.services.NotificationService9
+import cheezy_code.dagger2.chapter10_component_dependencies.services.EmailService9
+import cheezy_code.dagger2.chapter10_component_dependencies.services.MessageService9
+import cheezy_code.dagger2.chapter10_component_dependencies.services.NotificationService9
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named

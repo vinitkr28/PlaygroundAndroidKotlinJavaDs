@@ -4,7 +4,7 @@ import cheezy_code.dagger2.chapter9_application_component.views.UserRegistration
 import dagger.BindsInstance
 import dagger.Component
 
-@ApplicationScope
+@ApplicationScope9
 @Component(modules = [UserRepositoryModule9::class, NotificationServiceModule9WithMessageQualifierWithFactory::class])
 interface UserRegistrationComponent9WithFactory {
 
