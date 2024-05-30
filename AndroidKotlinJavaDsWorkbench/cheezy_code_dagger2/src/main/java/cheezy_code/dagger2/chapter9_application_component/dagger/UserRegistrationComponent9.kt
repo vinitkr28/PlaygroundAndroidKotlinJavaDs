@@ -1,6 +1,5 @@
 package cheezy_code.dagger2.chapter9_application_component.dagger
 
-import cheezy_code.dagger2.chapter10_component_dependencies.dagger.UserRepositoryModule9
 import cheezy_code.dagger2.chapter9_application_component.views.UserRegistration9Activity
 import dagger.Component
 

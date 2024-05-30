@@ -145,4 +145,21 @@
 
 1. [ ] 
 2. [ ] 
-3. [ ] 
+
+
+
+### 10. [Dagger 2 Concepts Revisted, Component Dependencies - CheezyCode (Hindi) #10](https://youtu.be/szs80OgMsy8?si=EAh8As-Y7_EJrIvQ)
+
+1.
+2.
+3.
+
+
+
+
+1. [ ] 
+2. [ ] 
+
+
+
+  

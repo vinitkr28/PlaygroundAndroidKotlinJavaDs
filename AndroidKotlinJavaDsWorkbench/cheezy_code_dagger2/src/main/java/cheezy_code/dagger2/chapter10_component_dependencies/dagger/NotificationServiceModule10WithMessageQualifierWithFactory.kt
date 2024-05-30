@@ -1,6 +1,5 @@
 package cheezy_code.dagger2.chapter10_component_dependencies.dagger
 
-import cheezy_code.dagger2.chapter10_component_dependencies.dagger.MessageQualifier10
 import cheezy_code.dagger2.chapter10_component_dependencies.services.EmailService10
 import cheezy_code.dagger2.chapter10_component_dependencies.services.MessageService10
 import cheezy_code.dagger2.chapter10_component_dependencies.services.NotificationService10

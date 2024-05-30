@@ -1,13 +1,13 @@
-package cheezy_code.dagger2.chapter9_application_component.services
+package cheezy_code.dagger2.chapter10_component_dependencies.services
 
-import cheezy_code.dagger2.chapter10_component_dependencies.services.NotificationService9
-import cheezy_code.dagger2.chapter10_component_dependencies.UserRepository9
-import cheezy_code.dagger2.chapter9_application_component.dagger.MessageQualifier9
+import cheezy_code.dagger2.chapter10_component_dependencies.UserRepository10
+import cheezy_code.dagger2.chapter10_component_dependencies.dagger.MessageQualifier10
+import cheezy_code.dagger2.chapter9_application_component.services.NotificationService9
 import javax.inject.Inject
 
-class UserRegistrationService9WithMessageQualifier @Inject constructor(
-    private val userRepository: UserRepository9,
-    @MessageQualifier9 private val notificationService: NotificationService9
+class UserRegistrationService10WithMessageQualifier @Inject constructor(
+    private val userRepository: UserRepository10,
+    @MessageQualifier10 private val notificationService: NotificationService9
 ) {
     fun registerUser(email: String, password: String) {
         userRepository.saveUser(email, password)

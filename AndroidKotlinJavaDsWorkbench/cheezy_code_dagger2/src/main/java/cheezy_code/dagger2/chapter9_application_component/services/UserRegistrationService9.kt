@@ -1,7 +1,6 @@
 package cheezy_code.dagger2.chapter9_application_component.services
 
-import cheezy_code.dagger2.chapter10_component_dependencies.services.NotificationService9
-import cheezy_code.dagger2.chapter10_component_dependencies.UserRepository9
+import cheezy_code.dagger2.chapter9_application_component.UserRepository9
 import javax.inject.Inject
 import javax.inject.Named
 
