@@ -50,7 +50,17 @@ package com
 
 fun main() {
 
+
+//    val set: HashSet<Integ> = HashSet()
+//    set.add(5)
+
+
+    val values = arrayOf(2, 3)
     val arr = arrayOf(7, 8, 3, 1, 2)
+
+    arr.any { it in values }
+
+
     for (index in 0 until arr.size-1) {
         var tempIndex = -1
         for (j in index until arr.size-1){
