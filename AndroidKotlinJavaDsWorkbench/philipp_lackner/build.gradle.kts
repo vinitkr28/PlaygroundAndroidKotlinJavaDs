@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
+    id("de.mannodermaus.android-junit5") version "1.9.3.0"
 }
 
 android {
@@ -66,4 +68,19 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    //Junit Jupiter
+    implementation(Dependencies.junit_jupiter_api)
+    implementation(Dependencies.junit_jupiter_engine)
+    implementation(Dependencies.junit_jupiter_params)
+
+    implementation("com.willowtreeapps.assertk:assertk:0.26.1")
+
+
+    // Retrofit
+    implementation(Dependencies.junit_retrofit)
+    implementation(Dependencies.junit_retrofit_converter_gson)
+
+
+
 }
