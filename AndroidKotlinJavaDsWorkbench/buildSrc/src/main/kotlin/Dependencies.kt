@@ -14,5 +14,19 @@ object Dependencies {
 
     //Google GSON
     const val google_gson =
-    "com.google.code.gson:gson:${Versions.googleGson}"
+        "com.google.code.gson:gson:${Versions.googleGson}"
+
+    //Junit Jupiter
+    const val junit_jupiter_api =
+        "org.junit.jupiter:junit-jupiter-api:${Versions.junit_jupiter_version}"
+    const val junit_jupiter_engine =
+        "org.junit.jupiter:junit-jupiter-engine:${Versions.junit_jupiter_version}"
+    const val junit_jupiter_params =
+        "org.junit.jupiter:junit-jupiter-params:${Versions.junit_jupiter_version}"
+
+    // Retrofit
+
+    const val junit_retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
+    const val junit_retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
+
 }
