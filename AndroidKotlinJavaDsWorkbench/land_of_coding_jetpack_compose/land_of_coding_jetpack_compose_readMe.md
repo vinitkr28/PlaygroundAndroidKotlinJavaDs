@@ -7,3 +7,6 @@
 
 
 ### 2/19. [Create your first jetpack compose application - jetpack compose basics](https://youtu.be/iEsa0M1-l6A?si=rKoSLqf_OKZ35E-K)
+
+
+### 3/19. [Jetpack compose layouts](https://youtu.be/asxCEOl27Io?si=SODNTsZzXsSol7Yz)
