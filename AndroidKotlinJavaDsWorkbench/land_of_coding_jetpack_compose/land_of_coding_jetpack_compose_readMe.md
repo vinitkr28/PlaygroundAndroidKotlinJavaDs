@@ -16,3 +16,6 @@
 
 
 ### 5/19. [Jetpack Compose State/Stateful/Stateless/Save the ui state](https://youtu.be/zTTRV-_Ubkg?si=dXfDh7BQYIV7Xpa_)
+
+
+### 6/19. [Text in Jetpack Compose From Beginner to Pro](https://youtu.be/mfNCRRY-uho?si=bUCRSRmJTMnR_6t9)
