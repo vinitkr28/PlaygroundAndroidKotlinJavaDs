@@ -10,3 +10,6 @@
 
 
 ### 3/19. [Jetpack compose layouts](https://youtu.be/asxCEOl27Io?si=SODNTsZzXsSol7Yz)
+
+
+### 4/19. [Jetpack Compose Modifier](https://youtu.be/vM0XhUOhnVI?si=K5EDJzXCFfWwKXeF)
