@@ -30,3 +30,5 @@ include(":mobile_app_info")
 include(":my_android_library")
 include(":androidtopics")
 include(":land_of_coding_jetpack_compose")
+include(":land_of_code_jetpack_compose_news_app")
+
