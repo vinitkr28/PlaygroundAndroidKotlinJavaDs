@@ -17,3 +17,6 @@ https://github.com/lofcoding/NewsApp/tree/master
 
 
 ### 4/19. [Onboarding Screen - Jetpack Compose Clean Architecture News App - part 4](https://youtu.be/rMhOCuc8XIE?si=NSXBwfqI2vx11hwo)
+
+
+### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=MYThA_DQTsYY5CeB)
