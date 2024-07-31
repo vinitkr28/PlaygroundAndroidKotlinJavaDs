@@ -1,6 +1,5 @@
 package com.philipp_lackner.testingcourse.shopping.domain
 
-import androidx.annotation.OpenForTesting
 import com.plcoding.testingcourse.shopping.domain.Product
 
 
