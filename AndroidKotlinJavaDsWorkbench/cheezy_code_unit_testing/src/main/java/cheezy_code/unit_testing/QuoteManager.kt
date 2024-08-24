@@ -8,12 +8,28 @@ import java.io.FileNotFoundException
 import java.io.InputStream
 
 private const val TAG = "QuoteManager"
+
 class QuoteManager {
 
     var quoteList = emptyArray<Quote>()
     var currentQuoteIndex = 0
 
     fun populateQuoteFromAssets(context: Context, fileName: String) {
+        var inputStream: InputStream? = null
+
+        inputStream = context.assets.open("quotes.json")
+        val size: Int = inputStream.available()
+        val buffer = ByteArray(size)
+        inputStream.read(buffer)
+        inputStream.close()
+        val json = String(buffer, Charsets.UTF_8)
+        val gson = Gson()
+        quoteList = gson.fromJson(json, Array<Quote>::class.java)
+
+
+    }
+
+    fun populateQuoteFromAssetsWithTryCatch(context: Context, fileName: String) {
         var inputStream: InputStream? = null
         try {
             inputStream = context.assets.open("quotes.json")
@@ -32,9 +48,8 @@ class QuoteManager {
             throw e;
         }*/
         catch (e: Exception) {
-            throw  e
-        }
-        finally {
+            throw e
+        } finally {
             inputStream?.close()
         }
 
