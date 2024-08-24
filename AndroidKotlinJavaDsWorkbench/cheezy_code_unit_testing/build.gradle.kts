@@ -45,6 +45,7 @@ dependencies {
 
 
     implementation(Dependencies.google_gson)
+    testImplementation(Dependencies.google_gson)
 
     testImplementation("junit:junit:4.13.2")
     //testImplementation("junit:junit:4.12")
