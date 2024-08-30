@@ -33,3 +33,4 @@ include(":land_of_coding_jetpack_compose")
 include(":land_of_code_jetpack_compose_news_app")
 
 include(":nativemobilebitsapp1")
+include(":nativemobilebitsapp1utilities")

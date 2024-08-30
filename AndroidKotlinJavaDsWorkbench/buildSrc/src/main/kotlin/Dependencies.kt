@@ -73,3 +73,8 @@ object Dependencies {
     val espressoCore by lazy { "androidx.test.espresso:espresso-core:${Versions.espressoCore}" }
     val junitExt by lazy { "androidx.test.ext:junit:${Versions.junitExt}" }
 }
+
+
+object Modules {
+    const val nativemobilebitsapp1utilities = ":nativemobilebitsapp1utilities"
+}
