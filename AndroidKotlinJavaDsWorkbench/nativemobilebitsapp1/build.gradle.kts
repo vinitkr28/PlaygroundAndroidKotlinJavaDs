@@ -51,14 +51,7 @@ android {
 
 dependencies {
 
-    implementation(Dependencies.coreKtx)
-    implementation(Dependencies.lifecycleRuntimeKtx)
-    implementation(Dependencies.composeActivity)
-    implementation(platform(Dependencies.composeBom))
-    implementation(Dependencies.composeUi)
-    implementation(Dependencies.composeGraphics)
-    implementation(Dependencies.composePreview)
-    implementation(Dependencies.composeMaterial3)
+    /*
     testImplementation(Dependencies.junit4)
     androidTestImplementation(Dependencies.junitExt)
     androidTestImplementation(Dependencies.espressoCore)
@@ -66,4 +59,15 @@ dependencies {
     androidTestImplementation(Dependencies.composeUiTestJunit4)
     debugImplementation(Dependencies.composeUiTooling)
     debugImplementation(Dependencies.composeUiTestManifest)
+    */
+
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.lifecycleRuntimeKtx)
+
+    implementation(Dependencies.composeActivity)
+    implementation(platform(Dependencies.composeBom))
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composePreview)
+    implementation(Dependencies.composeGraphics)
+    implementation(Dependencies.composeMaterial3)
 }
