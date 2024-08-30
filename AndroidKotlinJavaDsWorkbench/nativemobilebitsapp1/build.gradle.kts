@@ -70,4 +70,6 @@ dependencies {
     implementation(Dependencies.composePreview)
     implementation(Dependencies.composeGraphics)
     implementation(Dependencies.composeMaterial3)
+
+    implementation(project(Modules.nativemobilebitsapp1utilities))
 }
