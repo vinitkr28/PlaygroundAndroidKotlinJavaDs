@@ -59,7 +59,12 @@ fun OnBoardingPage(
     }
 }
 
-@Preview(name = "light_pixel", device = Devices.PIXEL_6_PRO, showSystemUi = true, showBackground = true)
+@Preview(
+    name = "light_pixel",
+    device = Devices.PIXEL_6_PRO,
+    showSystemUi = true,
+    showBackground = true
+)
 @Preview(
     name = "dark_pixel",
     device = Devices.PIXEL_6_PRO,

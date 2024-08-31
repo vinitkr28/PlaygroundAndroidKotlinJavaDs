@@ -1,6 +1,7 @@
 package land_of_code.jetpack_compose.news_app.presentation.common
 
 import android.widget.Button
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -44,7 +45,7 @@ fun NewsTextButton(
         Text(
             text = text,
             style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = Color.White
+            color = if (isSystemInDarkTheme()) Color.White else Color.Black
         )
     }
 
