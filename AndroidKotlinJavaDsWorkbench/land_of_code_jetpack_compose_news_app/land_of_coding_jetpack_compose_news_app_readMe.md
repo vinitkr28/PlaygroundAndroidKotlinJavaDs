@@ -17,3 +17,29 @@ https://github.com/lofcoding/NewsApp/tree/master
 
 
 ### 4/19. [Onboarding Screen - Jetpack Compose Clean Architecture News App - part 4](https://youtu.be/rMhOCuc8XIE?si=NSXBwfqI2vx11hwo)
+
+
+
+### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=qT_iRaxcTXUhSFmy)
+
+* Presentation Layer
+* Data Layer
+* Domain Layer
+
+[![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
+
+
+### 6/19. []()
+### 7/19. []()
+### 8/19. []()
+### 9/19. []()
+### 10/19. []()
+### 11/19. []()
+### 12/19. []()
+### 13/19. []()
+### 14/19. []()
+### 15/19. []()
+### 16/19. []()
+### 17/19. []()
+### 18/19. []()
+### 19/19. []()
