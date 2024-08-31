@@ -22,9 +22,23 @@ https://github.com/lofcoding/NewsApp/tree/master
 
 ### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=qT_iRaxcTXUhSFmy)
 
-* Presentation Layer
-* Data Layer
-* Domain Layer
+
+1. [ ] **Presentation** Layer
+    * Views
+    * ViewModel
+    * DI
+2. [ ] **Data** Layer
+    * DataSource {Remote/Local/Cache}
+    * Api {Services}
+    * Repository {impl}
+    * Model {Remote}
+    * Mapper {toDomain}
+3. [ ] **Domain** Layer
+    * Repository {interface} 
+    * Model {Domain} 
+    * UseCase
+
+
 
 [![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
 
