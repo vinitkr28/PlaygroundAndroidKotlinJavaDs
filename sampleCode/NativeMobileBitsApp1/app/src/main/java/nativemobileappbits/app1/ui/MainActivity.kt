@@ -1,4 +1,4 @@
-package nativemobilebits.app1
+package nativemobileappbits.app1.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,8 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import dagger.hilt.android.AndroidEntryPoint
-import nativemobilebits.app1.ui.navigation.AppNavigationGraph
-import nativemobilebits.app1.ui.theme.NativeMobileBitsApp1Theme
+import nativemobileappbits.app1.ui.navigation.AppNavigationGraph
+import nativemobileappbits.app1.ui.theme.NativeMobileAppBitsApp1Theme
+
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NativeMobileBitsApp1Theme {
+            NativeMobileAppBitsApp1Theme {
                 Surface(
                     modifier = Modifier
                         .fillMaxSize()

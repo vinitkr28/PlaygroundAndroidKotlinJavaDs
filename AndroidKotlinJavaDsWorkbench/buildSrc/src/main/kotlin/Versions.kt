@@ -3,6 +3,9 @@ object Versions {
 
     const val dagger_version = "2.48.1"
 
+    const val hilt = "2.48"
+    const val hiltCompiler = "1.0.0-alpha01"
+
 
     const val retrofit_version = "2.9.0"
 

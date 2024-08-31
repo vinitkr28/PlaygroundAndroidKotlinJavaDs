@@ -12,6 +12,12 @@ object Dependencies {
         "com.google.dagger:dagger-android-processor:${Versions.dagger_version}"
 
 
+    //HILT
+    val hiltAndroid by lazy { "androidx.hilt:hilt-android:${Versions.hilt}" }
+    val hiltAndroidCompiler by lazy { "com.google.dagger:hilt-android-compiler:${Versions.hiltCompiler}" }
+    val hiltCompiler by lazy { "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}" }
+
+
     //Google GSON
     const val google_gson =
         "com.google.code.gson:gson:${Versions.googleGson}"
