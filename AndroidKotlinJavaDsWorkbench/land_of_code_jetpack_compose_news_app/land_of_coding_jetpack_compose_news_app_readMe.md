@@ -43,7 +43,23 @@ https://github.com/lofcoding/NewsApp/tree/master
 [![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
 
 
-### 6/19. []()
+### 6/19. [Dagger Hilt - Jetpack Compose Clean Architecture News App - part 6](https://youtu.be/PDABkIkDE04?si=0b4Y_gKD9Gf3vYW5)
+
+1. [ ] **Dagger/Hilt**
+   1. Create Application class
+   2. add annotation @HiltAndroidApp
+   ```
+   @HiltAndroidApp
+   class NewsApplication: Application() {
+       override fun onCreate() {
+           super.onCreate()
+       }
+   }
+   ```
+   3. use this application class in```AndroidManifest.xml```
+   4. create interface```AppModule```
+   5. annotate Activity with````@AndroidEntryPoint````
+
 ### 7/19. []()
 ### 8/19. []()
 ### 9/19. []()
