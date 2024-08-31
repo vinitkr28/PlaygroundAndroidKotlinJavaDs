@@ -1,9 +1,9 @@
-package com.example.example
+package nativemobileappbits.app1.data.entity
 
 import com.google.gson.annotations.SerializedName
 
 
-data class Articles(
+data class Article(
 
     /*@SerializedName("source") var source: Source? = Source(),
     @SerializedName("author") var author: String? = null,
@@ -16,7 +16,7 @@ data class Articles(
 
 
     @SerializedName("source") var source: Source,
-    @SerializedName("author") var author: String,
+    @SerializedName("author") var author: String? = null,
     @SerializedName("title") var title: String,
     @SerializedName("description") var description: String? = null,
     @SerializedName("url") var url: String,

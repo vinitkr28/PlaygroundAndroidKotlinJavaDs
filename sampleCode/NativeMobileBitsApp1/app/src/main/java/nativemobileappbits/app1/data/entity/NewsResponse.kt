@@ -1,6 +1,5 @@
 package nativemobileappbits.app1.data.entity
 
-import com.example.example.Articles
 import com.google.gson.annotations.SerializedName
 
 data class NewsResponse(
@@ -11,5 +10,5 @@ data class NewsResponse(
 
     @SerializedName("status") var status: String,
     @SerializedName("totalResults") var totalResults: Int,
-    @SerializedName("articles") var articles: List<Articles>
+    @SerializedName("articles") var articles: List<Article>
 )

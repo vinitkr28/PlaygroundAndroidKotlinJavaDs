@@ -29,12 +29,22 @@ class NewsViewModel @Inject constructor(
     init {
         Log.d(TAG, "Init block of NewsViewModel")
 
-        getNews(AppConstants.COUNTRY)
+//        getNews(AppConstants.COUNTRY)
+        getNewsEverything()
     }
 
     private fun getNews(country: String) {
         viewModelScope.launch(Dispatchers.IO) {
             newsRepository.getNewsHeadline(country)
+                .collectLatest { newsRepository ->
+                    _news.value = newsRepository
+                }
+        }
+    }
+
+    private fun getNewsEverything() {
+        viewModelScope.launch(Dispatchers.IO) {
+            newsRepository.getNewsEverything()
                 .collectLatest { newsRepository ->
                     _news.value = newsRepository
                 }

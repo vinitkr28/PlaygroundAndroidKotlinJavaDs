@@ -1,14 +1,11 @@
-package com.example.example
+package nativemobileappbits.app1.data.entity
 
 import com.google.gson.annotations.SerializedName
 
 
 data class Source(
 
-    /*@SerializedName("id") var id: String? = null,
-    @SerializedName("name") var name: String? = null*/
-
-    @SerializedName("id") var id: String,
-    @SerializedName("name") var name: String
+    @SerializedName("id") var id: String? = null,
+    @SerializedName("name") var name: String? = null
 
 )

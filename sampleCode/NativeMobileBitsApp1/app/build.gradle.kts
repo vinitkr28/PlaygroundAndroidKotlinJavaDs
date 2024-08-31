@@ -2,13 +2,19 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+//    id("kotlin-kapt")
+//    id("dagger.hilt.android.plugin")
 //    id("com.google.dagger.hilt.android")
 
 //    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.ksp)
+//    alias(libs.plugins.ksp)
 //    alias(libs.plugins.dagger.hilt)
+
+
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
+
+    alias(libs.plugins.compose.compiler)
 
 }
 
@@ -49,7 +55,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
+        kotlinCompilerExtensionVersion = "1.7.10"
     }
     packaging {
         resources {
@@ -87,10 +93,14 @@ dependencies {
 //    kapt("com.google.dagger:hilt-android-compiler:2.42.1")
 
     // dagger -hilt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+//    implementation(libs.hilt.android)
+//    kapt(libs.hilt.compiler)
 //    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.hilt.navigation.compose)
+//    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-compiler:2.51.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
 
     implementation(libs.converter.gson)
@@ -98,10 +108,15 @@ dependencies {
     implementation(libs.converter.moshi)
     implementation(libs.moshi.kotlin)
 
+
+    implementation(libs.androidx.core.splashscreen)
+
+    implementation(libs.coil.compose)
+
     implementation(project(":utilities"))
 }
 
 // Allow references to generated code
-kapt {
-    correctErrorTypes = true
-}
+//kapt {
+//    correctErrorTypes = true
+//}
