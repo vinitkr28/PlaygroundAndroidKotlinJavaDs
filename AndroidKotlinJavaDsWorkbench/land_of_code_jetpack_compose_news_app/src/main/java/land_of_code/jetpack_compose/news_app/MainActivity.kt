@@ -7,6 +7,7 @@ import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,10 +23,12 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
+import land_of_code.jetpack_compose.news_app.presentation.navgraph.NavGraph
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.components.OnBoardingPage
@@ -36,14 +39,20 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject
-    lateinit var appEntryUseCases: AppEntryUseCases
+//    @Inject
+//    lateinit var appEntryUseCases: AppEntryUseCases
+
+    val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Tell the system to fit the window content below system bars (like status bar)
         WindowCompat.setDecorFitsSystemWindows(window, true)
-        installSplashScreen()
+        installSplashScreen().apply {
+            setKeepOnScreenCondition{
+                viewModel.splashCondition
+            }
+        }
         enableEdgeToEdge()
 
         //https://stackoverflow.com/questions/74429460/how-to-implement-transparent-status-bar-in-jetpack-compose-android
@@ -60,11 +69,14 @@ class MainActivity : ComponentActivity() {
         */
 
 
+        /*
         lifecycleScope.launch {
             appEntryUseCases.readAppEntry().collect{
                 Log.d("Test", "onCreate: $it")
             }
         }
+        */
+
         setContent {
             LandOfCodeNewsAppTheme {
                 /*Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -72,8 +84,13 @@ class MainActivity : ComponentActivity() {
                 }*/
 
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-                    val viewModel: OnBoardingViewModel = hiltViewModel()
-                    OnBoardingScreen(event = viewModel::onEvent)
+                    /*val viewModel: OnBoardingViewModel = hiltViewModel()
+                    OnBoardingScreen(event = viewModel::onEvent)*/
+
+                    //above line will go to navHost
+
+                    val startDestination = viewModel.startDestination
+                    NavGraph(startDestination = startDestination)
                 }
             }
         }

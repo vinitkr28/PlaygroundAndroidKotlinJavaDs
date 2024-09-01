@@ -45,6 +45,32 @@ https://github.com/lofcoding/NewsApp/tree/master
 
 ### 6/19. [Dagger Hilt - Jetpack Compose Clean Architecture News App - part 6](https://youtu.be/PDABkIkDE04?si=0b4Y_gKD9Gf3vYW5)
 
+`build.gradle.ks` Project level
+````
+plugins {
+- - -
+id("org.jetbrains.kotlin.android") version "1.9.21" apply false
+id("com.google.dagger.hilt.android") version "2.50" apply false
+}
+````
+
+
+`build.gradle.ks` App level
+```
+plugins {
+    - - -
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+}
+     - - - 
+     
+dependencies {
+    implementation("com.google.dagger:hilt-android:2.50")
+    kapt("com.google.dagger:hilt-compiler:2.50")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+}
+```
+
 1. [ ] **Dagger/Hilt**
    1. Create Application class
    2. add annotation @HiltAndroidApp
@@ -59,6 +85,13 @@ https://github.com/lofcoding/NewsApp/tree/master
    3. use this application class in`AndroidManifest.xml`
    4. create interface`AppModule`
    5. annotate Activity with`@AndroidEntryPoint`
+   ````
+   @AndroidEntryPoint
+   class MainActivity : ComponentActivity() {
+   - - -
+   }
+   ````
+   
 
 ### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=KH1lO3MCmSy73YjC)
 
@@ -68,7 +101,8 @@ class OnBoardingViewModel @Inject constructor(){
 
 }
 ```
-### 8/19. []()
+### 8/19. [Navgraph - Jetpack Compose Clean Architecture News App - part 8](https://youtu.be/FIX-BErk1lE?si=UXGS_r5y_XgAqkXu)
+
 ### 9/19. []()
 ### 10/19. []()
 ### 11/19. []()
@@ -83,8 +117,25 @@ class OnBoardingViewModel @Inject constructor(){
 
 
 
+| Library Name | Version | Package                        | Links | Documents |
+|--------------|---------|--------------------------------|-------|-----------|
+| Kotlin       | 1.9.21  | org.jetbrains.kotlin.android   | -     | -         |
+| Dagger/Hilt  | 2.50    | com.google.dagger.hilt.android | -     | -         |
+| -            | -       | -                              | -     | -         | 
+
+
+
+
+```
+
+```
+
+```
+********** # Some Rough Work # **********
+```
+
 <dl>
-  <dt>First Term</dt>
+  <dt>Library Name</dt>
   <dd>This is the definition of the first term.</dd>
   <dt>Second Term</dt>
   <dd>This is one definition of the second term. </dd>
@@ -92,27 +143,9 @@ class OnBoardingViewModel @Inject constructor(){
 </dl>
 
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
 
 
 
-
-| Syntax | Description |
-| --- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
 
 
 
