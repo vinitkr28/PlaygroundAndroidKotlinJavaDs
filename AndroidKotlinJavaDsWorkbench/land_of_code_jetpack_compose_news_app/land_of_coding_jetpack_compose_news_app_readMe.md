@@ -23,17 +23,17 @@ https://github.com/lofcoding/NewsApp/tree/master
 ### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=qT_iRaxcTXUhSFmy)
 
 
-1. [ ] **Presentation** Layer
+1. [x] **Presentation** Layer
     * Views
     * ViewModel
     * DI
-2. [ ] **Data** Layer
+2. [x] **Data** Layer
     * DataSource {Remote/Local/Cache}
     * Api {Services}
     * Repository {impl}
     * Model {Remote}
     * Mapper {toDomain}
-3. [ ] **Domain** Layer
+3. [x] **Domain** Layer
     * Repository {interface} 
     * Model {Domain} 
     * UseCase
@@ -56,11 +56,11 @@ https://github.com/lofcoding/NewsApp/tree/master
        }
    }
    ```
-   3. use this application class in```AndroidManifest.xml```
-   4. create interface```AppModule```
-   5. annotate Activity with````@AndroidEntryPoint````
+   3. use this application class in`AndroidManifest.xml`
+   4. create interface`AppModule`
+   5. annotate Activity with`@AndroidEntryPoint`
 
-### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=vo8xbgOfCDIPwOUy)
+### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=KH1lO3MCmSy73YjC)
 ### 8/19. []()
 ### 9/19. []()
 ### 10/19. []()
@@ -73,3 +73,93 @@ https://github.com/lofcoding/NewsApp/tree/master
 ### 17/19. []()
 ### 18/19. []()
 ### 19/19. []()
+
+
+
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+
+
+
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+
+
+
+
+
+
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+
+
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+
+
+
+~~The world is flat.~~ We now know that the world is round.
+
+
+Gone camping! :tent: Be back soon.
+
+That is so funny! :kissing_closed_eyes:
+
+https://gist.github.com/rxaviers/7360908
+
+
+I need to highlight these ==very important words==.
+
+
+H~2~O
+
+
+H<sub>2</sub>O
+
+X^2^
+
+X<sup>2</sup>
+
+`http://www.example.com`

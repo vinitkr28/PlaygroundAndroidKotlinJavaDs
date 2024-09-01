@@ -21,11 +21,13 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
+import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.components.OnBoardingPage
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.pages
 import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
@@ -70,7 +72,8 @@ class MainActivity : ComponentActivity() {
                 }*/
 
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-                    OnBoardingScreen()
+                    val viewModel: OnBoardingViewModel = hiltViewModel()
+                    OnBoardingScreen(event = viewModel::onEvent)
                 }
             }
         }

@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.MediumPadding2
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.PageIndicatorWidth
@@ -35,7 +36,9 @@ import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnBoardingScreen(modifier: Modifier = Modifier) {
+fun OnBoardingScreen(
+    event: (OnBoardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
@@ -93,8 +96,9 @@ fun OnBoardingScreen(modifier: Modifier = Modifier) {
                     text = buttonsState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pagerState.currentPage == 3) {
+                            if (pagerState.currentPage == 2) {
                                 //Navigate to the main screen and save a value in datastore preferences
+                                event(OnBoardingEvent.SaveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
@@ -125,7 +129,7 @@ fun OnBoardingScreen(modifier: Modifier = Modifier) {
 private fun OnBoardingScreenPreview() {
     LandOfCodeNewsAppTheme {
         Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-            OnBoardingScreen()
+            OnBoardingScreen {}
         }
     }
 }
