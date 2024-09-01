@@ -61,6 +61,13 @@ https://github.com/lofcoding/NewsApp/tree/master
    5. annotate Activity with`@AndroidEntryPoint`
 
 ### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=KH1lO3MCmSy73YjC)
+
+```
+@HiltViewModel
+class OnBoardingViewModel @Inject constructor(){
+
+}
+```
 ### 8/19. []()
 ### 9/19. []()
 ### 10/19. []()
