@@ -103,7 +103,7 @@ class OnBoardingViewModel @Inject constructor(){
 ```
 ### 8/19. [Navgraph - Jetpack Compose Clean Architecture News App - part 8](https://youtu.be/FIX-BErk1lE?si=UXGS_r5y_XgAqkXu)
 
-### 9/19. []()
+### 9/19. [System UI Controller - Jetpack Compose Clean Architecture News App - part 9](https://youtu.be/5s43YOl6w8w?si=t4vaMMy_b7HtMATG)
 ### 10/19. []()
 ### 11/19. []()
 ### 12/19. []()
