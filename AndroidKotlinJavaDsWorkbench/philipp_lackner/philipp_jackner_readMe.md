@@ -2,3 +2,39 @@
 
 
 -- Added Junit5 Dependencies 
+
+
+
+
+
+
+
+
+
+### [Top 3 Hacks to Remove LazyColumn Lag in Jetpack Compose - Android Studio Tutorial](https://youtu.be/s8h7GJTZa4E?si=C5CGEcmGZA22kRiw)
+
+```
+LazyColumn(
+     - - -       
+    ) {
+        items(
+            items = images,
+            key = { eachImages ->
+                eachImages.id
+            }
+        ) { 
+        - - -
+        }
+    }
+        
+        
+//@Stable
+@Immutable
+data class MyImage(
+    val id: String = UUID.randomUUID().toString(),
+    val resId: Int,
+    val title: String,
+    val tags: List<String>
+)
+
+```
