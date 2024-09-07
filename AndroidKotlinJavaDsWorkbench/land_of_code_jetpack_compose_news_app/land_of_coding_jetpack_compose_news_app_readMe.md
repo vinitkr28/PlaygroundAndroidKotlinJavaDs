@@ -4,6 +4,7 @@
 
 *  https://github.com/mohammednawas8
 *  https://github.com/lofcoding/NewsApp/tree/master
+*  https://github.com/lofcoding/NewsApp.git
 
 ### 1/19. [Introduction - Jetpack Compose Clean Architecture News App - part 1](https://youtu.be/9AekfR-EI-U?si=O-SQaCN_J9zDkeS3)
 
@@ -15,3 +16,7 @@
 6. [ ] Room
 7. [ ] DataStorage Preferences
 8. [ ] Dagger Hilt
+
+* Use JDK17.
+* dependent libraries added
+* Fonts, drawables(.xml) & colors added.
