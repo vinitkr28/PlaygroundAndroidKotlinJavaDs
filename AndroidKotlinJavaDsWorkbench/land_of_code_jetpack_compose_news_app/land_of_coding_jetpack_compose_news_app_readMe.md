@@ -66,3 +66,9 @@ class MainActivity : ComponentActivity() {
     * HorizontalPager
 
 ### 4/19. [Onboarding Screen - Jetpack Compose Clean Architecture News App - part 4](https://youtu.be/rMhOCuc8XIE?si=NSXBwfqI2vx11hwo)
+
+* `MainActivity`
+  * `WindowCompat.setDecorFitsSystemWindows(window, false)`
+* `themes.xml`
+  * `<item name="android:windowTranslucentStatus">true</item>`
+  * `<item name="android:windowTranslucentNavigation">true</item>`
