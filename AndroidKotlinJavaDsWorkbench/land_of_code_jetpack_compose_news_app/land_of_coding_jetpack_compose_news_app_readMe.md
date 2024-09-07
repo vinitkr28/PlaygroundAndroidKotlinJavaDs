@@ -262,7 +262,26 @@ SideEffect {
 </style>
 ```
 
-### 10/19. []()
+### 10/19. [Home Screen Get News - Jetpack Compose Clean Architecture News App - part 10](https://youtu.be/ww69apNPQJA?si=V6JCS-yb6uaejesN)
+1. [x] https://newsapi.org/ [v4victor4u@gmail.com]
+###### Create packages:
+* create app_entry inside domain -> usecases and move `AppEntryYseCases`, `ReadAppEntry` and `SaveAppEntry`
+* data
+  * remote
+    * dto(data transfer object) - package
+    * `interface NewsApi`
+    * `class NewsPagingSource`
+  * repository
+    * `class NewsRepositoryImpl`
+* domain
+  * model 
+    * Article
+    * Source
+  * repository
+    * `interface NewsRepository`
+  * usecases
+    * news
+      * `class GetNews`
 
 ### 11/19. []()
 
@@ -276,6 +295,26 @@ SideEffect {
 ### 17/19. []()
 ### 18/19. []()
 ### 19/19. []()
+<br/><br/>
+
+| Library Name | Version | Package                        | Links | Documents |
+|--------------|---------|--------------------------------|-------|-----------|
+| Kotlin       | 1.9.21  | org.jetbrains.kotlin.android   | -     | -         |
+| Dagger/Hilt  | 2.50    | com.google.dagger.hilt.android | -     | -         |
+| -            | -       | -                              | -     | -         | 
+
+
+&nbsp;
+
+```
+
+```
+
+```
+********** # Some Rough Work # **********
+```
+
+
 
 &nbsp;&nbsp;
 
@@ -296,22 +335,6 @@ Line two
 
 <br/><br/>
 
-| Library Name | Version | Package                        | Links | Documents |
-|--------------|---------|--------------------------------|-------|-----------|
-| Kotlin       | 1.9.21  | org.jetbrains.kotlin.android   | -     | -         |
-| Dagger/Hilt  | 2.50    | com.google.dagger.hilt.android | -     | -         |
-| -            | -       | -                              | -     | -         | 
-
-
-
-
-```
-
-```
-
-```
-********** # Some Rough Work # **********
-```
 
 <dl>
   <dt>Library Name</dt>

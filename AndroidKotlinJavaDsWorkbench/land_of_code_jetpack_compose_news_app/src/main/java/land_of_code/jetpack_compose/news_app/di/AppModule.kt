@@ -7,9 +7,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import land_of_code.jetpack_compose.news_app.data.manager.LocalUserManagerImpl
 import land_of_code.jetpack_compose.news_app.domain.manager.LocalUserManager
-import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
-import land_of_code.jetpack_compose.news_app.domain.usecases.ReadAppEntry
-import land_of_code.jetpack_compose.news_app.domain.usecases.SaveAppEntry
+import land_of_code.jetpack_compose.news_app.domain.usecases.app_entry.AppEntryUseCases
+import land_of_code.jetpack_compose.news_app.domain.usecases.app_entry.ReadAppEntry
+import land_of_code.jetpack_compose.news_app.domain.usecases.app_entry.SaveAppEntry
 import javax.inject.Singleton
 
 @Module

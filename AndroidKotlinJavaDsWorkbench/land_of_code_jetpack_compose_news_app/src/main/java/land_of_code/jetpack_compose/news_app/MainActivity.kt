@@ -1,8 +1,6 @@
 package land_of_code.jetpack_compose.news_app
 
 import android.os.Bundle
-import android.util.Log
-import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -16,22 +14,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.lifecycleScope
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
-import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
 import land_of_code.jetpack_compose.news_app.presentation.navgraph.NavGraph
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.components.OnBoardingPage
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.pages
 import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

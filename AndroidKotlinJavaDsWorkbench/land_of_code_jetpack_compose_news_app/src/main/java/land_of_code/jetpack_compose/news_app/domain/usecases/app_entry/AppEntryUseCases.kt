@@ -1,4 +1,4 @@
-package land_of_code.jetpack_compose.news_app.domain.usecases
+package land_of_code.jetpack_compose.news_app.domain.usecases.app_entry
 
 data class AppEntryUseCases(
     val readAppEntry: ReadAppEntry,
