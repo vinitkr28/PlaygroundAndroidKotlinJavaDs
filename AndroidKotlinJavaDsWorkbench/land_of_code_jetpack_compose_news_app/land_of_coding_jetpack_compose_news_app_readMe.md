@@ -86,3 +86,55 @@ class MainActivity : ComponentActivity() {
 2. [ ] Domain Layer
 3. [ ] Presentation Layer
 * Datastore preferences
+
+###### Create Packages:
+* data (Data Layer)
+  * manager
+    * `class LocalUserManagerImpl`
+      * ```
+        class LocalUserManagerImpl(private val context: Context) : LocalUserManager {
+            override suspend fun saveAppEntry() {
+              context.dataStore.edit { settings ->
+                  settings[PreferencesKeys.APP_ENTRY] = true
+              }
+            }
+        
+            override fun readAppEntry() : Flow<Boolean> {
+              return context.dataStore.data.map { preferences ->
+                  preferences[PreferencesKeys.APP_ENTRY] ?: false
+              }
+            }
+        
+        }
+        ```
+        ```
+        private val Context.dataStore : DataStore<Preferences> by preferencesDataStore(name = "userSettings")
+        ```
+        ```
+        private object PreferencesKeys {
+          val APP_ENTRY = booleanPreferencesKey(name = "appEntry")
+        }
+        ```
+* domain (Domain Layer)
+  * manager
+    * `interface LocalUserManager`
+      * `suspend fun saveAppEntry()`
+      * `fun readAppEntry() : Flow<Boolean>`
+  
+  * usecases
+    * `class SaveAppEntry`
+      * ```
+        class SaveAppEntry(private val localUserManager : LocalUserManager) {
+            suspend operator fun invoke() {
+                localUserManager.saveAppEntry()
+            }
+        }
+        ```
+    * `class ReadAppEntry`
+      * ```
+        class ReadAppEntry(private val localUserManager : LocalUserManager) {
+            operator fun invoke() : Flow<Boolean> {
+                return localUserManager.readAppEntry()
+            }
+        }
+        ```
