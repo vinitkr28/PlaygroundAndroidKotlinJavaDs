@@ -2,21 +2,142 @@
 
 ## [Land of coding](https://www.youtube.com/@Landofcoding)
 
-https://github.com/lofcoding/NewsApp/tree/master
+*  https://github.com/mohammednawas8
+*  https://github.com/lofcoding/NewsApp/tree/master
+*  https://github.com/lofcoding/NewsApp.git
+* Discord - https://discord.com/invite/snFzU9dZqz
 
 ### 1/19. [Introduction - Jetpack Compose Clean Architecture News App - part 1](https://youtu.be/9AekfR-EI-U?si=O-SQaCN_J9zDkeS3)
+
+1. [ ] Jetpack Compose
+2. [ ] Clean Architecture
+3. [ ] MVVM & MVI
+4. [ ] Paging 3
+5. [ ] Retrofit
+6. [ ] Room
+7. [ ] DataStorage Preferences
+8. [ ] Dagger Hilt
+
+* Use JDK17.
+* dependent libraries added
+* Fonts, drawables(.xml) & colors added.
 
 
 
 ### 2/19. [Splash Screen - Jetpack Compose Clean Architecture News App - part 2](https://youtu.be/5cEyV9GwlnA?si=qBJ9gtXAgrRt7JSs)
 
+`splash.xml`
+```
+<resources>
+    <style name="App.Starting.Theme" parent="Theme.SplashScreen" >
+        <item name="windowSplashScreenBackground">@color/splash_screen_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.NewsApp</item>
+    </style>
+    
+</resources>
+```
 
+* For splash.xml(night)
+  * Right click on values -> Values Resource File ->
+    * File name: splash
+    * Available qualifiers: Night Mode
+      * Night mode: Night
+
+###### Use this resource in `AndroidManifest.xml`
+
+`MainActivity.kt`
+```
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        - - -
+        installSplashScreen()
+        - - -
+    }
+}
+```
 
 ### 3/19. [Onboarding Page - Jetpack Compose Clean Architecture News App - part 3](https://youtu.be/ZwmFEFRLrOA?si=Sd0UwpDNrgVTtAlS)
 
-
+* create presentation package
+  * Screens
+  * anythings related to the screen
+  * rememberPagerState
+    * HorizontalPager
 
 ### 4/19. [Onboarding Screen - Jetpack Compose Clean Architecture News App - part 4](https://youtu.be/rMhOCuc8XIE?si=NSXBwfqI2vx11hwo)
+
+* `MainActivity`
+  * `WindowCompat.setDecorFitsSystemWindows(window, false)`
+* `themes.xml`
+  * `<item name="android:windowTranslucentStatus">true</item>`
+  * `<item name="android:windowTranslucentNavigation">true</item>`
+
+
+### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=MYThA_DQTsYY5CeB)
+
+[![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
+
+* Clean Architecture
+  * Maintainable
+  * Scalable
+  * Testable
+1. [ ] Data Layer
+2. [ ] Domain Layer
+3. [ ] Presentation Layer
+* Datastore preferences
+
+###### Create Packages:
+* data (Data Layer)
+  * manager
+    * `class LocalUserManagerImpl`
+      * ```
+        class LocalUserManagerImpl(private val context: Context) : LocalUserManager {
+            override suspend fun saveAppEntry() {
+              context.dataStore.edit { settings ->
+                  settings[PreferencesKeys.APP_ENTRY] = true
+              }
+            }
+        
+            override fun readAppEntry() : Flow<Boolean> {
+              return context.dataStore.data.map { preferences ->
+                  preferences[PreferencesKeys.APP_ENTRY] ?: false
+              }
+            }
+        
+        }
+        ```
+        ```
+        private val Context.dataStore : DataStore<Preferences> by preferencesDataStore(name = "userSettings")
+        ```
+        ```
+        private object PreferencesKeys {
+          val APP_ENTRY = booleanPreferencesKey(name = "appEntry")
+        }
+        ```
+* domain (Domain Layer)
+  * manager
+    * `interface LocalUserManager`
+      * `suspend fun saveAppEntry()`
+      * `fun readAppEntry() : Flow<Boolean>`
+  
+  * usecases
+    * `class SaveAppEntry`
+      * ```
+        class SaveAppEntry(private val localUserManager : LocalUserManager) {
+            suspend operator fun invoke() {
+                localUserManager.saveAppEntry()
+            }
+        }
+        ```
+    * `class ReadAppEntry`
+      * ```
+        class ReadAppEntry(private val localUserManager : LocalUserManager) {
+            operator fun invoke() : Flow<Boolean> {
+                return localUserManager.readAppEntry()
+            }
+        }
+        ```
 
 
 

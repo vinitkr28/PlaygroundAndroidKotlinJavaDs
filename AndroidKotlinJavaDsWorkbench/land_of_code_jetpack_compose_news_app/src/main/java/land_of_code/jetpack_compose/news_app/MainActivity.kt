@@ -1,6 +1,5 @@
 package land_of_code.jetpack_compose.news_app
 
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
@@ -9,14 +8,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -26,8 +19,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.components.OnBoardingPage
-import land_of_code.jetpack_compose.news_app.presentation.onboarding.pages
 import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 import javax.inject.Inject
 

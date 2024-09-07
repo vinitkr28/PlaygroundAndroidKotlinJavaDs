@@ -11,8 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Devices
+import androidx.compose.ui.tooling.preview.Preview
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.IndicatorSize
+import land_of_code.jetpack_compose.news_app.presentation.common.NewsButton
 import land_of_code.jetpack_compose.news_app.ui.theme.BlueGray
+import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 
 @Composable
 fun PageIndicator(
@@ -32,4 +36,11 @@ fun PageIndicator(
             )
         }
     }
+}
+
+
+@Preview(name = "NewsButtonPreview", device = Devices.PIXEL_6_PRO, showSystemUi = true)
+@Composable
+private fun NewsButtonPreview() {
+    PageIndicator(pageSize = 3, selectedPage = 1)
 }
