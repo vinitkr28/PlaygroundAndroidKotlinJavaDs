@@ -76,6 +76,8 @@ class MainActivity : ComponentActivity() {
 
 ### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=MYThA_DQTsYY5CeB)
 
+[![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
+
 * Clean Architecture
   * Maintainable
   * Scalable
