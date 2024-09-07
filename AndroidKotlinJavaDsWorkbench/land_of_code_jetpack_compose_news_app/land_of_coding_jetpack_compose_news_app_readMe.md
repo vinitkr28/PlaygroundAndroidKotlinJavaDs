@@ -189,32 +189,36 @@ class MainActivity : ComponentActivity() {
         saveAppEntry = SaveAppEntry(localUserManager)
     )
     ```
+    
+### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=usq6j8hVG_eRh-NF)
 
-```
-@HiltViewModel
-class OnBoardingViewModel @Inject constructor(){
 
-}
-```
-### 7/19. []()
-<br/><br/>
+* presentation -> onboarding -> `OnBoardingViewModel`
+    * ```
+      @HiltViewModel
+      class OnBoardingViewModel @Inject constructor(){
+      
+      }
+      ```
+* presentation -> onboarding -> `OnBoardEvent`
+    * ```
+      sealed class OnBoardingEvent {
+      object SaveAppEntry : OnBoardingEvent()
+      }
+      ```
+  
 ### 8/19. []()
-&nbsp;&nbsp;
+
 ### 9/19. []()
-\ \
+
 ### 10/19. []()
-&nbsp;
+
 ### 11/19. []()
-` `  
-` `
+
 ### 12/19. []()
-Line one\
-\
-\
-\
-Line two
 
 ### 13/19. []()
+
 ### 14/19. []()
 ### 15/19. []()
 ### 16/19. []()
@@ -222,7 +226,24 @@ Line two
 ### 18/19. []()
 ### 19/19. []()
 
+&nbsp;&nbsp;
 
+\ \
+
+
+` `  
+` `
+
+&nbsp;
+
+
+Line one\
+\
+\
+\
+Line two
+
+<br/><br/>
 
 <dl>
   <dt>First Term</dt>

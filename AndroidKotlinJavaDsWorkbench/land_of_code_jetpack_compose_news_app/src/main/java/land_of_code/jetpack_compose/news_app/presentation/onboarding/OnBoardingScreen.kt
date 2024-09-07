@@ -131,7 +131,7 @@ private fun OnBoardingScreenPreview() {
             modifier = Modifier
                 .background(color = MaterialTheme.colorScheme.background)
         ) {
-            OnBoardingScreen()
+            OnBoardingScreen {}
         }
     }
 }

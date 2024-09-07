@@ -66,7 +66,10 @@ class MainActivity : ComponentActivity() {
 
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
                     val viewModel: OnBoardingViewModel = hiltViewModel()
-                    OnBoardingScreen(event = viewModel::onEvent)
+                    OnBoardingScreen(
+                        event = viewModel::onEvent
+//                      event = { viewModel.onEvent(it) }
+                    )
                 }
             }
         }
