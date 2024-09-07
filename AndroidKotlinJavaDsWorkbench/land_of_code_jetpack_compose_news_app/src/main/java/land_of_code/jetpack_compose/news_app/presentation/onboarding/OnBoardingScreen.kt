@@ -24,7 +24,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.MediumPadding2
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.PageIndicatorWidth
@@ -128,8 +127,11 @@ fun OnBoardingScreen(
 @Composable
 private fun OnBoardingScreenPreview() {
     LandOfCodeNewsAppTheme {
-        Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-            OnBoardingScreen {}
+        Box(
+            modifier = Modifier
+                .background(color = MaterialTheme.colorScheme.background)
+        ) {
+            OnBoardingScreen()
         }
     }
 }
