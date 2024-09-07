@@ -5,6 +5,7 @@
 *  https://github.com/mohammednawas8
 *  https://github.com/lofcoding/NewsApp/tree/master
 *  https://github.com/lofcoding/NewsApp.git
+* Discord - https://discord.com/invite/snFzU9dZqz
 
 ### 1/19. [Introduction - Jetpack Compose Clean Architecture News App - part 1](https://youtu.be/9AekfR-EI-U?si=O-SQaCN_J9zDkeS3)
 
