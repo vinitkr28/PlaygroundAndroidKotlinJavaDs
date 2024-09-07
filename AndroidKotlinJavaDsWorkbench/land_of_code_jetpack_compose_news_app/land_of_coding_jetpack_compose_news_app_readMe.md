@@ -78,14 +78,30 @@ class MainActivity : ComponentActivity() {
 
 [![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
 
+* Datastore preferences
 * Clean Architecture
   * Maintainable
   * Scalable
   * Testable
-1. [ ] Data Layer
-2. [ ] Domain Layer
-3. [ ] Presentation Layer
-* Datastore preferences
+
+1. [ ] **Presentation** Layer 
+   * Views 
+   * ViewModel
+   * DI
+2. [ ] **Data** Layer
+   * DataSource {Remote/Local/Cache}
+   * Api {Services}
+   * Repository {impl}
+   * Model {Remote}
+   * Mapper {toDomain}
+3. [ ] **Domain** Layer
+   * Repository {interface}
+   * Model {Domain}
+   * UseCase
+
+
+
+
 
 ###### Create Packages:
 * data (Data Layer)
@@ -138,31 +154,6 @@ class MainActivity : ComponentActivity() {
             }
         }
         ```
-
-
-
-### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=qT_iRaxcTXUhSFmy)
-
-
-1. [ ] **Presentation** Layer
-    * Views
-    * ViewModel
-    * DI
-2. [ ] **Data** Layer
-    * DataSource {Remote/Local/Cache}
-    * Api {Services}
-    * Repository {impl}
-    * Model {Remote}
-    * Mapper {toDomain}
-3. [ ] **Domain** Layer
-    * Repository {interface} 
-    * Model {Domain} 
-    * UseCase
-
-
-
-[![MVVM and clean architecture](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*szHJJztWnmjO5U3boRZWiA.png)](https://medium.com/@abhineshchandra1234/movies-app-7d5362c52ae5)
-
 
 ### 6/19. [Dagger Hilt - Jetpack Compose Clean Architecture News App - part 6](https://youtu.be/PDABkIkDE04?si=0b4Y_gKD9Gf3vYW5)
 
