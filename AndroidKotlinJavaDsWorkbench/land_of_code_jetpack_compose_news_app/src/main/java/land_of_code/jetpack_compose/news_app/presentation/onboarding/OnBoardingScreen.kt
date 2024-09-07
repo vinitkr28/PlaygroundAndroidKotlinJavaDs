@@ -124,7 +124,10 @@ fun OnBoardingScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun OnBoardingScreenPreview() {
     LandOfCodeNewsAppTheme {
-        Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
+        Box(
+            modifier = Modifier
+                .background(color = MaterialTheme.colorScheme.background)
+        ) {
             OnBoardingScreen()
         }
     }

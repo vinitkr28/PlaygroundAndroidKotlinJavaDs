@@ -59,6 +59,10 @@ class MainActivity : ComponentActivity() {
 
 ### 3/19. [Onboarding Page - Jetpack Compose Clean Architecture News App - part 3](https://youtu.be/ZwmFEFRLrOA?si=Sd0UwpDNrgVTtAlS)
 
-
+* create presentation package
+  * Screens
+  * anythings related to the screen
+  * rememberPagerState
+    * HorizontalPager
 
 ### 4/19. [Onboarding Screen - Jetpack Compose Clean Architecture News App - part 4](https://youtu.be/rMhOCuc8XIE?si=NSXBwfqI2vx11hwo)
