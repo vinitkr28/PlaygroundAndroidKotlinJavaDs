@@ -78,17 +78,16 @@ class MainActivity : ComponentActivity() {
 
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
                     /*val viewModel: OnBoardingViewModel = hiltViewModel()
-                    OnBoardingScreen(event = viewModel::onEvent)*/
+                    OnBoardingScreen(
+                        event = viewModel::onEvent
+//                        event = { viewModel.onEvent(it) }
+                    )*/
 
                     //above line will go to navHost
 
                     val startDestination = viewModel.startDestination
                     NavGraph(startDestination = startDestination)
-                    val viewModel: OnBoardingViewModel = hiltViewModel()
-                    OnBoardingScreen(
-                        event = viewModel::onEvent
-//                      event = { viewModel.onEvent(it) }
-                    )
+
                 }
             }
         }

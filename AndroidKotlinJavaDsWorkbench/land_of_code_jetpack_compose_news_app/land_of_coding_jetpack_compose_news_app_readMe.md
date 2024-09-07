@@ -99,10 +99,6 @@ class MainActivity : ComponentActivity() {
     * Model {Domain} 
     * UseCase
 
-
-
-
-
 ###### Create Packages:
 * data (Data Layer)
   * manager
@@ -196,7 +192,13 @@ dependencies {
    ```
    3. use this application class in```AndroidManifest.xml```
    4. create interface```AppModule```
-   5. annotate Activity with````@AndroidEntryPoint````<br/><br/>
+   5. annotate Activity with````@AndroidEntryPoint````
+      * ````
+        @AndroidEntryPoint
+        class MainActivity : ComponentActivity() {
+             - - -
+        }
+        ````
 * domain -> usecases -> `AppEntryUseCases`
   * ```
     data class AppEntryUseCases(
@@ -217,17 +219,6 @@ dependencies {
     ```
     
 ### 7/19. [Onboarding ViewModel - Jetpack Compose Clean Architecture News App - part 7](https://youtu.be/guklBqKx2U8?si=usq6j8hVG_eRh-NF)
-   3. use this application class in`AndroidManifest.xml`
-   4. create interface`AppModule`
-   5. annotate Activity with`@AndroidEntryPoint`
-   ````
-   @AndroidEntryPoint
-   class MainActivity : ComponentActivity() {
-   - - -
-   }
-   ````
-   
-
 
 * presentation -> onboarding -> `OnBoardingViewModel`
     * ```
@@ -242,16 +233,12 @@ dependencies {
       object SaveAppEntry : OnBoardingEvent()
       }
       ```
-  
-### 8/19. []()
 
-```
-@HiltViewModel
-class OnBoardingViewModel @Inject constructor(){
+### 8/19. [Navgraph - Jetpack Compose Clean Architecture News App - part 8](https://youtu.be/FIX-BErk1lE?si=vNFHtpKGu9n1qdRj)
 
-}
-```
-### 8/19. [Navgraph - Jetpack Compose Clean Architecture News App - part 8](https://youtu.be/FIX-BErk1lE?si=UXGS_r5y_XgAqkXu)
+* presentation -> navgraph -> `Route.kt`
+* presentation -> navgraph -> `NavGraph.kt`
+* news_app -> `MainViewModel`
 
 ### 9/19. []()
 
