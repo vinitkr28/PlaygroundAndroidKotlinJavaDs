@@ -26,7 +26,36 @@
 
 ### 2/19. [Splash Screen - Jetpack Compose Clean Architecture News App - part 2](https://youtu.be/5cEyV9GwlnA?si=qBJ9gtXAgrRt7JSs)
 
+`splash.xml`
+```
+<resources>
+    <style name="App.Starting.Theme" parent="Theme.SplashScreen" >
+        <item name="windowSplashScreenBackground">@color/splash_screen_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.NewsApp</item>
+    </style>
+    
+</resources>
+```
 
+* For splash.xml(night)
+  * Right click on values -> Values Resource File ->
+    * File name: splash
+    * Available qualifiers: Night Mode
+      * Night mode: Night
+
+###### Use this resource in `AndroidManifest.xml`
+
+`MainActivity.kt`
+```
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        - - -
+        installSplashScreen()
+        - - -
+    }
+}
+```
 
 ### 3/19. [Onboarding Page - Jetpack Compose Clean Architecture News App - part 3](https://youtu.be/ZwmFEFRLrOA?si=Sd0UwpDNrgVTtAlS)
 
