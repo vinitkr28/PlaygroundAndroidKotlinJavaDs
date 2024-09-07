@@ -170,14 +170,44 @@ class MainActivity : ComponentActivity() {
    ```
    3. use this application class in```AndroidManifest.xml```
    4. create interface```AppModule```
-   5. annotate Activity with````@AndroidEntryPoint````
+   5. annotate Activity with````@AndroidEntryPoint````<br/><br/>
+* domain -> usecases -> `AppEntryUseCases`
+  * ```
+    data class AppEntryUseCases(
+         val readAppEntry: ReadAppEntry,
+         val saveAppEntry: SaveAppEntry
+     )
+    ```
+* `AppModule.kt`
+  * ```
+    @Provides
+    @Singleton
+    fun provideAppEntryUseCases(
+        localUserManager: LocalUserManager
+    ) = AppEntryUseCases(
+        readAppEntry = ReadAppEntry(localUserManager),
+        saveAppEntry = SaveAppEntry(localUserManager)
+    )
+    ```
 
 ### 7/19. []()
+<br/><br/>
 ### 8/19. []()
+&nbsp;&nbsp;
 ### 9/19. []()
+\ \
 ### 10/19. []()
+&nbsp;
 ### 11/19. []()
+` `  
+` `
 ### 12/19. []()
+Line one\
+\
+\
+\
+Line two
+
 ### 13/19. []()
 ### 14/19. []()
 ### 15/19. []()
