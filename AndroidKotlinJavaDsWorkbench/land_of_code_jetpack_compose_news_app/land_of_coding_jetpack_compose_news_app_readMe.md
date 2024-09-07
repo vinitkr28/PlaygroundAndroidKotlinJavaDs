@@ -241,6 +241,27 @@ dependencies {
 * news_app -> `MainViewModel`
 
 ### 9/19. [System UI Controller - Jetpack Compose Clean Architecture News App - part 9](https://youtu.be/5s43YOl6w8w?si=t4vaMMy_b7HtMATG)
+
+`MainActivity`
+```
+val isSystemInDarkMode = isSystemInDarkTheme()
+val systemController = rememberSystemUiController()
+
+SideEffect {
+    systemController.setSystemBarsColor(
+        color = Color.Transparent,
+        darkIcons = !isSystemInDarkMode
+    )
+}
+```
+`themes.xml`
+```
+<style name="Theme.NewsApp" parent="android:Theme.Material.Light.NoActionBar" >
+    <!--  <item name="android:windowTranslucentStatus">true</item>  -->
+    <!--  <item name="android:windowTranslucentNavigation">true</item>  -->
+</style>
+```
+
 ### 10/19. []()
 
 ### 11/19. []()

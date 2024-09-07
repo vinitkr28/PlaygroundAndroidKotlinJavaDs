@@ -8,9 +8,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -18,6 +21,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.domain.usecases.AppEntryUseCases
@@ -75,6 +79,18 @@ class MainActivity : ComponentActivity() {
                 /*Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     OnBoardingScreen()
                 }*/
+
+
+                val isSystemInDarkMode = isSystemInDarkTheme()
+                val systemController = rememberSystemUiController()
+
+                SideEffect {
+                    systemController.setSystemBarsColor(
+//                        color = Color.Transparent,
+                        color = Color.Red,
+                        darkIcons = !isSystemInDarkMode
+                    )
+                }
 
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
                     /*val viewModel: OnBoardingViewModel = hiltViewModel()
