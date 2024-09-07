@@ -75,3 +75,12 @@ class MainActivity : ComponentActivity() {
 
 
 ### 5/19. [Preferences datastore - Jetpack Compose Clean Architecture News App - part 5](https://youtu.be/rpBYw5JMZHk?si=MYThA_DQTsYY5CeB)
+
+* Clean Architecture
+  * Maintainable
+  * Scalable
+  * Testable
+1. [ ] Data Layer
+2. [ ] Domain Layer
+3. [ ] Presentation Layer
+* Datastore preferences
