@@ -2,6 +2,8 @@ package land_of_code.jetpack_compose.news_app.presentation.onboarding.components
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -59,7 +61,12 @@ fun OnBoardingPage(
     }
 }
 
-@Preview(name = "light_pixel", device = Devices.PIXEL_6_PRO, showSystemUi = true, showBackground = true)
+@Preview(
+    name = "light_pixel",
+    device = Devices.PIXEL_6_PRO,
+    showSystemUi = true,
+    showBackground = true
+)
 @Preview(
     name = "dark_pixel",
     device = Devices.PIXEL_6_PRO,
@@ -69,8 +76,13 @@ fun OnBoardingPage(
 @Composable
 private fun OnBoardingPagePreview() {
     LandOfCodeNewsAppTheme {
-        OnBoardingPage(
-            page = pages[0]
-        )
+        Box(
+            modifier = Modifier
+                .background(color = MaterialTheme.colorScheme.background)
+        ) {
+            OnBoardingPage(
+                page = pages[0]
+            )
+        }
     }
 }
