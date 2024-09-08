@@ -15,6 +15,7 @@ import land_of_code.jetpack_compose.news_app.domain.usecases.app_entry.ReadAppEn
 import land_of_code.jetpack_compose.news_app.domain.usecases.app_entry.SaveAppEntry
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.GetNews
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.NewsUseCases
+import land_of_code.jetpack_compose.news_app.domain.usecases.news.SearchNews
 import land_of_code.jetpack_compose.news_app.util.Constants
 import land_of_code.jetpack_compose.news_app.util.Constants.BASE_URL
 import retrofit2.Retrofit
@@ -62,7 +63,8 @@ object AppModule {
         newsRepository: NewsRepository
     ) : NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 }

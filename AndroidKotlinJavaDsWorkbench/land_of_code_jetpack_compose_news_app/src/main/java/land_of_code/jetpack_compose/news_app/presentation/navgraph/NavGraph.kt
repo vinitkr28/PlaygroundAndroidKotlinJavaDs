@@ -1,17 +1,16 @@
 package land_of_code.jetpack_compose.news_app.presentation.navgraph
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import androidx.paging.compose.collectAsLazyPagingItems
-import land_of_code.jetpack_compose.news_app.presentation.home.HomeScreen
 import land_of_code.jetpack_compose.news_app.presentation.home.HomeViewModel
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
+import land_of_code.jetpack_compose.news_app.presentation.search.SearchScreen
+import land_of_code.jetpack_compose.news_app.presentation.search.SearchViewModel
 
 @Composable
 fun NavGraph(
@@ -42,10 +41,14 @@ fun NavGraph(
             ) {
 //                Text(text = "News Navigator Screen")
 
-                val viewModel: HomeViewModel = hiltViewModel()
-                val articles = viewModel.news.collectAsLazyPagingItems()
 
-                HomeScreen(articles = articles, navigate = {})
+                /*val viewModel: HomeViewModel = hiltViewModel()
+                val articles = viewModel.news.collectAsLazyPagingItems()
+                HomeScreen(articles = articles, navigate = {})*/
+
+
+                val viewModel: SearchViewModel = hiltViewModel()
+                SearchScreen(state = viewModel.state.value, event = {viewModel::onEvent}, navigate = {})
             }
         }
     }

@@ -40,15 +40,11 @@ import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 
 @Composable
 fun ArticleCard(
-    modifier: Modifier = Modifier,
-    article: Article,
-    onClick: () -> Unit
+    modifier: Modifier = Modifier, article: Article, onClick: () -> Unit
 ) {
     val context = LocalContext.current
 
-    Row(
-        modifier = modifier.clickable { onClick() }
-    ) {
+    Row(modifier = modifier.clickable { onClick() }) {
         AsyncImage(
             modifier = Modifier
                 .size(ArticleCardSize)
@@ -120,8 +116,7 @@ private fun ArticleCardPreview() {
 
     LandOfCodeNewsAppTheme {
         Box(
-            modifier = Modifier
-                .background(color = MaterialTheme.colorScheme.background)
+            modifier = Modifier.background(color = MaterialTheme.colorScheme.background)
         ) {
             ArticleCard(article = article) {}
         }

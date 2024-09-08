@@ -2,9 +2,9 @@
 
 ## [Land of coding](https://www.youtube.com/@Landofcoding)
 
-*  https://github.com/mohammednawas8
-*  https://github.com/lofcoding/NewsApp/tree/master
-*  https://github.com/lofcoding/NewsApp.git
+* https://github.com/mohammednawas8
+* https://github.com/lofcoding/NewsApp/tree/master
+* https://github.com/lofcoding/NewsApp.git
 * Discord - https://discord.com/invite/snFzU9dZqz
 
 ### 1/19. [Introduction - Jetpack Compose Clean Architecture News App - part 1](https://youtu.be/9AekfR-EI-U?si=O-SQaCN_J9zDkeS3)
@@ -21,8 +21,6 @@
 * Use JDK17.
 * dependent libraries added
 * Fonts, drawables(.xml) & colors added.
-
-
 
 ### 2/19. [Splash Screen - Jetpack Compose Clean Architecture News App - part 2](https://youtu.be/5cEyV9GwlnA?si=qBJ9gtXAgrRt7JSs)
 
@@ -342,7 +340,59 @@ SideEffect {
       * `NavGraph.kt`
         * 
 
-### 13/19. []()
+### 13/19. [Search Screen - Jetpack Compose Clean Architecture News App - part 13](https://youtu.be/nLctxH_fSbM?si=BHZJE1pF1nn5Za54)
+
+* data
+  * remote
+    * `NewsApi`
+      * ```
+        @GET("everything")
+        suspend fun searchNews(
+            @Query("q") searchQuery: String,
+            @Query("page") page: Int,
+            @Query("sources") sources: String,
+            @Query("apiKey") apiKey: String = API_KEY
+        ): NewsResponse
+        ```
+    * `SearchNewsPagingSource.kt`
+  * repository
+    * `NewsRepositoryImpl.kt`
+      * ```
+        override fun searchNews(searchQuery: String, sources: List<String>): Flow<PagingData<Article>> {
+            return Pager(
+                config = PagingConfig(pageSize = 10),
+                pagingSourceFactory = {
+                    SearchNewsPagingSource(
+                        searchQuery = searchQuery,
+                        newsApi = newsApi,
+                        sources = sources.joinToString(separator = ",")
+                    )
+                }
+            ).flow
+        }
+        ```
+* domain
+  * repository
+    * `NewsRepository`
+      * ```
+        fun searchNews(searchQuery: String, sources: List<String>) : Flow<PagingData<Article>>
+        ```
+
+* presentation
+  * search
+    * `SearchState.kt`
+    * `SearchEvent.kt`
+    * `SearchViewModel.kt`
+    * `SearchScreen.kt`
+  * navgraph
+    * `NavGraph`
+* domain
+  * usecases
+    * news
+      * `SearchNews.kt`
+      * `NewsUseCases`
+* di
+  * `AppModule`
 
 ### 14/19. []()
 ### 15/19. []()
