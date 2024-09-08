@@ -409,6 +409,8 @@ SideEffect {
 * **GitHub:**
   * lofcoding / NewsApp
     * branch: [part11-RoomDatabase](https://github.com/lofcoding/NewsApp/tree/part11-RoomDatabase)
+  * vinitkr28 / PlaygroundAndroidKotlinJavaDs
+    * branch: [LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
 ### 16/19. []()
 ### 17/19. []()
 ### 18/19. []()
