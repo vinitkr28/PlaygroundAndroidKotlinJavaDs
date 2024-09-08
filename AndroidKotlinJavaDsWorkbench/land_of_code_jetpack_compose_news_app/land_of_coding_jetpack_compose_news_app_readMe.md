@@ -394,7 +394,17 @@ SideEffect {
 * di
   * `AppModule`
 
-### 14/19. []()
+### 14/19. [Details Screen - Jetpack Compose Clean Architecture News App - part 14](https://youtu.be/CC3ybpzgm2M?si=fyNGk6e1DmvGrJ_t)
+
+* presentation
+  * details
+    * components
+      * `DetailsTopBar.kt`
+    * `DetailsScreen.kt`
+    * `DetailsEvent.kt`
+* `AndroidManifest.xml`
+* 
+
 ### 15/19. []()
 ### 16/19. []()
 ### 17/19. []()
