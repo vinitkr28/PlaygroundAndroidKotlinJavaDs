@@ -283,7 +283,51 @@ SideEffect {
     * news
       * `class GetNews`
 
-### 11/19. []()
+### 11/19. [Home Screen ViewModel - Jetpack Compose Clean Architecture News App - part 11](https://youtu.be/WYrC-bsUSRk?si=KtihybbR5Qt6NwC6)
+
+* presentation
+  * home
+    * `HomeViewModel`
+* domain
+  * usecases
+    * news
+      * `NewsUseCases`
+* di
+  * `AppModule`
+    * ```
+      @Provides
+      @Singleton
+      fun provideNewsApi(): NewsApi {
+        return Retrofit.Builder()
+          .baseUrl(BASE_URL)
+          .addConverterFactory(GsonConverterFactory.create())
+          .build()
+          .create(NewsApi::class.java)
+      }
+      ```
+      ```
+      @Provides
+      @Singleton
+      fun provideNewsRepository(
+        newsApi: NewsApi
+      ): NewsRepository = NewsRepositoryImpl(newsApi)
+      ```
+      ```
+      @Provides
+      @Singleton
+      fun provideNewsUseCases(
+        newsRepository: NewsRepository
+      ) : NewsUseCases {
+        return NewsUseCases(
+          getNews = GetNews(newsRepository)
+       )
+      }
+      ```
+* presentation
+  * common 
+    * `ArticleCard.kt`
+    * `ShimmerEffect.kt`
+      
 
 ### 12/19. []()
 
