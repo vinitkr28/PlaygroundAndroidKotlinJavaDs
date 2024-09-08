@@ -329,7 +329,18 @@ SideEffect {
     * `ShimmerEffect.kt`
       
 
-### 12/19. []()
+### 12/19. [Finish Home Screen - Jetpack Compose Clean Architecture News App - part 12](https://youtu.be/3Kq1xIfcqtM?si=zYteaRQrFxF3V68W)
+
+* presentation
+    * common
+      * `ArticlesList.kt`
+      * `EmptyScreen.kt`
+      * `SearchBar.kt`
+    * home
+      * `HomeScreen.kt`
+    * navgraph
+      * `NavGraph.kt`
+        * 
 
 ### 13/19. []()
 

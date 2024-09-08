@@ -72,8 +72,8 @@ class MainActivity : ComponentActivity() {
 
                 SideEffect {
                     systemController.setSystemBarsColor(
-//                        color = Color.Transparent,
-                        color = Color.Red,
+                        color = Color.Transparent,
+//                        color = Color.Red,
                         darkIcons = !isSystemInDarkMode
                     )
                 }

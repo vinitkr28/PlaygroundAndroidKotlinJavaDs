@@ -52,7 +52,7 @@ fun ArticleCard(
         AsyncImage(
             modifier = Modifier
                 .size(ArticleCardSize)
-                .background(Color.LightGray)
+                .background(Color.Transparent)
                 .clip(MaterialTheme.shapes.medium),
             model = ImageRequest.Builder(context).data(article.urlToImage).build(),
             contentScale = ContentScale.Crop,
