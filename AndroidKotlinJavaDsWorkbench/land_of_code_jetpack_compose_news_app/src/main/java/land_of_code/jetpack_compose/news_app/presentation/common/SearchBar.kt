@@ -4,7 +4,7 @@ import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsDraggedAsState
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -40,23 +40,103 @@ fun SearchBar(
     readOnly: Boolean,
     onClick: (() -> Unit)? = null,
     onValueChange: (String) -> Unit,
-    onSearch: () -> Unit
+    onSearch: () -> Unit,
 ) {
+
     val interactionSource = remember {
         MutableInteractionSource()
     }
-
-    val isClicked = interactionSource.collectIsDraggedAsState().value
-
+    val isClicked = interactionSource.collectIsPressedAsState().value
     LaunchedEffect(key1 = isClicked) {
         if (isClicked) {
             onClick?.invoke()
         }
     }
 
-    Box(
-        modifier = modifier
-    ) {
+//    var text1 by remember { mutableStateOf("") }
+
+    Box(modifier = modifier) {
+        /*
+        //Working
+        val modifierTextField = Modifier
+            .fillMaxWidth()
+            .searchBarBoarder()
+            .onFocusChanged { focusState ->
+                if (focusState.isFocused) {
+                    // TextField gained focus
+                } else {
+                    // TextField lost focus
+                }
+            }
+        TextField(
+            modifier = modifierTextField,
+            value = text1,
+            onValueChange = { newText ->
+                // Perform any actions you need based on the new text
+                text1 = newText
+                onValueChange
+            },
+            readOnly = readOnly,
+            leadingIcon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_search),
+                    contentDescription = null,
+                    modifier = Modifier.size(IconSize),
+                    tint = colorResource(id = R.color.body)
+                )
+            },
+            placeholder = {
+                Text(
+                    text = "Search",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = colorResource(id = R.color.placeholder)
+                )
+            },
+            shape = MaterialTheme.shapes.medium,
+            colors = TextFieldDefaults.textFieldColors(
+                containerColor = colorResource(id = R.color.input_background),
+                focusedTextColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
+                unfocusedTextColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
+//                textColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
+                cursorColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
+                disabledIndicatorColor = Color.Transparent,
+                errorIndicatorColor = Color.Transparent,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
+            ),
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(
+                onSearch = {
+                    onSearch()
+                }
+            ),
+            textStyle = MaterialTheme.typography.bodySmall,
+            interactionSource = interactionSource
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+        */
+        /*
+        //Working
+        TextField(
+            modifier = Modifier.onFocusChanged { focusState ->
+                if (focusState.isFocused) {
+                    // TextField gained focus
+                } else {
+                    // TextField lost focus
+                }
+            },
+            value = text1,
+            onValueChange = { newText ->
+                text1 = newText
+                // Perform any actions you need based on the new text
+
+            }
+        )*/
+
+
+
         TextField(
             modifier = Modifier
                 .fillMaxWidth()
@@ -68,9 +148,7 @@ fun SearchBar(
                 Icon(
                     painter = painterResource(id = R.drawable.ic_search),
                     contentDescription = null,
-                    modifier = Modifier.size(
-                        IconSize
-                    ),
+                    modifier = Modifier.size(IconSize),
                     tint = colorResource(id = R.color.body)
                 )
             },
@@ -78,9 +156,7 @@ fun SearchBar(
                 Text(
                     text = "Search",
                     style = MaterialTheme.typography.bodySmall,
-                    color = colorResource(
-                        id = R.color.placeholder
-                    )
+                    color = colorResource(id = R.color.placeholder)
                 )
             },
             shape = MaterialTheme.shapes.medium,
@@ -88,6 +164,7 @@ fun SearchBar(
                 containerColor = colorResource(id = R.color.input_background),
                 focusedTextColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
                 unfocusedTextColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
+//                textColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
                 cursorColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
                 disabledIndicatorColor = Color.Transparent,
                 errorIndicatorColor = Color.Transparent,
@@ -98,22 +175,22 @@ fun SearchBar(
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
             keyboardActions = KeyboardActions(
                 onSearch = {
-                    onSearch
+                    onSearch()
                 }
             ),
             textStyle = MaterialTheme.typography.bodySmall,
             interactionSource = interactionSource
         )
+
+
     }
-
-
 }
 
-fun Modifier.searchBarBoarder() = composed {
+fun Modifier.searchBarBoarder(): Modifier = composed {
     if (!isSystemInDarkTheme()) {
         border(
             width = 1.dp,
-            color = if (isSystemInDarkTheme()) Color.Red else Color.Black,
+            color = Color.Black,
             shape = MaterialTheme.shapes.medium
         )
     } else {

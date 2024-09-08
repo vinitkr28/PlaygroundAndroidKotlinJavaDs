@@ -60,7 +60,7 @@ fun SearchScreen(
 private fun SearchScreenPreview() {
     LandOfCodeNewsAppTheme {
         val viewModel: SearchViewModel = hiltViewModel()
-        SearchScreen(state = viewModel.state.value, event = { viewModel::onEvent }, navigate = {})
+        SearchScreen(state = viewModel.state.value, event = viewModel::onEvent, navigate = {})
     }
 }
 

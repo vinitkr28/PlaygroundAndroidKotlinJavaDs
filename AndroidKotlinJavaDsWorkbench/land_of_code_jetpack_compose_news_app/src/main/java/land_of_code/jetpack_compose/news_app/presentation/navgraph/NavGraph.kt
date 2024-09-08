@@ -6,7 +6,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import land_of_code.jetpack_compose.news_app.presentation.home.HomeViewModel
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
 import land_of_code.jetpack_compose.news_app.presentation.search.SearchScreen
@@ -48,7 +47,12 @@ fun NavGraph(
 
 
                 val viewModel: SearchViewModel = hiltViewModel()
-                SearchScreen(state = viewModel.state.value, event = {viewModel::onEvent}, navigate = {})
+                SearchScreen(
+                    state = viewModel.state.value,
+                    event = viewModel::onEvent,
+//                    event = { viewModel.onEvent(it) },//we can call onEvent in this way also.
+                    navigate = {}
+                )
             }
         }
     }
