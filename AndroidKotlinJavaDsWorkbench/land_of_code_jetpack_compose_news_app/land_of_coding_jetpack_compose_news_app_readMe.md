@@ -405,7 +405,10 @@ SideEffect {
 * `AndroidManifest.xml`
 * 
 
-### 15/19. []()
+### 15/19. [Room Database - Jetpack Compose Clean Architecture News App - part 15](https://youtu.be/mY4ejkfdPz0?si=edIIMVTCjRA1hSbI)
+* **GitHub:**
+  * lofcoding / NewsApp
+    * branch: [part11-RoomDatabase](https://github.com/lofcoding/NewsApp/tree/part11-RoomDatabase)
 ### 16/19. []()
 ### 17/19. []()
 ### 18/19. []()
