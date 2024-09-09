@@ -406,11 +406,24 @@ SideEffect {
 * 
 
 ### 15/19. [Room Database - Jetpack Compose Clean Architecture News App - part 15](https://youtu.be/mY4ejkfdPz0?si=edIIMVTCjRA1hSbI)
+
 * **GitHub:**
   * lofcoding / NewsApp
     * _branch:_ [part11-RoomDatabase](https://github.com/lofcoding/NewsApp/tree/part11-RoomDatabase)
   * vinitkr28 / PlaygroundAndroidKotlinJavaDs
     * _branch:_ [LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+
+* domain
+  * model
+    * `Article`
+* data
+  * local
+    * `NewsDao.kt`
+    * `NewsTypeConverter.kt`
+    * `NewsDatabase.kt`
+* di
+  * `AppModule`
+
 ### 16/19. []()
 ### 17/19. []()
 ### 18/19. []()

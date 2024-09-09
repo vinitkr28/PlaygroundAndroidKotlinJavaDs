@@ -1,8 +1,10 @@
 package land_of_code.jetpack_compose.news_app.domain.model
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
 
+@Entity(tableName = "news_articles")
 data class Article(
 
     /*@SerializedName("source") var source: Source? = Source(),

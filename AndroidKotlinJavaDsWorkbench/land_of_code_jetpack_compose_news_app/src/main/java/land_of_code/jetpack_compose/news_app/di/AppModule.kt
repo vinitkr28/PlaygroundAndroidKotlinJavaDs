@@ -1,10 +1,13 @@
 package land_of_code.jetpack_compose.news_app.di
 
 import android.app.Application
+import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import land_of_code.jetpack_compose.news_app.data.local.NewsDatabase
+import land_of_code.jetpack_compose.news_app.data.local.NewsTypeConverter
 import land_of_code.jetpack_compose.news_app.data.manager.LocalUserManagerImpl
 import land_of_code.jetpack_compose.news_app.data.remote.NewsApi
 import land_of_code.jetpack_compose.news_app.data.repository.NewsRepositoryImpl
@@ -61,10 +64,24 @@ object AppModule {
     @Singleton
     fun provideNewsUseCases(
         newsRepository: NewsRepository
-    ) : NewsUseCases {
+    ): NewsUseCases {
         return NewsUseCases(
             getNews = GetNews(newsRepository),
             searchNews = SearchNews(newsRepository)
         )
+    }
+
+    @Provides
+    @Singleton
+    fun provideNewsDatabase(
+        application: Application
+    ): NewsDatabase {
+        return Room.databaseBuilder(
+            context = application,
+            klass = NewsDatabase::class.java,
+            name = Constants.NEWS_DB
+        ).addTypeConverter(NewsTypeConverter())
+            .fallbackToDestructiveMigration()
+            .build()
     }
 }
