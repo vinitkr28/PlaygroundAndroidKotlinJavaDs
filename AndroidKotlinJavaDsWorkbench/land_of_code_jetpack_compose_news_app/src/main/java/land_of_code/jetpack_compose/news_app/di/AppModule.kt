@@ -22,6 +22,7 @@ import land_of_code.jetpack_compose.news_app.domain.usecases.news.GetNews
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.NewsUseCases
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.SearchNews
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.SelectArticle
+import land_of_code.jetpack_compose.news_app.domain.usecases.news.SelectArticles
 import land_of_code.jetpack_compose.news_app.domain.usecases.news.UpsertArticle
 import land_of_code.jetpack_compose.news_app.util.Constants
 import land_of_code.jetpack_compose.news_app.util.Constants.BASE_URL
@@ -74,8 +75,9 @@ object AppModule {
             getNews = GetNews(newsRepository),
             searchNews = SearchNews(newsRepository),
             deleteArticle = DeleteArticle(newsDao = newsDao),
-            selectArticle = SelectArticle(newsDao = newsDao),
-            upsertArticle = UpsertArticle(newsDao = newsDao)
+            selectArticles = SelectArticles(newsDao = newsDao),
+            upsertArticle = UpsertArticle(newsDao = newsDao),
+            selectArticle = SelectArticle(newsDao = newsDao)
         )
     }
 

@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import land_of_code.jetpack_compose.news_app.R
+import land_of_code.jetpack_compose.news_app.domain.model.Article
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.ExtraSmallPadding
 import land_of_code.jetpack_compose.news_app.presentation.Dimens.MediumPadding1
 import land_of_code.jetpack_compose.news_app.presentation.common.ArticleList
@@ -20,7 +21,7 @@ import land_of_code.jetpack_compose.news_app.presentation.navgraph.Route
 
 @Composable
 fun BookmarkScreen(
-    state: BookmarkState, navigate: (String) -> Unit
+    state: BookmarkState, navigateToDetails: (Article) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -54,7 +55,7 @@ fun BookmarkScreen(
 //                ),
             articles = state.articles
         ) {
-            navigate(Route.DetailsScreen.route)
+            navigateToDetails(it)
         }
     }
 }

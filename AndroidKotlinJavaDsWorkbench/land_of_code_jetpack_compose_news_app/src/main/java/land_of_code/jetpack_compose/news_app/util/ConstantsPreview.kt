@@ -1,7 +1,9 @@
 package land_of_code.jetpack_compose.news_app.util
 
+import land_of_code.jetpack_compose.news_app.R
 import land_of_code.jetpack_compose.news_app.domain.model.Article
 import land_of_code.jetpack_compose.news_app.domain.model.Source
+import land_of_code.jetpack_compose.news_app.presentation.news_navigator.components.BottomNavigationItem
 
 object ConstantsPreview {
 

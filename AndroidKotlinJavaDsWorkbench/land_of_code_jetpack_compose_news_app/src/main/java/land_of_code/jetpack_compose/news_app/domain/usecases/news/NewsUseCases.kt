@@ -9,5 +9,7 @@ data class NewsUseCases(
 
     val deleteArticle: DeleteArticle,
 
-    val selectArticle: SelectArticle,
+    val selectArticles: SelectArticles,
+
+    val selectArticle: SelectArticle
 )

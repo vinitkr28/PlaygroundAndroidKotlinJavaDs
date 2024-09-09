@@ -8,10 +8,9 @@ import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import land_of_code.jetpack_compose.news_app.presentation.bookmark.BookMarkViewModel
 import land_of_code.jetpack_compose.news_app.presentation.bookmark.BookmarkScreen
+import land_of_code.jetpack_compose.news_app.presentation.news_navigator.NewsNavigator
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
-import land_of_code.jetpack_compose.news_app.presentation.search.SearchScreen
-import land_of_code.jetpack_compose.news_app.presentation.search.SearchViewModel
 
 @Composable
 fun NavGraph(
@@ -58,9 +57,12 @@ fun NavGraph(
                 )
                 */
 
-                val viewModel: BookMarkViewModel = hiltViewModel()
+                /*val viewModel: BookMarkViewModel = hiltViewModel()
 //                BookmarkScreen(state = viewModel.state.value) {}
-                BookmarkScreen(state = viewModel.state.value, navigate = {})
+                BookmarkScreen(state = viewModel.state.value, navigateToDetails = {})*/
+
+
+                NewsNavigator()
             }
         }
     }

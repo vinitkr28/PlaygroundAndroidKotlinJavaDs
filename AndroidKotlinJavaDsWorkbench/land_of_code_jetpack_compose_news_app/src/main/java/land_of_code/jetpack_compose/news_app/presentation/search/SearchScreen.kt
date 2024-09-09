@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.collectAsLazyPagingItems
+import land_of_code.jetpack_compose.news_app.domain.model.Article
 import land_of_code.jetpack_compose.news_app.presentation.Dimens
 import land_of_code.jetpack_compose.news_app.presentation.common.ArticleList
 import land_of_code.jetpack_compose.news_app.presentation.common.SearchBar
@@ -24,7 +25,7 @@ import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 fun SearchScreen(
     state: SearchState,
     event: (SearchEvent) -> Unit,
-    navigate: (String) -> Unit,
+    navigateToDetails: (Article) -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -47,9 +48,9 @@ fun SearchScreen(
 
         state.articles?.let {
             val articles = it.collectAsLazyPagingItems()
-            ArticleList(articles = articles) {
-                navigate(Route.DetailsScreen.route)
-            }
+            ArticleList(articles = articles, onClick = {
+                navigateToDetails(it)
+            })
         }
     }
 }
@@ -60,7 +61,7 @@ fun SearchScreen(
 private fun SearchScreenPreview() {
     LandOfCodeNewsAppTheme {
         val viewModel: SearchViewModel = hiltViewModel()
-        SearchScreen(state = viewModel.state.value, event = viewModel::onEvent, navigate = {})
+        SearchScreen(state = viewModel.state.value, event = viewModel::onEvent, navigateToDetails = {})
     }
 }
 

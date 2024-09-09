@@ -1,11 +1,14 @@
 package land_of_code.jetpack_compose.news_app.domain.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 
+@Parcelize
 //@Entity(tableName = "news_articles", primaryKeys = ["id", "title"])
 @Entity(tableName = "news_articles")
 //@Entity
@@ -57,4 +60,4 @@ data class Article(
     @ColumnInfo(name = "content")
     @SerializedName("content")
     var content: String? = null
-)
+): Parcelable

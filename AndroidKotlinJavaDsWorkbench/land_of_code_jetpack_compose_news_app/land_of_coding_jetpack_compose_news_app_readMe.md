@@ -447,10 +447,37 @@ SideEffect {
     * news
       * `UpsertArticle.kt`
       * `DeleteArticle.kt`
-      * `SelectArticle.kt`
+      * `SelectArticles.kt`
       * `NewsUseCases`
 
-### 17/19. []()
+### 17/19. [News Navigator - Jetpack Compose Clean Architecture News App - part 17](https://youtu.be/94biU8_HcT8?si=9-7NA0FwFNUPBL8E)
+
+* **GitHub:**
+  * lofcoding / NewsApp
+    * _branch:_ [part13-CodeCleanup](https://github.com/lofcoding/NewsApp/tree/part13-CodeCleanup)
+  * vinitkr28 / PlaygroundAndroidKotlinJavaDs
+    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+
+* `NewsDao`
+* `DetailsEvent`
+* `DetailsScreen`
+* `DetailViewModel.kt`
+* `SelectArticle.kt`
+* `SelectArticles.kt`
+* `AppModule`
+* `Article`
+* `Source`
+* `BookmarkScreen`
+* `BookmarkViewModel`
+* `build.gradle.kts` 
+* `DeleteArticle.kt` 
+* `HomeScreen` 
+* `NavGraph` 
+* `NewsBottomNavigation.kt` 
+* `NewsNavigator.kt` 
+* `NewsUseCases` 
+* `SearchScreen` 
+
 ### 18/19. []()
 ### 19/19. []()
 <br/><br/>
