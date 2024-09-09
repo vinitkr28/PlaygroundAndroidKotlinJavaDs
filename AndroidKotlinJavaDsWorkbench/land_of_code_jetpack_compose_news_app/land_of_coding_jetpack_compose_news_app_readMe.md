@@ -425,7 +425,15 @@ SideEffect {
   * `AppModule`
 * `MainActivity`
 
-### 16/19. []()
+### 16/19. [Bookmark Screen - Jetpack Compose Clean Architecture News App - part 16](https://youtu.be/kB-uQUxSnoc?si=m6hp8kV4d5Is5TlQ)
+
+* **GitHub:**
+  * lofcoding / NewsApp
+    * _branch:_ [part12-Bookmark](https://github.com/lofcoding/NewsApp/tree/part12-Bookmark)
+  * vinitkr28 / PlaygroundAndroidKotlinJavaDs
+    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+
+
 ### 17/19. []()
 ### 18/19. []()
 ### 19/19. []()
