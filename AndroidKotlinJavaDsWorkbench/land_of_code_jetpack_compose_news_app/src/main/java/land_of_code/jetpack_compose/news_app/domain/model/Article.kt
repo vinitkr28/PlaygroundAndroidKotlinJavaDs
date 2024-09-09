@@ -57,33 +57,4 @@ data class Article(
     @ColumnInfo(name = "content")
     @SerializedName("content")
     var content: String? = null
-
-
-
-    /*@PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
-
-    @SerializedName("source")
-    var source: Source,
-
-    @SerializedName("author")
-    var author: String? = null,
-
-    @SerializedName("title")
-    var title: String,
-
-    @SerializedName("description")
-    var description: String? = null,
-
-    @SerializedName("url")
-    var url: String,
-
-    @SerializedName("urlToImage")
-    var urlToImage: String? = null,
-
-    @SerializedName("publishedAt")
-    var publishedAt: String,
-
-    @SerializedName("content")
-    var content: String? = null*/
 )

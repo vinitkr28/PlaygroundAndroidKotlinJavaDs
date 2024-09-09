@@ -32,18 +32,15 @@ class MainActivity : ComponentActivity() {
 
     val viewModel by viewModels<MainViewModel>()
 
-    @Inject
-    lateinit var newsDao: NewsDao
+//    @Inject
+//    lateinit var newsDao: NewsDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Tell the system to fit the window content below system bars (like status bar)
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        lifecycleScope.launch {
-
-            newsDao.upsert(ConstantsPreview.articlePreviewInputType1)
-        }
+//        lifecycleScope.launch { newsDao.upsert(ConstantsPreview.articlePreviewInputType1) }
 
         installSplashScreen().apply {
             setKeepOnScreenCondition{

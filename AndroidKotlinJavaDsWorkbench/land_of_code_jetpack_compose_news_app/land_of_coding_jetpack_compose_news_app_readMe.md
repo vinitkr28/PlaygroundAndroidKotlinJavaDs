@@ -431,21 +431,23 @@ SideEffect {
 ### 19/19. []()
 <br/><br/>
 
-| Library Name | Version | Package                                                                                                                  | Links | Documents |
-|--------------|---------|--------------------------------------------------------------------------------------------------------------------------|-------|-----------|
-| _Kotlin_       | 1.9.21  | org.jetbrains.kotlin.android                                                                                             | -     | -         |
-| _Dagger/Hilt_  | 2.50    | com.google.dagger.hilt.android                                                                                           | -     | -         |
-| _Room_         | 2.6.1   | * implementation("androidx.room:room-runtime:$room_version")<br/>* kapt("androidx.room:room-compiler:$room_version")<br/>* implementation("androidx.room:room-ktx:$room_version")
-| -     | -         |
-| -            | -       | -                                                                                                                        | -     | -         |
-| -            | -       | -                                                                                                                        | -     | -         | 
-| -            | -       | -                                                                                                                        | -     | -         |
-| -            | -       | -                                                                                                                        | -     | -         | 
-| -            | -       | -                                                                                                                        | -     | -         |
-| -            | -       | -                                                                                                                        | -     | -         | 
+| Library Name  | Version | Package                                                                                                                                                                           | Links | Documents |
+|---------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-----------|
+| _Kotlin_      | 1.9.21  | org.jetbrains.kotlin.android                                                                                                                                                      | -     | -         |
+| _Dagger/Hilt_ | 2.50    | com.google.dagger.hilt.android                                                                                                                                                    | -     | -         |
+| _Room_        | 2.6.1   | * implementation("androidx.room:room-runtime:$room_version")<br/>* kapt("androidx.room:room-compiler:$room_version")<br/>* implementation("androidx.room:room-ktx:$room_version") | -     | -         |
+| -             | -       |                                                                                                                                                                                   |       |           |
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
 
 
 &nbsp;
+
+
 
 ```
 
