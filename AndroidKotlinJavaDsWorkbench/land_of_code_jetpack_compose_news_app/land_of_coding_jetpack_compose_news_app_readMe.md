@@ -431,7 +431,7 @@ SideEffect {
   * lofcoding / NewsApp
     * _branch:_ [part12-Bookmark](https://github.com/lofcoding/NewsApp/tree/part12-Bookmark)
   * vinitkr28 / PlaygroundAndroidKotlinJavaDs
-    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
 
 
 ### 17/19. []()
