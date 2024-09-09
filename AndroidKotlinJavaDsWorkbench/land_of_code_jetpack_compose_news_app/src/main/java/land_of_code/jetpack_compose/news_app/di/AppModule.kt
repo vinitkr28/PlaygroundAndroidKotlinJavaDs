@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import land_of_code.jetpack_compose.news_app.data.local.NewsDao
 import land_of_code.jetpack_compose.news_app.data.local.NewsDatabase
 import land_of_code.jetpack_compose.news_app.data.local.NewsTypeConverter
 import land_of_code.jetpack_compose.news_app.data.manager.LocalUserManagerImpl
@@ -84,4 +85,10 @@ object AppModule {
             .fallbackToDestructiveMigration()
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideNewsDao(
+        newsDatabase: NewsDatabase
+    ): NewsDao = newsDatabase.newsDao
 }

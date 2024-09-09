@@ -14,10 +14,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import land_of_code.jetpack_compose.news_app.data.local.NewsDao
 import land_of_code.jetpack_compose.news_app.presentation.navgraph.NavGraph
 import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
+import land_of_code.jetpack_compose.news_app.util.ConstantsPreview
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -27,10 +32,19 @@ class MainActivity : ComponentActivity() {
 
     val viewModel by viewModels<MainViewModel>()
 
+    @Inject
+    lateinit var newsDao: NewsDao
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Tell the system to fit the window content below system bars (like status bar)
         WindowCompat.setDecorFitsSystemWindows(window, true)
+
+        lifecycleScope.launch {
+
+            newsDao.upsert(ConstantsPreview.articlePreviewInputType1)
+        }
+
         installSplashScreen().apply {
             setKeepOnScreenCondition{
                 viewModel.splashCondition
