@@ -6,6 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import land_of_code.jetpack_compose.news_app.presentation.bookmark.BookMarkViewModel
+import land_of_code.jetpack_compose.news_app.presentation.bookmark.BookmarkScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingScreen
 import land_of_code.jetpack_compose.news_app.presentation.onboarding.OnBoardingViewModel
 import land_of_code.jetpack_compose.news_app.presentation.search.SearchScreen
@@ -13,7 +15,7 @@ import land_of_code.jetpack_compose.news_app.presentation.search.SearchViewModel
 
 @Composable
 fun NavGraph(
-    startDestination:String
+    startDestination: String
 ) {
     val navController = rememberNavController()
 
@@ -21,11 +23,11 @@ fun NavGraph(
 
         navigation(
             route = Route.AppStartNavigation.route,
-            startDestination =  Route.OnBoardingScreen.route
+            startDestination = Route.OnBoardingScreen.route
         ) {
             composable(
                 route = Route.OnBoardingScreen.route
-            ){
+            ) {
                 val viewModel: OnBoardingViewModel = hiltViewModel()
                 OnBoardingScreen(event = viewModel::onEvent)
             }
@@ -34,7 +36,7 @@ fun NavGraph(
         navigation(
             route = Route.NewsNavigation.route,
             startDestination = Route.NewsNavigatorScreen.route
-        ){
+        ) {
             composable(
                 route = Route.NewsNavigatorScreen.route
             ) {
@@ -46,6 +48,7 @@ fun NavGraph(
                 HomeScreen(articles = articles, navigate = {})*/
 
 
+                /*
                 val viewModel: SearchViewModel = hiltViewModel()
                 SearchScreen(
                     state = viewModel.state.value,
@@ -53,6 +56,11 @@ fun NavGraph(
 //                    event = { viewModel.onEvent(it) },//we can call onEvent in this way also.
                     navigate = {}
                 )
+                */
+
+                val viewModel: BookMarkViewModel = hiltViewModel()
+//                BookmarkScreen(state = viewModel.state.value) {}
+                BookmarkScreen(state = viewModel.state.value, navigate = {})
             }
         }
     }

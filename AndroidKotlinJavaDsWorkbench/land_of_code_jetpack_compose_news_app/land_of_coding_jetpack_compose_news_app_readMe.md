@@ -433,6 +433,22 @@ SideEffect {
   * vinitkr28 / PlaygroundAndroidKotlinJavaDs
     * _branch:_ [LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
 
+* presentation
+  * bookmark
+    * `BookMarkViewModel.kt`
+    * `BookmarkState.kt`
+    * `BookmarkScreen.kt`
+  * common
+    * `ArticleList`
+  * navgraph
+    * `NavGraph`
+* domain
+  * usecases
+    * news
+      * `UpsertArticle.kt`
+      * `DeleteArticle.kt`
+      * `SelectArticle.kt`
+      * `NewsUseCases`
 
 ### 17/19. []()
 ### 18/19. []()
@@ -455,8 +471,62 @@ SideEffect {
 
 &nbsp;
 
-
-
+* ### **operator**
+  * keyword that translated to an expression.
+    * invoke operator
+      * ```
+        fun doSomething(arg: () -> Unit) {
+          //arg()
+          arg.invoke()
+        }
+        ```
+        * The usecase should do one thing only
+          * ```
+              class FirstUseCase() {
+                //fun execute() {} 
+                operator fun invoke() {}
+              }
+            ```
+            ```
+              class SecondUseCase() {
+                fun execute() {} 
+              }
+            ```
+            ```
+              val firstUsecase = FirstUseCase()
+              val secondUsecase = FirstUseCase()
+              fun main() {
+                //firstUsecase.execute()
+                //firstUsecase.invoke()//We can call in this way also.
+                firstUsecase()
+            
+                secondUsecase.execute()
+              }
+            ```
+          * ```
+            interface BaseUseCase() {
+              //fun execute() {} 
+              operator fun invoke() {}
+            }
+            ```
+            ```
+            class MyFirstUseCase(): BaseUseCase {
+              //fun execute() {}
+              override operator fun invoke() {}
+            }
+            ```
+            ```
+            class MySecondUseCase(): BaseUseCase {
+              //fun execute() {}
+              override operator fun invoke() {}
+            }
+            ```
+            ```
+            val baseUseCase = MyFirstUseCase()
+            fun main() {
+              baseUseCase()
+            }
+            ```
 ```
 
 ```
