@@ -458,25 +458,45 @@ SideEffect {
   * vinitkr28 / PlaygroundAndroidKotlinJavaDs
     * _branch:_ [LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
 
-* `NewsDao`
-* `DetailsEvent`
-* `DetailsScreen`
-* `DetailViewModel.kt`
-* `SelectArticle.kt`
-* `SelectArticles.kt`
-* `AppModule`
-* `Article`
-* `Source`
-* `BookmarkScreen`
-* `BookmarkViewModel`
-* `build.gradle.kts` 
-* `DeleteArticle.kt` 
-* `HomeScreen` 
-* `NavGraph` 
-* `NewsBottomNavigation.kt` 
-* `NewsNavigator.kt` 
-* `NewsUseCases` 
-* `SearchScreen` 
+* data
+  * local
+    * `NewsDao`
+  * repository
+    * `NewsRepositoryImpl`
+* domain
+  * model
+    * `Article`
+    * `Source`
+  * repository
+    * `NewsRepository`
+  * usecases
+    * news
+      * `SelectArticle.kt`
+      * `SelectArticles.kt`
+      * `DeleteArticle.kt`
+      * `UpsertArticle`
+      * `NewsUseCases`
+* presentation
+  * bookmark
+    * `BookmarkScreen`
+    * `BookmarkViewModel`
+  * details
+    * `DetailsEvent`
+    * `DetailsScreen`
+    * `DetailViewModel.kt`
+  * news_navigator
+    * `NewsNavigator.kt`
+    * components
+      * `NewsBottomNavigation.kt`
+  * navgraph
+    * `NavGraph`
+  * search
+    * `SearchScreen`
+  * home
+    * `HomeScreen`
+* di
+  * `AppModule`
+* `build.gradle.kts`
 
 ### 18/19. []()
 ### 19/19. []()
