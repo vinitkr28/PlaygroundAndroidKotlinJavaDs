@@ -93,7 +93,31 @@ fun EmptyContent(alphaAnim: Float, message: String, iconId: Int) {
             color = if (isSystemInDarkTheme()) Color.LightGray else Color.DarkGray
         )
 
+        Box(
+//            modifier = Modifier.fillMaxSize(),
+//            contentAlignment = Alignment.Center
+        ) {
+            val shakeState = rememberShakingState(
+                strength = ShakingState.Strength.Strong,
+                direction = ShakingState.Direction.LEFT_THEN_RIGHT
+            )
+            val scope = rememberCoroutineScope()
 
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                TextButton(
+                    modifier = Modifier.shakable(shakeState),
+                    onClick = {
+                        scope.launch {
+                            shakeState.shake(
+                                animationDuration = 40
+                            )
+                        }
+                    }
+                ) {
+                    Text(text = "Refresh", fontSize = 22.sp)
+                }
+            }
+        }
 
 
     }

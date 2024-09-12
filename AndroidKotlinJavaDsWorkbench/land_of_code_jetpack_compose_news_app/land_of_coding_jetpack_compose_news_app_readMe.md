@@ -503,6 +503,10 @@ SideEffect {
 ### 19/19. []()
 
 
+### Topics:
+
+### * [Create Shaking Effect In Jetpack Compose - UI Challenge](https://youtu.be/7zrf6GdcIQQ?si=jQvHR8XpMqUcmqmL)
+
 
 <br/><br/>
 
