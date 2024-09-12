@@ -3,3 +3,8 @@
 ## [Land of coding](https://www.youtube.com/@Landofcoding)
 
 ### 1/19. [What is Jetpack Compose? Why Compose? Compose Vs. Xml](https://youtu.be/k02U6T1qn_Y?si=qcID3cjO5Ok89c5S)
+* Less Code
+* reusability
+* can use in web 
+* UI for Desktop app
+* performance is higher compare with XML because it uses reactive programming
