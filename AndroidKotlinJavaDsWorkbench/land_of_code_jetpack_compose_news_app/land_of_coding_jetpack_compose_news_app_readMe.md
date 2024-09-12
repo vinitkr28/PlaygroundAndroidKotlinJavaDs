@@ -406,26 +406,182 @@ SideEffect {
 * 
 
 ### 15/19. [Room Database - Jetpack Compose Clean Architecture News App - part 15](https://youtu.be/mY4ejkfdPz0?si=edIIMVTCjRA1hSbI)
+
 * **GitHub:**
   * lofcoding / NewsApp
     * _branch:_ [part11-RoomDatabase](https://github.com/lofcoding/NewsApp/tree/part11-RoomDatabase)
   * vinitkr28 / PlaygroundAndroidKotlinJavaDs
     * _branch:_ [LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/15-Room-Database-part-15/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
-### 16/19. []()
-### 17/19. []()
-### 18/19. []()
+
+* domain
+  * model
+    * `Article`
+* data
+  * local
+    * `NewsDao.kt`
+    * `NewsTypeConverter.kt`
+    * `NewsDatabase.kt`
+* di
+  * `AppModule`
+* `MainActivity`
+
+### 16/19. [Bookmark Screen - Jetpack Compose Clean Architecture News App - part 16](https://youtu.be/kB-uQUxSnoc?si=m6hp8kV4d5Is5TlQ)
+
+* **GitHub:**
+  * lofcoding / NewsApp
+    * _branch:_ [part12-Bookmark](https://github.com/lofcoding/NewsApp/tree/part12-Bookmark)
+  * vinitkr28 / PlaygroundAndroidKotlinJavaDs
+    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/16-Bookmark-Screen-part-16/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+
+* presentation
+  * bookmark
+    * `BookMarkViewModel.kt`
+    * `BookmarkState.kt`
+    * `BookmarkScreen.kt`
+  * common
+    * `ArticleList`
+  * navgraph
+    * `NavGraph`
+* domain
+  * usecases
+    * news
+      * `UpsertArticle.kt`
+      * `DeleteArticle.kt`
+      * `SelectArticles.kt`
+      * `NewsUseCases`
+
+### 17/19. [News Navigator - Jetpack Compose Clean Architecture News App - part 17](https://youtu.be/94biU8_HcT8?si=9-7NA0FwFNUPBL8E)
+
+* **GitHub:**
+  * lofcoding / NewsApp
+    * _branch:_ [part13-CodeCleanup](https://github.com/lofcoding/NewsApp/tree/part13-CodeCleanup)
+  * vinitkr28 / PlaygroundAndroidKotlinJavaDs
+    * _branch:_ [LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17](https://github.com/vinitkr28/PlaygroundAndroidKotlinJavaDs/tree/LandOfCoding/JetpackComposeNewsApp/17-News-Navigator-part-17/AndroidKotlinJavaDsWorkbench/land_of_code_jetpack_compose_news_app)
+
+* data
+  * local
+    * `NewsDao`
+  * repository
+    * `NewsRepositoryImpl`
+* domain
+  * model
+    * `Article`
+    * `Source`
+  * repository
+    * `NewsRepository`
+  * usecases
+    * news
+      * `SelectArticle.kt`
+      * `SelectArticles.kt`
+      * `DeleteArticle.kt`
+      * `UpsertArticle`
+      * `NewsUseCases`
+* presentation
+  * bookmark
+    * `BookmarkScreen`
+    * `BookmarkViewModel`
+  * details
+    * `DetailsEvent`
+    * `DetailsScreen`
+    * `DetailViewModel.kt`
+  * news_navigator
+    * `NewsNavigator.kt`
+    * components
+      * `NewsBottomNavigation.kt`
+  * navgraph
+    * `NavGraph`
+  * search
+    * `SearchScreen`
+  * home
+    * `HomeScreen`
+* di
+  * `AppModule`
+* `build.gradle.kts`
+
+### 18/19. [News app refactoring code and fixing bugs - Live stream 🔴](https://www.youtube.com/live/XVvsetaur8w?si=s3VDooUUvqouFIaX)
+
 ### 19/19. []()
+
+
+### Topics:
+
+### * [Create Shaking Effect In Jetpack Compose - UI Challenge](https://youtu.be/7zrf6GdcIQQ?si=jQvHR8XpMqUcmqmL)
+
+
 <br/><br/>
 
-| Library Name | Version | Package                        | Links | Documents |
-|--------------|---------|--------------------------------|-------|-----------|
-| Kotlin       | 1.9.21  | org.jetbrains.kotlin.android   | -     | -         |
-| Dagger/Hilt  | 2.50    | com.google.dagger.hilt.android | -     | -         |
-| -            | -       | -                              | -     | -         | 
+| Library Name  | Version | Package                                                                                                                                                                           | Links | Documents |
+|---------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-----------|
+| _Kotlin_      | 1.9.21  | org.jetbrains.kotlin.android                                                                                                                                                      | -     | -         |
+| _Dagger/Hilt_ | 2.50    | com.google.dagger.hilt.android                                                                                                                                                    | -     | -         |
+| _Room_        | 2.6.1   | * implementation("androidx.room:room-runtime:$room_version")<br/>* kapt("androidx.room:room-compiler:$room_version")<br/>* implementation("androidx.room:room-ktx:$room_version") | -     | -         |
+| -             | -       |                                                                                                                                                                                   |       |           |
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
+| -             | -       | -                                                                                                                                                                                 | -     | -         |
+| -             | -       | -                                                                                                                                                                                 | -     | -         | 
 
 
 &nbsp;
 
+* ### **operator**
+  * keyword that translated to an expression.
+    * invoke operator
+      * ```
+        fun doSomething(arg: () -> Unit) {
+          //arg()
+          arg.invoke()
+        }
+        ```
+        * The usecase should do one thing only
+          * ```
+              class FirstUseCase() {
+                //fun execute() {} 
+                operator fun invoke() {}
+              }
+            ```
+            ```
+              class SecondUseCase() {
+                fun execute() {} 
+              }
+            ```
+            ```
+              val firstUsecase = FirstUseCase()
+              val secondUsecase = FirstUseCase()
+              fun main() {
+                //firstUsecase.execute()
+                //firstUsecase.invoke()//We can call in this way also.
+                firstUsecase()
+            
+                secondUsecase.execute()
+              }
+            ```
+          * ```
+            interface BaseUseCase() {
+              //fun execute() {} 
+              operator fun invoke() {}
+            }
+            ```
+            ```
+            class MyFirstUseCase(): BaseUseCase {
+              //fun execute() {}
+              override operator fun invoke() {}
+            }
+            ```
+            ```
+            class MySecondUseCase(): BaseUseCase {
+              //fun execute() {}
+              override operator fun invoke() {}
+            }
+            ```
+            ```
+            val baseUseCase = MyFirstUseCase()
+            fun main() {
+              baseUseCase()
+            }
+            ```
 ```
 
 ```
