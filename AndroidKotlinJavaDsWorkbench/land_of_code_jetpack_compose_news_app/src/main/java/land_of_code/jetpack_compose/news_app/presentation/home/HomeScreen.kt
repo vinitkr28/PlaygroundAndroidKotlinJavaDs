@@ -33,7 +33,9 @@ import land_of_code.jetpack_compose.news_app.presentation.navgraph.Route
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
-    articles: LazyPagingItems<Article>, navigate: (String) -> Unit
+    articles: LazyPagingItems<Article>,
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
 ) {
     val titles by remember {
         derivedStateOf {
@@ -68,8 +70,9 @@ fun HomeScreen(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             text = "",
             readOnly = true,
-            onValueChange = {
-                navigate(Route.SearchScreen.route)
+            onValueChange = {},
+            onClick = {
+                navigateToSearch()
             },
             onSearch = { }
         )
@@ -92,7 +95,7 @@ fun HomeScreen(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             articles = articles,
             onClick = {
-                navigate(Route.DetailsScreen.route)
+                navigateToDetails(it)
             }
         )
     }
