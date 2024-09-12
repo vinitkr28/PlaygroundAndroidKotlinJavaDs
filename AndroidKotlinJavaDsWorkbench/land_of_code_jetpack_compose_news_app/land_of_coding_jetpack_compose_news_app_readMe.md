@@ -586,6 +586,15 @@ SideEffect {
 
 ```
 
+* discord
+  * discord.gg/snFzU9dZqz
+* Instagram 
+  * instagram.com/mohammednas88
+* Github 
+  * github.com/mohammednawas8
+* LinkedIn 
+  * linkedin.com/in/mohammad-nawas-37034b226
+
 ```
 ********** # Some Rough Work # **********
 ```
