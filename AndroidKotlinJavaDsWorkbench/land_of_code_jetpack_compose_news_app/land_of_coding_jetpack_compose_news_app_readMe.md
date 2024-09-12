@@ -498,8 +498,12 @@ SideEffect {
   * `AppModule`
 * `build.gradle.kts`
 
-### 18/19. []()
+### 18/19. [News app refactoring code and fixing bugs - Live stream 🔴](https://www.youtube.com/live/XVvsetaur8w?si=s3VDooUUvqouFIaX)
+
 ### 19/19. []()
+
+
+
 <br/><br/>
 
 | Library Name  | Version | Package                                                                                                                                                                           | Links | Documents |

@@ -19,6 +19,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import land_of_code.jetpack_compose.news_app.data.local.NewsDao
+import land_of_code.jetpack_compose.news_app.presentation.common.EmptyScreen
 import land_of_code.jetpack_compose.news_app.presentation.navgraph.NavGraph
 import land_of_code.jetpack_compose.news_app.ui.theme.LandOfCodeNewsAppTheme
 import land_of_code.jetpack_compose.news_app.util.ConstantsPreview
@@ -100,7 +101,6 @@ class MainActivity : ComponentActivity() {
 
                     val startDestination = viewModel.startDestination
                     NavGraph(startDestination = startDestination)
-
                 }
             }
         }
