@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -15,6 +16,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -25,7 +29,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AcUnit
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -57,8 +60,22 @@ class MainActivity : ComponentActivity() {
 
             LandOfCodingJetpackComposeTheme {
 
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.SpaceAround,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 
+                    Row(
+                        modifier = Modifier
+                            .weight(.5f)
+//                            .fillMaxHeight(.5f)
+                            .background(Color.Blue)
+                    ) {
+                        Box(modifier = Modifier.weight(.5f)) {
+                            ModifierExample()
+                        }
                     Column(
                         modifier = Modifier.fillMaxSize(),
                         verticalArrangement = Arrangement.SpaceAround
@@ -71,6 +88,45 @@ class MainActivity : ComponentActivity() {
                         }
                         MyTextFieldStateless(textValue = textState, onValueChange = {
 
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Box(modifier = Modifier.weight(.5f)) {
+                            ModifierExample()
+                        }
+                    }
+                    Row(
+                        modifier = Modifier
+                            .weight(.5f)
+                            .fillMaxWidth()
+//                            .fillMaxHeight(.5f)
+                            .border(
+                                color = Color.Red,
+                                width = 5.dp,
+                                shape = RoundedCornerShape(15.dp)
+                            )
+                            .background(Color.Magenta),
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Box(
+                            modifier = Modifier
+//                                .weight(1f)
+                                .size(200.dp)
+                                .clip(CircleShape)
+                                .background(color = Color.Green)
+                        ) {
+
+                        }
+                        Box(
+                            modifier = Modifier
+//                                .weight(1f)
+                                .size(200.dp)
+                                .clip(shape = RoundedCornerShape(30.dp))
+                                .background(color = Color.Green)
+                        ) {
+
+                        }
+                    }
+                }
                         }, onAddClick = {
 
                         }
@@ -85,6 +141,23 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
+fun BoxComposeSample() {
+    Box(
+        modifier = Modifier
+            .background(Color.LightGray)
+            .fillMaxSize()
+            .statusBarsPadding()
+            .navigationBarsPadding(), contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Middle of the screen")
+        Box(
+            modifier = Modifier
+                .background(Color.LightGray)
+                .fillMaxSize(), contentAlignment = Alignment.Center
+        ) {
+            Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
+            Text(text = "World", modifier = Modifier.align(Alignment.TopEnd))
+        }
 fun MyTextField() {
     val textState = remember {
         mutableStateOf(value = "")
@@ -98,6 +171,68 @@ fun MyTextField() {
 
 
 @Composable
+fun Greeting(name: String) {
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.SpaceAround,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+
+        Text(
+            text = "Welcome $name",
+            color = Color.Red,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
+
+        Icon(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null,
+            tint = Color.Black
+        )
+
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null
+        )
+
+        BasicText("Basic Text")
+
+        TextField(value = "", onValueChange = {}, label = {
+            Text(text = "Label")
+        })
+
+        FloatingActionButton(onClick = { }) {
+            Icon(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null
+            )
+        }
+        FloatingActionButton(onClick = { }) {
+            Icon(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null
+            )
+        }
+
+//EXTENDED FAB WITHOUT ICON
+        ExtendedFloatingActionButton(
+            text = {
+                Text(text = "EXTENDED FAB")
+            },
+            onClick = { },
+            icon = { Icon(Icons.Filled.Add, "") }
+        )
+
+    }
+    ExtendedFloatingActionButton(
+        text = {
+            Text(text = "EXTENDED FAB")
+        },
+        onClick = { },
+        icon = { Icon(Icons.Filled.Add, "") }
 fun MyTextFieldStateless(
     textValue: String,
     onValueChange: (String) -> Unit,
