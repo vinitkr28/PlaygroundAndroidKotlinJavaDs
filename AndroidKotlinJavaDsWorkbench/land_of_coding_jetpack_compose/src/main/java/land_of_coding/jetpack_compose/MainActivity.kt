@@ -54,19 +54,59 @@ class MainActivity : ComponentActivity() {
 
             LandOfCodingJetpackComposeTheme {
 
-
-                Row(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Red)
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.SpaceAround,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Box(modifier = Modifier.weight(.5f)) {
-                        ModifierExample()
-                    }
 
-                    Spacer(modifier = Modifier.width(5.dp))
-                    Box(modifier = Modifier.weight(.5f)) {
-                        ModifierExample()
+                    Row(
+                        modifier = Modifier
+                            .weight(.5f)
+//                            .fillMaxHeight(.5f)
+                            .background(Color.Blue)
+                    ) {
+                        Box(modifier = Modifier.weight(.5f)) {
+                            ModifierExample()
+                        }
+
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Box(modifier = Modifier.weight(.5f)) {
+                            ModifierExample()
+                        }
+                    }
+                    Row(
+                        modifier = Modifier
+                            .weight(.5f)
+                            .fillMaxWidth()
+//                            .fillMaxHeight(.5f)
+                            .border(
+                                color = Color.Red,
+                                width = 5.dp,
+                                shape = RoundedCornerShape(15.dp)
+                            )
+                            .background(Color.Magenta),
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Box(
+                            modifier = Modifier
+//                                .weight(1f)
+                                .size(200.dp)
+                                .clip(CircleShape)
+                                .background(color = Color.Green)
+                        ) {
+
+                        }
+                        Box(
+                            modifier = Modifier
+//                                .weight(1f)
+                                .size(200.dp)
+                                .clip(shape = RoundedCornerShape(30.dp))
+                                .background(color = Color.Green)
+                        ) {
+
+                        }
                     }
                 }
 
@@ -147,12 +187,12 @@ fun Greeting(name: String) {
                 contentDescription = null
             )
         }
-    FloatingActionButton(onClick = { }) {
-        Icon(
-            painter = painterResource(id = R.drawable.ic_launcher_background),
-            contentDescription = null
-        )
-    }
+        FloatingActionButton(onClick = { }) {
+            Icon(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null
+            )
+        }
 
 //EXTENDED FAB WITHOUT ICON
         ExtendedFloatingActionButton(
