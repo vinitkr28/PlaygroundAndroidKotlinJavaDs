@@ -124,7 +124,7 @@ class MainActivity : ComponentActivity() {
 
                             var textState by remember {
 //                        val textState by rememberSaveable {//this will save on screen configuration change.
-                                //Remember this will work with mutableStateOf and not work with mutableStateListOf
+                                //Remember this will work with mutableStateOf and not work with mutableStateListOf. We can do but more setup required.
                                 mutableStateOf(value = "")
                             }
 
