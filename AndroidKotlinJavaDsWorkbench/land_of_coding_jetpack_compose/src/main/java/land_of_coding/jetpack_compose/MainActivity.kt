@@ -5,6 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -56,33 +60,53 @@ fun BoxComposeSample() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Welcome $name", color = Color.Red, fontSize = 22.sp, fontWeight = FontWeight.Bold)
 
-    Icon(
-        painter = painterResource(id = R.drawable.ic_launcher_background),
-        contentDescription = null,
-        tint = Color.Black
-    )
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.SpaceAround,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
 
-    Image(
-        painter = painterResource(id = R.drawable.ic_launcher_background),
-        contentDescription = null
-    )
 
-    TextField(value = "", onValueChange = {}, label = {
-        Text(text = "Label")
-    })
+        Text(
+            text = "Welcome $name",
+            color = Color.Red,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
 
-    FloatingActionButton(onClick = {  }) {
-        Icon(painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = null)
-    }
+        Icon(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null,
+            tint = Color.Black
+        )
+
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null
+        )
+
+        BasicText("Basic Text")
+
+        TextField(value = "", onValueChange = {}, label = {
+            Text(text = "Label")
+        })
+
+        FloatingActionButton(onClick = { }) {
+            Icon(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null
+            )
+        }
 
 //EXTENDED FAB WITHOUT ICON
-    ExtendedFloatingActionButton(
-        text = {
-            Text(text = "EXTENDED FAB")
-        },
-        onClick = {  },
-        icon ={ Icon(Icons.Filled.Add,"")}
-    )
+        ExtendedFloatingActionButton(
+            text = {
+                Text(text = "EXTENDED FAB")
+            },
+            onClick = { },
+            icon = { Icon(Icons.Filled.Add, "") }
+        )
+
+    }
 }
