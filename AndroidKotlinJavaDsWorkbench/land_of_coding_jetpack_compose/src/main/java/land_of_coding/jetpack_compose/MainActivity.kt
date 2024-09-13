@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
@@ -49,13 +50,23 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModelProvider
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
+//    val viewModel = ViewModelProvider(this).get(MyViewModel::class.java)
+//    val viewModel = ViewModelProvider(this)[MyViewModel::class.java]
+
+    val viewModel by lazy {
+        ViewModelProvider(this)[MyViewModel::class.java]
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
+            val state = viewModel.state
 
             LandOfCodingJetpackComposeTheme {
 
@@ -148,6 +159,25 @@ class MainActivity : ComponentActivity() {
                             LazyRow {
                                 items(nameListState.size) { index ->
                                     BasicText(text = nameListState[index])
+                                }
+                            }
+
+                            BasicText("State manage with viewmodel")
+
+                            MyTextFieldStateless(
+                                textValue = state.value.testState,
+                                onValueChange = { text ->
+                                    viewModel.updateText(text)
+                                },
+                                onAddClick = {
+                                    viewModel.updateNamesList2()
+                                    viewModel.updateText(it)
+                                }
+                            )
+
+                            LazyRow {
+                                items(viewModel.state.value.nameList.size) { index ->
+                                    BasicText(text = viewModel.state.value.nameList[index])
                                 }
                             }
                         }
