@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -14,33 +13,33 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AcUnit
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -65,28 +64,16 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.SpaceAround,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 
                     Row(
                         modifier = Modifier
-                            .weight(.5f)
+                            .weight(1f)
 //                            .fillMaxHeight(.5f)
                             .background(Color.Blue)
                     ) {
                         Box(modifier = Modifier.weight(.5f)) {
                             ModifierExample()
                         }
-                    Column(
-                        modifier = Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.SpaceAround
-                    ) {
-                        MyTextField()
-
-//                        val textState by remember {
-                        val textState by rememberSaveable {
-                            mutableStateOf(value = "")
-                        }
-                        MyTextFieldStateless(textValue = textState, onValueChange = {
 
                         Spacer(modifier = Modifier.width(5.dp))
                         Box(modifier = Modifier.weight(.5f)) {
@@ -95,7 +82,7 @@ class MainActivity : ComponentActivity() {
                     }
                     Row(
                         modifier = Modifier
-                            .weight(.5f)
+                            .weight(1f)
                             .fillMaxWidth()
 //                            .fillMaxHeight(.5f)
                             .border(
@@ -126,14 +113,56 @@ class MainActivity : ComponentActivity() {
 
                         }
                     }
-                }
-                        }, onAddClick = {
 
+                    Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
+
+                        Column(
+                            modifier = Modifier.fillMaxSize(),
+                            verticalArrangement = Arrangement.SpaceAround
+                        ) {
+                            MyTextField()
+
+                            var textState by remember {
+//                        val textState by rememberSaveable {
+                                mutableStateOf(value = "")
+                            }
+
+
+                            var nameListState = remember {
+                                mutableStateListOf<String>()
+                            }
+
+                            MyTextFieldStateless(
+                                textValue = textState,
+                                onValueChange = { text ->
+                                    textState = text
+                                },
+                                onAddClick = {
+                                    nameListState.add(it)
+                                }
+                            )
+
+
+
+                            LazyRow {
+                                items(nameListState.size) { index ->
+                                    BasicText(text = nameListState[index])
+                                }
+                            }
                         }
-                        )
-                    }
 
+                    }
                 }
+
+                /*Greeting(name = "Android App Dev.")
+                Button(
+                    onClick = { },
+                    content = {
+                        Text(text = "Click Here")
+                    }
+                )*/
+//                BoxComposeSample()
+
             }
         }
     }
@@ -158,15 +187,7 @@ fun BoxComposeSample() {
             Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
             Text(text = "World", modifier = Modifier.align(Alignment.TopEnd))
         }
-fun MyTextField() {
-    val textState = remember {
-        mutableStateOf(value = "")
     }
-    TextField(
-        value = textState.value, onValueChange = {
-            textState.value = it
-        }, modifier = Modifier.fillMaxWidth()
-    )
 }
 
 
@@ -233,10 +254,71 @@ fun Greeting(name: String) {
         },
         onClick = { },
         icon = { Icon(Icons.Filled.Add, "") }
+    )
+}
+
+
+@Composable
+fun ModifierExample() {
+    Box(
+        modifier = Modifier
+            .background(
+                color = Color.LightGray,
+                shape = RectangleShape
+            )
+            .padding(start = 10.dp, end = 10.dp, top = 10.dp, bottom = 10.dp)
+            .clip(RoundedCornerShape(30.dp))
+//        .align(Alignment.Center)
+//        .size(100.dp)
+//        .width(100.dp)
+//        .height(200.dp)
+            .fillMaxSize(1f)
+//            .fillMaxWidth(.6f)
+//            .fillMaxHeight(.7f)
+            .background(
+                color = Color.Yellow,
+                shape = RectangleShape
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        Box(modifier = Modifier
+            .size(200.dp)
+            .clip(RoundedCornerShape(40.dp))
+            .border(10.dp, color = Color.Gray, shape = RoundedCornerShape(40.dp))
+            .border(20.dp, color = Color.Green, shape = RoundedCornerShape(40.dp))
+            .background(Color.LightGray)
+            .clickable { println("Button Clicked") }
+
+        ) {
+            Text(
+                text = "Button",
+                color = Color.Red,
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.align(
+                    Alignment.Center
+                )
+            )
+        }
+    }
+}
+
+@Composable
+fun MyTextField() {
+    val textState = remember {
+        mutableStateOf(value = "")
+    }
+    TextField(
+        value = textState.value, onValueChange = {
+            textState.value = it
+        }, modifier = Modifier.fillMaxWidth()
+    )
+}
+
+@Composable
 fun MyTextFieldStateless(
     textValue: String,
     onValueChange: (String) -> Unit,
-    onAddClick: () -> Unit
+    onAddClick: (String) -> Unit
 ) {
     TextField(
         value = textValue,
@@ -247,10 +329,10 @@ fun MyTextFieldStateless(
         modifier = Modifier.fillMaxWidth(),
         trailingIcon = {
             Icon(
-                imageVector = Icons.Default.AcUnit,
+                imageVector = Icons.Default.Add,
                 contentDescription = null,
                 modifier = Modifier.clickable {
-                    onAddClick.invoke()
+                    onAddClick.invoke(textValue)
                 }
             )
         }
