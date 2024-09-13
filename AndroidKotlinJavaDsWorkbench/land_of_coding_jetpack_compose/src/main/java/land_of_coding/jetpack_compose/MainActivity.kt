@@ -95,13 +95,14 @@ fun BoxComposeSample() {
             .navigationBarsPadding(), contentAlignment = Alignment.Center
     ) {
         Text(text = "Middle of the screen")
-    Box(
-        modifier = Modifier
-            .background(Color.LightGray)
-            .fillMaxSize(), contentAlignment = Alignment.Center
-    ) {
-        Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
-        Text(text = "World", modifier = Modifier.align(Alignment.TopEnd))
+        Box(
+            modifier = Modifier
+                .background(Color.LightGray)
+                .fillMaxSize(), contentAlignment = Alignment.Center
+        ) {
+            Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
+            Text(text = "World", modifier = Modifier.align(Alignment.TopEnd))
+        }
     }
 }
 
