@@ -5,16 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.text.BasicText
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -51,7 +51,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BoxComposeSample() {
-    Box(modifier = Modifier.background(Color.LightGray).fillMaxSize(), contentAlignment = Alignment.Center) {
+    Box(
+        modifier = Modifier
+            .background(Color.LightGray)
+            .fillMaxSize()
+            .statusBarsPadding()
+            .navigationBarsPadding(), contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Middle of the screen")
         Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
         Text(text = "World", modifier = Modifier.align(Alignment.TopEnd))
     }
