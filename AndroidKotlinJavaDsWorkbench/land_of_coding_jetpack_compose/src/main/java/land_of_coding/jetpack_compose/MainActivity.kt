@@ -6,13 +6,18 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -22,7 +27,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -86,6 +90,14 @@ fun BoxComposeSample() {
     Box(
         modifier = Modifier
             .background(Color.LightGray)
+            .fillMaxSize()
+            .statusBarsPadding()
+            .navigationBarsPadding(), contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Middle of the screen")
+    Box(
+        modifier = Modifier
+            .background(Color.LightGray)
             .fillMaxSize(), contentAlignment = Alignment.Center
     ) {
         Text(text = "Hello", modifier = Modifier.align(Alignment.TopCenter))
@@ -96,23 +108,44 @@ fun BoxComposeSample() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Welcome $name", color = Color.Red, fontSize = 22.sp, fontWeight = FontWeight.Bold)
 
-    Icon(
-        painter = painterResource(id = R.drawable.ic_launcher_background),
-        contentDescription = null,
-        tint = Color.Black
-    )
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.SpaceAround,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
 
-    Image(
-        painter = painterResource(id = R.drawable.ic_launcher_background),
-        contentDescription = null
-    )
 
-    TextField(value = "", onValueChange = {}, label = {
-        Text(text = "Label")
-    })
+        Text(
+            text = "Welcome $name",
+            color = Color.Red,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
 
+        Icon(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null,
+            tint = Color.Black
+        )
+
+        Image(
+            painter = painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription = null
+        )
+
+        BasicText("Basic Text")
+
+        TextField(value = "", onValueChange = {}, label = {
+            Text(text = "Label")
+        })
+
+        FloatingActionButton(onClick = { }) {
+            Icon(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null
+            )
+        }
     FloatingActionButton(onClick = { }) {
         Icon(
             painter = painterResource(id = R.drawable.ic_launcher_background),
@@ -121,6 +154,15 @@ fun Greeting(name: String) {
     }
 
 //EXTENDED FAB WITHOUT ICON
+        ExtendedFloatingActionButton(
+            text = {
+                Text(text = "EXTENDED FAB")
+            },
+            onClick = { },
+            icon = { Icon(Icons.Filled.Add, "") }
+        )
+
+    }
     ExtendedFloatingActionButton(
         text = {
             Text(text = "EXTENDED FAB")
