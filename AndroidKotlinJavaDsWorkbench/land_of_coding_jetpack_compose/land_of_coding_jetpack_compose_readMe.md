@@ -3,3 +3,33 @@
 ## [Land of coding](https://www.youtube.com/@Landofcoding)
 
 ### 1/19. [What is Jetpack Compose? Why Compose? Compose Vs. Xml](https://youtu.be/k02U6T1qn_Y?si=qcID3cjO5Ok89c5S)
+* Less Code
+* Reusability
+* Can use in web 
+* UI for Desktop app
+* Performance is higher compare with XML because it uses reactive programming
+
+
+### 2/19. [Create your first jetpack compose application - jetpack compose basics](https://youtu.be/iEsa0M1-l6A?si=rKoSLqf_OKZ35E-K)
+
+
+### 3/19. [Jetpack compose layouts](https://youtu.be/asxCEOl27Io?si=SODNTsZzXsSol7Yz)
+
+
+### 4/19. [Jetpack Compose Modifier](https://youtu.be/vM0XhUOhnVI?si=K5EDJzXCFfWwKXeF)
+
+
+### 5/19. [Jetpack Compose State/Stateful/Stateless/Save the ui state](https://youtu.be/zTTRV-_Ubkg?si=dXfDh7BQYIV7Xpa_)
+
+
+### 5/19. [Text in Jetpack Compose From Beginner to Pro](https://youtu.be/mfNCRRY-uho?si=Z8sssB_69Jc2daB3)
+
+
+### 6/19. [Text in Jetpack Compose From Beginner to Pro](https://youtu.be/mfNCRRY-uho?si=bUCRSRmJTMnR_6t9)
+
+* `SecondActivity.kt`
+
+### 7/19. [Create a post card in Android jetpack compose](https://youtu.be/KZGIouqkInY?si=d5o-fgmXu-AtdFKr)
+
+* `PostCardActivity`
+* `MyCustomCard.kt`
