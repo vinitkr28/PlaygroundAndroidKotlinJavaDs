@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.MarqueeAnimationMode
+import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
@@ -37,10 +38,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
@@ -99,7 +106,13 @@ class SecondActivity : ComponentActivity() {
                         )
                     },
                     content = { innerPaddingValues ->
-                        Box(modifier = Modifier.padding(innerPaddingValues)) {
+                        Box(
+                            modifier = Modifier
+                                .padding(innerPaddingValues)
+                                .fillMaxSize(),
+//                                .background(Color.Black),
+                            contentAlignment = Alignment.Center
+                        ) {
                             TextCompose()
                         }
                     }
@@ -144,6 +157,16 @@ fun TextCompose() {
             textDecoration = TextDecoration.Underline
         )
 
+        val annotatedString = buildAnnotatedString {
+            blueGradientText("New")
+            append("\n\n")
+            pinkBlueGradientText(text = "Gradient")
+            append("\n\n")
+            blueGradientText("text")
+        }
+
+        Text(text = annotatedString)
+
         Text(
             text = stringResource(id = R.string.land_of_coding)
                 .plus("")
@@ -152,6 +175,42 @@ fun TextCompose() {
             overflow = TextOverflow.Ellipsis
         )
 
+    }
+}
+
+@Composable
+private fun AnnotatedString.Builder.blueGradientText(text: String) {
+    withStyle(
+        style = SpanStyle(
+            brush = Brush.linearGradient(
+                colors = listOf(
+                    Color(0xFF2788C7),
+                    Color(0xFF00BBD4)
+                )
+            ),
+            fontSize = 42.sp,
+            fontWeight = FontWeight.Medium
+        )
+    ) {
+        append(text)
+    }
+}
+
+@Composable
+private fun AnnotatedString.Builder.pinkBlueGradientText(text: String) {
+    withStyle(
+        style = SpanStyle(
+            brush = Brush.linearGradient(
+                colors = listOf(
+                    Color(0xFF2788C7),
+                    Color(0xFF00BBD4)
+                )
+            ),
+            fontSize = 48.sp,
+            fontWeight = FontWeight.Medium
+        )
+    ) {
+        append(text)
     }
 }
 

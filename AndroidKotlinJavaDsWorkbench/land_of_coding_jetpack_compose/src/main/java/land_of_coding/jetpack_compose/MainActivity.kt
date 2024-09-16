@@ -140,7 +140,7 @@ class MainActivity : ComponentActivity() {
                             }
 
 
-                            var nameListState = remember {
+                            val nameListState = remember {
                                 mutableStateListOf<String>()
                             }
 
