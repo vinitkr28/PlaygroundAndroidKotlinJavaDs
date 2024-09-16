@@ -28,3 +28,8 @@
 ### 6/19. [Text in Jetpack Compose From Beginner to Pro](https://youtu.be/mfNCRRY-uho?si=bUCRSRmJTMnR_6t9)
 
 * `SecondActivity.kt`
+
+### 7/19. [Create a post card in Android jetpack compose](https://youtu.be/KZGIouqkInY?si=d5o-fgmXu-AtdFKr)
+
+* `PostCardActivity`
+* `MyCustomCard.kt`
