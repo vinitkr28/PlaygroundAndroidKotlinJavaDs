@@ -35,3 +35,5 @@
 * `MyCustomCard.kt`
 
 ### 8/19. [Buttons in Jetpack Compose](https://youtu.be/Xx3s7YReM1M?si=rpBltzDq8JditwLB)
+
+### 9/19. [Text Field in Jetpack Compose](https://youtu.be/4ksqf9B1lC4?si=lBO4To2gU_9wbrLB)
