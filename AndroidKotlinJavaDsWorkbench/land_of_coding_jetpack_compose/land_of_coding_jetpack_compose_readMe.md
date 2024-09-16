@@ -33,3 +33,5 @@
 
 * `PostCardActivity`
 * `MyCustomCard.kt`
+
+### 8/19. [Buttons in Jetpack Compose](https://youtu.be/Xx3s7YReM1M?si=rpBltzDq8JditwLB)
