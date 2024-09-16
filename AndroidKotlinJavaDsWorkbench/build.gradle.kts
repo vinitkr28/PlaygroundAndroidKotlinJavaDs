@@ -10,6 +10,8 @@ plugins {
 //    id("org.jetbrains.dokka") version "1.9.10"
 }
 
+
+
 // The versioning plugin must be applied in all submodules
 /*subprojects {
     repositories {
