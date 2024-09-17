@@ -2,7 +2,6 @@ package land_of_coding.jetpack_compose
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,7 +10,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -23,20 +21,17 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 
-class ButtonAndTextFieldActivity : ComponentActivity() {
+class ButtonExampleActivity : ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +45,7 @@ class ButtonAndTextFieldActivity : ComponentActivity() {
                         .background(Color.Black.copy(alpha = 0.9f)),
                     contentAlignment = Alignment.Center
                 ) {
-                    ButtonAndTextFieldExample()
+                    ButtonExample()
                 }
             }
         }
@@ -59,7 +54,7 @@ class ButtonAndTextFieldActivity : ComponentActivity() {
 
 
 @Composable
-fun ButtonAndTextFieldExample(modifier: Modifier = Modifier) {
+fun ButtonExample(modifier: Modifier = Modifier) {
     Column {
 
         //Compose Material Catalog
@@ -110,7 +105,7 @@ fun ButtonAndTextFieldExample(modifier: Modifier = Modifier) {
     uiMode = Configuration.UI_MODE_NIGHT_YES
 )
 @Composable
-private fun ButtonAndTextFieldExamplePreview() {
+private fun ButtonExamplePreview() {
     LandOfCodingJetpackComposeTheme {
         Box(
             modifier = Modifier
@@ -118,7 +113,7 @@ private fun ButtonAndTextFieldExamplePreview() {
 //                .background(colorResource(id = R.color.black).copy(alpha = 0.9f)),
             contentAlignment = Alignment.Center,
         ) {
-            ButtonAndTextFieldExample()
+            ButtonExample()
         }
     }
 }
