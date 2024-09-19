@@ -6,6 +6,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -15,7 +16,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -27,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -48,9 +52,14 @@ import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.dim
 fun LoginScreenAllScreen(modifier: Modifier = Modifier) {
     Surface {
         if (ScreenOrientation == Configuration.ORIENTATION_PORTRAIT)
-            PortraitLoginScreen()
-        else
-            LandscapeLoginScreen()
+//            PortraitLoginScreen()
+        PortraitLoginScreen4SplitScreen()
+        else {
+            PortraitLoginScreen4SplitScreen()
+//            LandscapeLoginScreen()
+        }
+
+
 
     }
 }
@@ -92,15 +101,46 @@ private fun PortraitLoginScreen() {
 }
 
 @Composable
-private fun CreateAccountLink() {
-    val uiColor = if (isSystemInDarkTheme()) Color.White else BlackAllScreen
-    Box(
+private fun PortraitLoginScreen4SplitScreen() {
+    Column(
         modifier = Modifier
-            .fillMaxHeight(fraction = 0.8f)
-            .fillMaxWidth(),
-        contentAlignment = Alignment.BottomCenter
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
     ) {
+        TopSection()
+
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium2))
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 30.dp)
+        ) {
+
+            LoginSection()
+            Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium1))
+
+            SocialMediaSection()
+
+
+        }
+        Spacer(modifier = Modifier.weight(0.8f))
+        CreateAccountLink()
+        Spacer(modifier = Modifier.weight(0.3f))
+    }
+}
+
+@Composable
+private fun ColumnScope.CreateAccountLink() {
+    val uiColor = if (isSystemInDarkTheme()) Color.White else BlackAllScreen
+//    Box(
+//        modifier = Modifier
+//            .fillMaxHeight(fraction = 0.8f)
+//            .fillMaxWidth(),
+//        contentAlignment = Alignment.BottomCenter
+//    ) {
         Text(
+            modifier = Modifier.align(alignment = Alignment.CenterHorizontally),
             text = buildAnnotatedString {
                 withStyle(
                     style = SpanStyle(
@@ -126,7 +166,7 @@ private fun CreateAccountLink() {
                 }
             }
         )
-    }
+//    }
 }
 
 @Composable
@@ -206,6 +246,8 @@ private fun LoginSection() {
 private fun TopSection() {
     val uiColor = if (isSystemInDarkTheme()) Color.White else BlackAllScreen
 
+    val screenHeight = LocalConfiguration.current.screenHeightDp
+
     Box(
         contentAlignment = Alignment.TopCenter
     ) {
@@ -213,7 +255,8 @@ private fun TopSection() {
             modifier = Modifier
                 .fillMaxWidth()
 //                .fillMaxHeight(fraction = 0.5f),
-                .fillMaxHeight(fraction = 0.46f),
+//                .fillMaxHeight(fraction = 0.46f),
+            .height((screenHeight / 2.2).dp),
             painter = painterResource(id = R.drawable.shape),
             contentDescription = null,
             contentScale = ContentScale.FillBounds
@@ -221,7 +264,8 @@ private fun TopSection() {
 
 
         Row(
-            modifier = Modifier.padding(MaterialTheme.dimens.large),
+//            modifier = Modifier.padding(top = MaterialTheme.dimens.large),
+            modifier = Modifier.padding(top = (screenHeight/9).dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
