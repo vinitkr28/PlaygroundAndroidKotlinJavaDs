@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose.loggin_screen
+package land_of_coding.jetpack_compose.loggin_screen_all_screen_size
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
@@ -37,13 +37,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import land_of_coding.jetpack_compose.R
-import land_of_coding.jetpack_compose.loggin_screen.ui.theme.Black
-import land_of_coding.jetpack_compose.loggin_screen.ui.theme.BlueGray
-import land_of_coding.jetpack_compose.loggin_screen.ui.theme.LandOfCodingJetpackComposeLoginScreenTheme
-import land_of_coding.jetpack_compose.loggin_screen.ui.theme.Roboto
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.BlackAllScreen
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.BlueGrayAllScreen
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.LandOfCodingJetpackComposeLoginScreenAllScreenTheme
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.RobotoAllScreen
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreenAllScreen(modifier: Modifier = Modifier) {
     Surface {
         Column(modifier = Modifier.fillMaxSize()) {
             TopSection()
@@ -68,7 +68,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
 @Composable
 private fun CreateAccountLink() {
-    val uiColor = if (isSystemInDarkTheme()) Color.White else Black
+    val uiColor = if (isSystemInDarkTheme()) Color.White else BlackAllScreen
     Box(
         modifier = Modifier
             .fillMaxHeight(fraction = 0.8f)
@@ -81,7 +81,7 @@ private fun CreateAccountLink() {
                     style = SpanStyle(
                         color = Color(0xFF94A3B8),
                         fontSize = 14.sp,
-                        fontFamily = Roboto,
+                        fontFamily = RobotoAllScreen,
                         fontWeight = FontWeight.Normal
                     )
                 ) {
@@ -92,7 +92,7 @@ private fun CreateAccountLink() {
                     style = SpanStyle(
                         color = uiColor,
                         fontSize = 14.sp,
-                        fontFamily = Roboto,
+                        fontFamily = RobotoAllScreen,
                         fontWeight = FontWeight.Medium
                     )
                 ) {
@@ -120,7 +120,7 @@ private fun SocialMediaSection() {
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
-            SocialMediaLogin(
+            SocialMediaLoginAllScreen(
                 icon = R.drawable.google,
                 text = "Google",
                 modifier = Modifier.weight(1f)
@@ -130,7 +130,7 @@ private fun SocialMediaSection() {
 
             Spacer(modifier = Modifier.width(20.dp))
 
-            SocialMediaLogin(
+            SocialMediaLoginAllScreen(
                 icon = R.drawable.facebook,
                 text = "Facebook",
                 modifier = Modifier.weight(1f)
@@ -143,7 +143,7 @@ private fun SocialMediaSection() {
 
 @Composable
 private fun LoginSection() {
-    land_of_coding.jetpack_compose.loggin_screen_all_screen_size.LoginTextField(
+    LoginTextField(
         label = "Email",
         trailing = "",
         modifier = Modifier.fillMaxWidth()
@@ -151,7 +151,7 @@ private fun LoginSection() {
 
     Spacer(modifier = Modifier.height(15.dp))
 
-    land_of_coding.jetpack_compose.loggin_screen_all_screen_size.LoginTextField(
+    LoginTextField(
         label = "Password",
         trailing = "",
         modifier = Modifier.fillMaxWidth()
@@ -165,7 +165,7 @@ private fun LoginSection() {
             .fillMaxWidth()
             .height(40.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (isSystemInDarkTheme()) BlueGray else Black,
+            containerColor = if (isSystemInDarkTheme()) BlueGrayAllScreen else BlackAllScreen,
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(size = 4.dp)
@@ -179,7 +179,7 @@ private fun LoginSection() {
 
 @Composable
 private fun TopSection() {
-    val uiColor = if (isSystemInDarkTheme()) Color.White else Black
+    val uiColor = if (isSystemInDarkTheme()) Color.White else BlackAllScreen
 
     Box(
         contentAlignment = Alignment.TopCenter
@@ -251,14 +251,14 @@ private fun TopSection() {
 )
 @Composable
 private fun LoginScreenPreview() {
-    LandOfCodingJetpackComposeLoginScreenTheme {
+    LandOfCodingJetpackComposeLoginScreenAllScreenTheme {
         Box(
             modifier = Modifier
                 .fillMaxSize(),
 //                .background(colorResource(id = R.color.black).copy(alpha = 0.9f)),
             contentAlignment = Alignment.Center,
         ) {
-            LoginScreen()
+            LoginScreenAllScreen()
         }
     }
 }

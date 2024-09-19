@@ -50,3 +50,10 @@
 
 
 ### 10/19. [Jetpack compose UI Challenge - building a modern login screen with Jetpack Compose](https://youtu.be/TCBAWdwupjU?si=WYFbdPbqofMeY1l8)
+
+* Github
+  * Branch: screen-design
+    * https://github.com/lofcoding/ComposeLoginScreen/tree/screen-design
+
+
+### 11/19. [The Ultimate guide to supporting all screen sizes in Jetpack Compose using Material 3 design](https://youtu.be/Dj_X-RKL-c0?si=JVQVRiFbFOm3KonW)
