@@ -3,6 +3,7 @@ package land_of_coding.jetpack_compose.loggin_screen_all_screen_size
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,33 +36,57 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import land_of_coding.jetpack_compose.R
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.BlackAllScreen
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.BlueGrayAllScreen
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.LandOfCodingJetpackComposeLoginScreenAllScreenTheme
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.RobotoAllScreen
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.ScreenOrientation
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.dimens
 
 @Composable
 fun LoginScreenAllScreen(modifier: Modifier = Modifier) {
     Surface {
-        Column(modifier = Modifier.fillMaxSize()) {
-            TopSection()
+        if (ScreenOrientation == Configuration.ORIENTATION_PORTRAIT)
+            PortraitLoginScreen()
+        else
+            LandscapeLoginScreen()
 
-            Spacer(modifier = Modifier.height(36.dp))
+    }
+}
 
-            Column(
-                modifier = Modifier
-                    .padding(horizontal = 30.dp)
-            ) {
+@Composable
+private fun LandscapeLoginScreen() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 30.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
+        LoginScreenAllScreen()
+        SocialMediaSection()
+    }
+}
 
-                LoginSection()
-                Spacer(modifier = Modifier.height(30.dp))
+@Composable
+private fun PortraitLoginScreen() {
+    Column(modifier = Modifier.fillMaxSize()) {
+        TopSection()
 
-                SocialMediaSection()
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium2))
 
-                CreateAccountLink()
-            }
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 30.dp)
+        ) {
+
+            LoginSection()
+            Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium1))
+
+            SocialMediaSection()
+
+            CreateAccountLink()
         }
     }
 }
@@ -80,7 +105,7 @@ private fun CreateAccountLink() {
                 withStyle(
                     style = SpanStyle(
                         color = Color(0xFF94A3B8),
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontFamily = RobotoAllScreen,
                         fontWeight = FontWeight.Normal
                     )
@@ -91,7 +116,7 @@ private fun CreateAccountLink() {
                 withStyle(
                     style = SpanStyle(
                         color = uiColor,
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontFamily = RobotoAllScreen,
                         fontWeight = FontWeight.Medium
                     )
@@ -115,7 +140,7 @@ private fun SocialMediaSection() {
             style = MaterialTheme.typography.labelMedium.copy(color = Color(0xFF64748B))
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.small2))
 
         Row(
             verticalAlignment = Alignment.CenterVertically
@@ -149,7 +174,7 @@ private fun LoginSection() {
         modifier = Modifier.fillMaxWidth()
     )
 
-    Spacer(modifier = Modifier.height(15.dp))
+    Spacer(modifier = Modifier.height(MaterialTheme.dimens.small2))
 
     LoginTextField(
         label = "Password",
@@ -157,13 +182,13 @@ private fun LoginSection() {
         modifier = Modifier.fillMaxWidth()
     )
 
-    Spacer(modifier = Modifier.height(20.dp))
+    Spacer(modifier = Modifier.height(MaterialTheme.dimens.small3))
 
     Button(
         onClick = { /*TODO*/ },
         modifier = Modifier
             .fillMaxWidth()
-            .height(40.dp),
+            .height(MaterialTheme.dimens.buttonHeight),
         colors = ButtonDefaults.buttonColors(
             containerColor = if (isSystemInDarkTheme()) BlueGrayAllScreen else BlackAllScreen,
             contentColor = Color.White
@@ -187,6 +212,7 @@ private fun TopSection() {
         Image(
             modifier = Modifier
                 .fillMaxWidth()
+//                .fillMaxHeight(fraction = 0.5f),
                 .fillMaxHeight(fraction = 0.46f),
             painter = painterResource(id = R.drawable.shape),
             contentDescription = null,
@@ -195,11 +221,11 @@ private fun TopSection() {
 
 
         Row(
-            modifier = Modifier.padding(top = 80.dp),
+            modifier = Modifier.padding(MaterialTheme.dimens.large),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
-                modifier = Modifier.size(42.dp),
+                modifier = Modifier.size(MaterialTheme.dimens.logoSize),
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = stringResource(id = R.string.app_logo),
                 tint = uiColor

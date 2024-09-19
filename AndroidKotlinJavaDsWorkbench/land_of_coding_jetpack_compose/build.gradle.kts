@@ -71,4 +71,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation ("androidx.compose.material:material-icons-extended-android:1.5.4")
+
+    //WindowSizeClass
+    implementation("androidx.compose.material3:material3-window-size-class:1.3.0")
 }

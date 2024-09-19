@@ -24,7 +24,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -34,7 +33,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -100,10 +98,10 @@ fun TextFieldExample(modifier: Modifier = Modifier) {
                     Text(text = if (isPasswordVisible) "Hide" else "Show")
                 }
             },
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color.Transparent,
-                cursorColor = Color.Red
-            ),
+//            colors = TextFieldDefaults.textFieldColors(
+//                containerColor = Color.Transparent,
+//                cursorColor = Color.Red
+//            ),
             singleLine = true,
             placeholder = {
                 Text(text = "Password")

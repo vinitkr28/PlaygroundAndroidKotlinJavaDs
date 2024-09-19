@@ -26,6 +26,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.BlueGrayAllScreen
 import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.LightBlueWhiteAllScreen
+import land_of_coding.jetpack_compose.loggin_screen_all_screen_size.ui.theme.dimens
 
 @Composable
 fun SocialMediaLoginAllScreen(
@@ -40,7 +41,7 @@ fun SocialMediaLoginAllScreen(
             .clip(RoundedCornerShape(4.dp))
             .socialMediaAllScreen()
             .clickable { onClick() }
-            .height(40.dp),
+            .height(MaterialTheme.dimens.buttonHeight),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {

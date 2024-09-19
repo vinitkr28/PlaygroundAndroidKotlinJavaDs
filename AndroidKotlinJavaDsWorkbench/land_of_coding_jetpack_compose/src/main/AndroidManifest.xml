@@ -103,7 +103,7 @@
         </activity>
 
         <activity
-            android:name=".loggin_screen_all_screen_size.LoginActivityAllScreen"
+            android:name=".loggin_screen_all_screen_size.LoginAllScreenActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">

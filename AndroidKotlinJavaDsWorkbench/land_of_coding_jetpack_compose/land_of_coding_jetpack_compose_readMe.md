@@ -54,6 +54,13 @@
 * Github
   * Branch: screen-design
     * https://github.com/lofcoding/ComposeLoginScreen/tree/screen-design
+    * https://github.com/lofcoding/ComposeLoginScreen/tree/support-screen-sizes/
 
 
 ### 11/19. [The Ultimate guide to supporting all screen sizes in Jetpack Compose using Material 3 design](https://youtu.be/Dj_X-RKL-c0?si=JVQVRiFbFOm3KonW)
+
+* package: loggin_screen_all_screen_size
+* implementation("androidx.compose.material3:material3-window-size-class:1.3.0")
+  
+  [![Window size classes](https://developer.android.com/static/develop/ui/compose/images/layouts/adaptive/window-size-classes/window_size_classes_width.png)](https://developer.android.com/develop/ui/compose/layouts/adaptive/window-size-classes)
+
