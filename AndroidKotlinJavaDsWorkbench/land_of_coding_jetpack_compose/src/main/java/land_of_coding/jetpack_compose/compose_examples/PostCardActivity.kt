@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose
+package land_of_coding.jetpack_compose.compose_examples
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import land_of_coding.jetpack_compose.R
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 
 class PostCardActivity : ComponentActivity() {

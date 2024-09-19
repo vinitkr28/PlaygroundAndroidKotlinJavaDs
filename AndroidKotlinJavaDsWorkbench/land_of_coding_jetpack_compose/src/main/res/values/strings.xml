@@ -2,4 +2,9 @@
     <string name="app_name">land_of_coding_jetpack_compose</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="land_of_coding">Land of coding</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="app_logo">App Logo</string>
+    <string name="the_tolet">The Tolet</string>
+    <string name="find_house">Find Your House</string>
+    <string name="text_login">Login</string>
 </resources>

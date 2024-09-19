@@ -8,9 +8,78 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
-
         <activity
-            android:name=".MainActivity"
+            android:name=".compose_examples.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".compose_examples.SecondActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".compose_examples.AppBarExampleActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".compose_examples.PostCardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".compose_examples.ButtonExampleActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".compose_examples.TextFieldExampleActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
@@ -22,7 +91,7 @@
         </activity>
 
         <activity
-            android:name=".SecondActivity"
+            android:name=".loggin_screen.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
@@ -34,19 +103,7 @@
         </activity>
 
         <activity
-            android:name=".AppBarExampleActivity"
-            android:exported="true"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
-
-        <activity
-            android:name=".PostCardActivity"
+            android:name=".loggin_screen_all_screen_size.LoginAllScreenActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
