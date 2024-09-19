@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose
+package land_of_coding.jetpack_compose.compose_examples
 
 import android.content.res.Configuration
 import androidx.annotation.DrawableRes
@@ -37,6 +37,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import land_of_coding.jetpack_compose.R
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 import land_of_coding.jetpack_compose.ui.theme.MutedBlack
 

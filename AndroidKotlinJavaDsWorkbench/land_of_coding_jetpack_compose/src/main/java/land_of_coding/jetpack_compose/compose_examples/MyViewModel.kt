@@ -1,8 +1,7 @@
-package land_of_coding.jetpack_compose
+package land_of_coding.jetpack_compose.compose_examples
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import org.w3c.dom.Text
 
 class MyViewModel: ViewModel() {
 
