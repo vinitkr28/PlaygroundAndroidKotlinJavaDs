@@ -37,3 +37,13 @@
 ### 8/19. [Buttons in Jetpack Compose](https://youtu.be/Xx3s7YReM1M?si=rpBltzDq8JditwLB)
 
 ### 9/19. [Text Field in Jetpack Compose](https://youtu.be/4ksqf9B1lC4?si=lBO4To2gU_9wbrLB)
+
+
+### 9/19. [Jetpack compose UI Challenge - building a modern login screen with Jetpack Compose](https://youtu.be/TCBAWdwupjU?si=j7ChB4JmhcutWLP5)
+
+
+* Github
+  * https://github.com/lofcoding/ComposeLoginScreenInit
+* Figma
+  * https://www.figma.com/design/De06Vj85aKVpYVh54HRhEP/Login-Screen---House-Rental-Solution-(Community)
+    * LoggedIn with v4victor4u@gmail.com

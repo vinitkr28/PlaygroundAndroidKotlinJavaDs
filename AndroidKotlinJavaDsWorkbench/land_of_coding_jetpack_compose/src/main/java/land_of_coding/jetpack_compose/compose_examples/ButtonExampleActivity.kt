@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose
+package land_of_coding.jetpack_compose.compose_examples
 
 import android.content.res.Configuration
 import android.os.Bundle

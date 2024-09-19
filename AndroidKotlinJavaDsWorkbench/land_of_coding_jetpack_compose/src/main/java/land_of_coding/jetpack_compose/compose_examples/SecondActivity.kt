@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose
+package land_of_coding.jetpack_compose.compose_examples
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -6,7 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.MarqueeAnimationMode
-import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
@@ -50,6 +49,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import land_of_coding.jetpack_compose.R
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 
 class SecondActivity : ComponentActivity() {
