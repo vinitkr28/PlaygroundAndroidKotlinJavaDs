@@ -64,3 +64,11 @@
   
   [![Window size classes](https://developer.android.com/static/develop/ui/compose/images/layouts/adaptive/window-size-classes/window_size_classes_width.png)](https://developer.android.com/develop/ui/compose/layouts/adaptive/window-size-classes)
 
+### 12/19. [Jetpack compose Previews](https://youtu.be/EceFM3Ocv4Y?si=e68Gn3o6PogeFa77)
+* Skipped this
+
+
+### 13/19. [Full guide to Jetpack compose animations in Android](https://youtu.be/wLmVyXl4Now?si=CMkovKCKgzk4Yd0Q)
+* Animations in Compose
+  * Android Developer
+    * https://developer.android.com/develop/ui/compose/animation/introduction
