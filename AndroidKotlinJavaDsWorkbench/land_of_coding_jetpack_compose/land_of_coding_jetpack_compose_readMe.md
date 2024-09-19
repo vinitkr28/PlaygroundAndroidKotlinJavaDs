@@ -47,3 +47,6 @@
 * Figma
   * https://www.figma.com/design/De06Vj85aKVpYVh54HRhEP/Login-Screen---House-Rental-Solution-(Community)
     * LoggedIn with v4victor4u@gmail.com
+
+
+### 10/19. [Jetpack compose UI Challenge - building a modern login screen with Jetpack Compose](https://youtu.be/TCBAWdwupjU?si=WYFbdPbqofMeY1l8)
