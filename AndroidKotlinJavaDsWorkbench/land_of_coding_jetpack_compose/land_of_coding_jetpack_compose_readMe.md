@@ -72,3 +72,8 @@
 * Animations in Compose
   * Android Developer
     * https://developer.android.com/develop/ui/compose/animation/introduction
+
+
+### 14/19. [Layout your screens using the Scaffold component - Compose](https://youtu.be/7SldQzpkO1o?si=YUdKwdAk_Gn4hC2E)
+
+* `ScaffoldActivity`
