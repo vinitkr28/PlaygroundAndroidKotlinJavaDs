@@ -95,3 +95,14 @@
 
 
 ### 16/19. [Scrollable lists in Jetpack Compose](https://youtu.be/9ybBOUavglQ?si=jE7k5oFeCSw1aAPh)
+
+
+### 16/19. [Jetpack compose navigation - basics](https://youtu.be/aCXofs2Zejk?si=C1-wUVxgUOtcGkmt)
+
+`implementation("androidx.navigation:navigation-compose:2.8.3")`
+
+* Navigation Controller
+* Navigation Host
+
+
+https://whimsical.com/
