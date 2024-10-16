@@ -97,12 +97,28 @@
 ### 16/19. [Scrollable lists in Jetpack Compose](https://youtu.be/9ybBOUavglQ?si=jE7k5oFeCSw1aAPh)
 
 
-### 16/19. [Jetpack compose navigation - basics](https://youtu.be/aCXofs2Zejk?si=C1-wUVxgUOtcGkmt)
+### 17/19. [Jetpack compose navigation - basics](https://youtu.be/aCXofs2Zejk?si=C1-wUVxgUOtcGkmt)
 
 `implementation("androidx.navigation:navigation-compose:2.8.3")`
 
 * Navigation Controller
 * Navigation Host
+
+
+### 18/19. [Jetpack compose navigation - Transitions](https://youtu.be/MhXa-5Arw3Q?si=SLALBBHryTy-kbnE)
+* https://developer.android.com/develop/ui/compose/animation/introduction
+* https://developer.android.com/develop/ui/compose/animation/composables-modifiers
+
+### 19/19. [Jetpack compose navigation - arguments](https://youtu.be/bj6OjSjPM1I?si=9VjyJOdRKdTXDc1A)
+
+```
+plugins {
+---
+id("kotlin-parcelize")
+}
+```
+
+`import kotlinx.parcelize.Parcelize`
 
 
 https://whimsical.com/

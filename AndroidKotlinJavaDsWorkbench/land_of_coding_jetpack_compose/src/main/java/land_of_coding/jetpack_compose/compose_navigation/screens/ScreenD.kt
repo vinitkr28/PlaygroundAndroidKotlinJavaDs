@@ -1,4 +1,4 @@
-package land_of_coding.jetpack_compose.compose_navigation.navigation_basics.screens
+package land_of_coding.jetpack_compose.compose_navigation.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,13 +19,16 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScreenC(
+fun ScreenD(
+    name: String,
+    age: Int,
+    navigateBackToC: () -> Unit,
     navigateBackToB: () -> Unit,
     navigateBackToA: () -> Unit
 ) {
 
     Scaffold(
-        topBar = { TopAppBar(title = { Text(text = "Screen C") }) }
+        topBar = { TopAppBar(title = { Text(text = "Screen D") }) }
     ) {
         Column(
             modifier = Modifier
@@ -34,6 +37,19 @@ fun ScreenC(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+
+            Text(text = "Name: $name, Age: $age")
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Button(onClick = {
+                navigateBackToC.invoke()
+            }) {
+                Text(text = "Back to C")
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
             Button(onClick = {
                 navigateBackToB.invoke()
             }) {

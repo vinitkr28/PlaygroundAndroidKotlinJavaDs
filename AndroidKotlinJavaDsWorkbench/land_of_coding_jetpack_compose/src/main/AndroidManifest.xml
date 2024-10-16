@@ -153,7 +153,7 @@
         </activity>
 
         <activity
-            android:name=".compose_navigation.navigation_basics.ComposeNavigationActivity"
+            android:name=".compose_navigation.ComposeNavigationActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
