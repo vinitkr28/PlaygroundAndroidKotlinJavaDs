@@ -92,3 +92,6 @@
    * When we want to make a long run in time side effect always up to date
 8. snapshot flow
    * convert from a state to kotlin flow
+
+
+### 16/19. [Scrollable lists in Jetpack Compose](https://youtu.be/9ybBOUavglQ?si=jE7k5oFeCSw1aAPh)
