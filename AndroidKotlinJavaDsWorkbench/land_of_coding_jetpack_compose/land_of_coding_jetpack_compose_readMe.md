@@ -77,3 +77,18 @@
 ### 14/19. [Layout your screens using the Scaffold component - Compose](https://youtu.be/7SldQzpkO1o?si=YUdKwdAk_Gn4hC2E)
 
 * `ScaffoldActivity`
+
+
+### 15/19. [Full guide to Jetpack Compose Side Effects](https://youtu.be/mGpax3Y5B7E?si=Mx_TCIPgb-CPH5HY)
+
+1. Launched Effect
+2. remember Coroutine Scope
+3. Disposable Effect
+4. derivedStateOf
+5. produce state
+6. Side Effect
+   * When you want to change non compose state inside a composable function and the way you want to change that state is not supported by digit composed apis
+7. remember updated state
+   * When we want to make a long run in time side effect always up to date
+8. snapshot flow
+   * convert from a state to kotlin flow
