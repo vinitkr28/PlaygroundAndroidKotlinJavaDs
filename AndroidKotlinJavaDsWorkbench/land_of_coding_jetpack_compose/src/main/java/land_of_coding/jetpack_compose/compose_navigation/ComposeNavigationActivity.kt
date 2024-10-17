@@ -9,6 +9,7 @@ import androidx.compose.animation.fadeOut
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import land_of_coding.jetpack_compose.compose_navigation.screens.EnteredPersonDataScreen
@@ -17,6 +18,8 @@ import land_of_coding.jetpack_compose.compose_navigation.screens.ScreenA
 import land_of_coding.jetpack_compose.compose_navigation.screens.ScreenB
 import land_of_coding.jetpack_compose.compose_navigation.screens.ScreenC
 import land_of_coding.jetpack_compose.compose_navigation.screens.ScreenD
+import land_of_coding.jetpack_compose.compose_navigation.screens.ShareByViewModelScreen
+import land_of_coding.jetpack_compose.compose_navigation.screens.ShareToViewModelScreen
 import land_of_coding.jetpack_compose.ui.theme.LandOfCodingJetpackComposeTheme
 
 
@@ -50,7 +53,8 @@ class ComposeNavigationActivity : ComponentActivity() {
                             navigateToB = {
                                 navController.navigate("screen_b/$it/12")
                             },
-                            navigateToPassObjectScreen = { navController.navigate("screen_pass_objects") }
+                            navigateToPassObjectScreen = { navController.navigate("screen_pass_objects") },
+                            navigateToShareWithViewModel = { navController.navigate("main") }
                         )
                     }
 
@@ -208,6 +212,49 @@ class ComposeNavigationActivity : ComponentActivity() {
                                     }
                                 )
                             }
+                    }
+
+                    navigation(
+                        route = "main",
+                        startDestination = "share_by_view_model"
+                    ) {
+                        composable(
+                            route = "share_by_view_model",
+
+                            ) {
+                            val viewModel: SharedViewModel =
+                                it.sharedViewModel(navController = navController)
+                            ShareByViewModelScreen(
+                                navigateToShareToViewModelScreen = {
+                                    viewModel.person = it
+                                    navController.navigate("share_to_view_model")
+                                },
+                                navigateBackToA = {
+                                    navController.navigate("screen_a") {
+                                        popUpTo(0)
+                                    }
+                                }
+                            )
+                        }
+
+                        composable(
+                            route = "share_to_view_model",
+                        ) {
+                            val viewModel: SharedViewModel =
+                                it.sharedViewModel(navController = navController)
+                            viewModel.person?.let { p ->
+                                ShareToViewModelScreen(
+                                    p,
+                                    navigateBackToShareByViewModelScreen = { navController.popBackStack() },
+                                    navigateBackToA = {
+                                        navController.navigate("screen_a") {
+                                            popUpTo(0)
+                                        }
+                                    }
+                                )
+                            }
+
+                        }
                     }
                 }
             }

@@ -121,4 +121,11 @@ id("kotlin-parcelize")
 `import kotlinx.parcelize.Parcelize`
 
 
+Simple arguments
+Optional arguments
+backstack entry
+shared view model
+Custom NavType
+
+
 https://whimsical.com/
