@@ -107,6 +107,56 @@
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".compose_examples.ScaffoldActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".compose_side_effects.SideEffectsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".scrollable_list.ScrollableListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".compose_navigation.ComposeNavigationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AndroidKotlinJavaDsWorkbench">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

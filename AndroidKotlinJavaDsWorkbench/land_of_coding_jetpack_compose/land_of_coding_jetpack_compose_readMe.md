@@ -64,3 +64,68 @@
   
   [![Window size classes](https://developer.android.com/static/develop/ui/compose/images/layouts/adaptive/window-size-classes/window_size_classes_width.png)](https://developer.android.com/develop/ui/compose/layouts/adaptive/window-size-classes)
 
+### 12/19. [Jetpack compose Previews](https://youtu.be/EceFM3Ocv4Y?si=e68Gn3o6PogeFa77)
+* Skipped this
+
+
+### 13/19. [Full guide to Jetpack compose animations in Android](https://youtu.be/wLmVyXl4Now?si=CMkovKCKgzk4Yd0Q)
+* Animations in Compose
+  * Android Developer
+    * https://developer.android.com/develop/ui/compose/animation/introduction
+
+
+### 14/19. [Layout your screens using the Scaffold component - Compose](https://youtu.be/7SldQzpkO1o?si=YUdKwdAk_Gn4hC2E)
+
+* `ScaffoldActivity`
+
+
+### 15/19. [Full guide to Jetpack Compose Side Effects](https://youtu.be/mGpax3Y5B7E?si=Mx_TCIPgb-CPH5HY)
+
+1. Launched Effect
+2. remember Coroutine Scope
+3. Disposable Effect
+4. derivedStateOf
+5. produce state
+6. Side Effect
+   * When you want to change non compose state inside a composable function and the way you want to change that state is not supported by digit composed apis
+7. remember updated state
+   * When we want to make a long run in time side effect always up to date
+8. snapshot flow
+   * convert from a state to kotlin flow
+
+
+### 16/19. [Scrollable lists in Jetpack Compose](https://youtu.be/9ybBOUavglQ?si=jE7k5oFeCSw1aAPh)
+
+
+### 17/19. [Jetpack compose navigation - basics](https://youtu.be/aCXofs2Zejk?si=C1-wUVxgUOtcGkmt)
+
+`implementation("androidx.navigation:navigation-compose:2.8.3")`
+
+* Navigation Controller
+* Navigation Host
+
+
+### 18/19. [Jetpack compose navigation - Transitions](https://youtu.be/MhXa-5Arw3Q?si=SLALBBHryTy-kbnE)
+* https://developer.android.com/develop/ui/compose/animation/introduction
+* https://developer.android.com/develop/ui/compose/animation/composables-modifiers
+
+### 19/19. [Jetpack compose navigation - arguments](https://youtu.be/bj6OjSjPM1I?si=9VjyJOdRKdTXDc1A)
+
+```
+plugins {
+---
+id("kotlin-parcelize")
+}
+```
+
+`import kotlinx.parcelize.Parcelize`
+
+
+Simple arguments
+Optional arguments
+backstack entry
+shared view model
+Custom NavType
+
+
+https://whimsical.com/
