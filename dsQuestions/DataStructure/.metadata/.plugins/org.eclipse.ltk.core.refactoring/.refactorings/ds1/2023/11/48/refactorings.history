@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;node&apos; in &apos;ds1.BinaryTreeYT.preorder(...)&apos; to &apos;root&apos;&#x0A;- Original project: &apos;ds1&apos;&#x0A;- Original element: &apos;ds1.BinaryTreeYT.preorder(Node).node&apos;&#x0A;- Renamed element: &apos;node&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;node&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ds1{BinaryTreeYT.java[BinaryTreeYT~preorder~QNode;@node!645!653!650!653!QNode;!0!true" name="root" references="true" stamp="1701104751235" version="1.0"/>
+</session>
