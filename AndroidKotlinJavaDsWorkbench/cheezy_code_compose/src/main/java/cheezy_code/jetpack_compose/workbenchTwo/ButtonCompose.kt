@@ -13,7 +13,7 @@ import cheezy_code.jetpack_compose.R
 class WorkbenchTwoButtonCompose {
 }
 
-@Preview(showBackground = true, widthDp = 300, heightDp = 500)
+@Preview(showBackground = true, widthDp = 300, heightDp = 500, showSystemUi = true)
 @Composable
 fun PreviewSampleButton() {
     SampleButton()

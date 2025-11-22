@@ -186,7 +186,7 @@ fun LaunchEffectComposableWithRemember() {
     val counter = remember {
         mutableIntStateOf(0)
     }
-    val scope = rememberCoroutineScope()
+    val scope = rememberCoroutineScope()//If the screen rotate the coroutine will not be cancelled.
 
     var text = "Counter is running ${counter.intValue}"
     if (counter.intValue == 10){
@@ -257,6 +257,8 @@ fun CounterForRememberUnderstateCompose3(intValue: Int) {
 @Composable
 fun CounterForRememberUnderstateCompose4(intValue: Int) {
     val state = rememberUpdatedState(newValue = intValue)
+//    val state2 by rememberUpdatedState(newValue = intValue)
+
     LaunchedEffect(key1 = Unit) {
         delay(5000)
         Log.d(TAG, "CounterForRememberUnderstateCompose2: ${state.value}")
@@ -379,6 +381,9 @@ fun KeyboardComposable() {
             val isKeyboardVisible = insets?.isVisible(WindowInsetsCompat.Type.ime())
             Log.d(TAG, "KeyboardComposable: $isKeyboardVisible")
         }
+
+        view.viewTreeObserver.addOnGlobalLayoutListener(listener)
+
         onDispose {
             view.viewTreeObserver.removeOnGlobalLayoutListener { listener }
         }

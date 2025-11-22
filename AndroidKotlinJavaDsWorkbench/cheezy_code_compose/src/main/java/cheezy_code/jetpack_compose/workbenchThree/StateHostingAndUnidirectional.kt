@@ -1,4 +1,13 @@
+/*
+*
+* Android Jetpack Compose State Concept - Hoisting & Unidirectional Flow | CheezyCode Hindi
+* https://youtu.be/zdCrYONv-ec?si=CgMO2N81NWuKSl6N
+*
+* */
+
+
 package cheezy_code.jetpack_compose.workbenchThree
+
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -45,7 +54,7 @@ fun NotificationScreen() {
 @Composable
 fun NotificationCounter() {
     Log.d(TAG, "NotificationCounter called.")
-    val count: MutableState<Int> = rememberSaveable {
+    val count: MutableState<Int> = rememberSaveable {//rememberSaveable will store the value during configuration change in bundle
         mutableIntStateOf(0)
     }
 

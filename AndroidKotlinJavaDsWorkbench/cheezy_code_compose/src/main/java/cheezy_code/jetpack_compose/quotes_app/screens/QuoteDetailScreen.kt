@@ -55,6 +55,7 @@ fun PreviewQuoteDetail() {
 @Composable
 fun QuoteDetail(quote: Quote) {
 
+    //it handle the back button press
     BackHandler {
         DataManager.switchPages(null)
     }

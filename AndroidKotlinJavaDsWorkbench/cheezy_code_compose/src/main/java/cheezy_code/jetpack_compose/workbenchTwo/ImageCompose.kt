@@ -23,7 +23,7 @@ fun SampleImageOne() {
     )
 }
 
-@Preview(showBackground = true, widthDp = 300, heightDp = 500)
+@Preview(showBackground = true, widthDp = 300, heightDp = 500, name = "ImageOnePreview")
 @Composable
 fun PreviewSampleImageOne() {
     SampleImageOne()
@@ -36,11 +36,11 @@ fun SampleImageTwo() {
         painter = painterResource(id = R.drawable.heart_svgrepo_com),
         contentDescription = "Dummy Image",
         colorFilter = ColorFilter.tint(Color.Red),
-        contentScale = ContentScale.FillBounds
+        contentScale = ContentScale.Inside
     )
 }
 
-@Preview(showBackground = true, widthDp = 300, heightDp = 500)
+@Preview(showBackground = true, widthDp = 300, heightDp = 500, name = "ImageTwoPreview")
 @Composable
 fun PreviewSampleImageTwo() {
     SampleImageTwo()
